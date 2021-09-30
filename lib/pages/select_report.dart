@@ -1,3 +1,4 @@
+import 'package:asde_app/pages/report_form.dart';
 import 'package:flutter/material.dart';
 
 import '../main_drawer.dart';
@@ -48,262 +49,254 @@ class SelectReport extends StatelessWidget {
                 elevation: 0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: IntrinsicHeight(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Flexible(
-                          flex: 1,
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      primary: Colors.black,
-                                      textStyle: TextStyle(
-                                        fontSize: 14,
-                                      )),
-                                  onPressed: () {},
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset(
-                                        "assets/trash_icon.png",
-                                        scale: 0.8,
-                                      ),
-                                      Text(
-                                        "Basura",
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Expanded(
-                                child: OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      primary: Colors.black,
-                                      textStyle: TextStyle(
-                                        fontSize: 15,
-                                      )),
-                                  onPressed: () {},
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset("assets/street_icon.png"),
-                                      Text(
-                                        "Asfalto",
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Expanded(
-                                child: OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      primary: Colors.black,
-                                      textStyle: TextStyle(
-                                        fontSize: 14,
-                                      )),
-                                  onPressed: () {},
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset(
-                                          "assets/urban_cleaning_icon.png"),
-                                      Text(
-                                        "Aseo Urbano",
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Flexible(
-                          flex: 1,
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0),
-                                      ),
-                                      primary: Colors.black,
-                                      textStyle: TextStyle(
-                                        fontSize: 14,
-                                      )),
-                                  onPressed: () {},
-                                  child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset("assets/drainage_icon.png"),
-                                        Text("Drenaje"),
-                                      ]),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Expanded(
-                                child: OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Flexible(
+                        flex: 1,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     primary: Colors.black,
                                     textStyle: TextStyle(
                                       fontSize: 14,
+                                    )),
+                                onPressed: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      "assets/trash_icon.png",
+                                      scale: 0.8,
                                     ),
-                                  ),
-                                  onPressed: () {},
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset("assets/fumigation_icon.png"),
-                                      Text("Fumigación"),
-                                    ],
-                                  ),
+                                    Text(
+                                      "Basura",
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ],
                                 ),
                               ),
-                              SizedBox(
-                                width: 10,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                    ),
+                                    primary: Colors.black,
+                                    textStyle: TextStyle(
+                                      fontSize: 15,
+                                    )),
+                                onPressed: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset("assets/street_icon.png"),
+                                    Text(
+                                      "Asfalto",
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ],
+                                ),
                               ),
-                              Expanded(
-                                child: OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
                                     primary: Colors.black,
                                     textStyle: TextStyle(
                                       fontSize: 14,
+                                    )),
+                                onPressed: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                        "assets/urban_cleaning_icon.png"),
+                                    Text(
+                                      "Aseo Urbano",
+                                      textAlign: TextAlign.center,
                                     ),
-                                  ),
-                                  onPressed: () {},
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset("assets/transit_icon.png"),
-                                      Text("Tránsito"),
-                                    ],
-                                  ),
+                                  ],
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                        SizedBox(
-                          height: 10,
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Flexible(
+                        flex: 1,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(10.0),
+                                    ),
+                                    primary: Colors.black,
+                                    textStyle: TextStyle(
+                                      fontSize: 14,
+                                    )),
+                                onPressed: () {},
+                                child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset("assets/drainage_icon.png"),
+                                      Text("Drenaje"),
+                                    ]),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  primary: Colors.black,
+                                  textStyle: TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset("assets/fumigation_icon.png"),
+                                    Text("Fumigación"),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  primary: Colors.black,
+                                  textStyle: TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset("assets/transit_icon.png"),
+                                    Text("Tránsito"),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        Flexible(
-                          flex: 1,
-                          child: Row(
-                            children: [
-                              Expanded(
-                                child: OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10.0),
-                                    ),
-                                    primary: Colors.black,
-                                    textStyle: TextStyle(
-                                      fontSize: 14,
-                                    ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Flexible(
+                        flex: 1,
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
                                   ),
-                                  onPressed: () {},
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset(
-                                          "assets/ilumination_icon.png"),
-                                      Text("Iluminación"),
-                                    ],
+                                  primary: Colors.black,
+                                  textStyle: TextStyle(
+                                    fontSize: 14,
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Expanded(
-                                child: OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10.0),
-                                    ),
-                                    primary: Colors.black,
-                                    textStyle: TextStyle(
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                  onPressed: () {},
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset("assets/park_icon.png"),
-                                      Text("Espacios Públicos"),
-                                    ],
-                                  ),
+                                onPressed: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset("assets/ilumination_icon.png"),
+                                    Text("Iluminación"),
+                                  ],
                                 ),
                               ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Expanded(
-                                child: OutlinedButton(
-                                  style: OutlinedButton.styleFrom(
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(10.0),
-                                    ),
-                                    primary: Colors.black,
-                                    textStyle: TextStyle(
-                                      fontSize: 14,
-                                    ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
                                   ),
-                                  onPressed: () {},
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Image.asset(
-                                          "assets/animal_protection_icon.png"),
-                                      Text("Protección Animal"),
-                                    ],
+                                  primary: Colors.black,
+                                  textStyle: TextStyle(
+                                    fontSize: 14,
                                   ),
                                 ),
+                                onPressed: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset("assets/park_icon.png"),
+                                    Text("Espacios Públicos"),
+                                  ],
+                                ),
                               ),
-                            ],
-                          ),
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Expanded(
+                              child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                  primary: Colors.black,
+                                  textStyle: TextStyle(
+                                    fontSize: 14,
+                                  ),
+                                ),
+                                onPressed: () {},
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                        "assets/animal_protection_icon.png"),
+                                    Text("Protección Animal"),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -324,19 +317,20 @@ class SelectReport extends StatelessWidget {
                       ),
                       TextButton(
                         style: TextButton.styleFrom(
-                            padding: const EdgeInsets.all(16.0),
-                            primary: Colors.white,
-                            minimumSize: Size(double.infinity, 20),
-                            textStyle: TextStyle(
-                              fontSize: 18,
-                            )),
+                          padding: const EdgeInsets.all(16.0),
+                          primary: Colors.white,
+                          minimumSize: Size(double.infinity, 20),
+                          textStyle: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
                         onPressed: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => RegisterUser(),
-                          //   ),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => ReportForm(),
+                            ),
+                          );
                         },
                         child: Text('Continuar'),
                       ),
