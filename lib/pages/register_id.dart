@@ -10,7 +10,6 @@ class RegisterId extends StatefulWidget {
 
 class _RegisterIdState extends State<RegisterId> {
   final _formKey = GlobalKey<FormState>();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

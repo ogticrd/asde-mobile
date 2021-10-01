@@ -1,3 +1,4 @@
+import 'package:asde_app/pages/home_page.dart';
 import 'package:asde_app/pages/select_report.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,21 +17,26 @@ class MainDrawer extends StatelessWidget {
         padding: EdgeInsets.zero,
         children: [
           Container(
-            height: 80,
             child: DrawerHeader(
               margin: EdgeInsets.zero,
               padding: EdgeInsets.zero,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Icon(Icons.person),
-                  Text(
-                    "Francifelly Bencosme",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Icon(
+                      Icons.person,
+                      size: 100,
                     ),
-                  ),
-                ],
+                    Text(
+                      "Francifelly Bencosme",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -40,6 +46,12 @@ class MainDrawer extends StatelessWidget {
               color: Color(0xFFDADADA),
             ),
             title: Text("Inicio"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
           ),
           ListTile(
             leading: Image.asset(

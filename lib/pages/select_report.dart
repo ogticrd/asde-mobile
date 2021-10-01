@@ -3,8 +3,15 @@ import 'package:flutter/material.dart';
 
 import '../main_drawer.dart';
 
-class SelectReport extends StatelessWidget {
+class SelectReport extends StatefulWidget {
   const SelectReport({Key? key}) : super(key: key);
+
+  @override
+  State<SelectReport> createState() => _SelectReportState();
+}
+
+class _SelectReportState extends State<SelectReport> {
+  String _value = "";
 
   @override
   Widget build(BuildContext context) {
@@ -60,6 +67,9 @@ class SelectReport extends StatelessWidget {
                             Expanded(
                               child: OutlinedButton(
                                 style: OutlinedButton.styleFrom(
+                                    backgroundColor: (_value == "Basura"
+                                        ? Colors.lightBlue[50]
+                                        : Colors.white),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
@@ -67,7 +77,11 @@ class SelectReport extends StatelessWidget {
                                     textStyle: TextStyle(
                                       fontSize: 14,
                                     )),
-                                onPressed: () {},
+                                onPressed: () {
+                                  setState(() {
+                                    _value = "Basura";
+                                  });
+                                },
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -89,6 +103,9 @@ class SelectReport extends StatelessWidget {
                             Expanded(
                               child: OutlinedButton(
                                 style: OutlinedButton.styleFrom(
+                                    backgroundColor: (_value == "Asfalto"
+                                        ? Colors.lightBlue[50]
+                                        : Colors.white),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
@@ -96,7 +113,11 @@ class SelectReport extends StatelessWidget {
                                     textStyle: TextStyle(
                                       fontSize: 15,
                                     )),
-                                onPressed: () {},
+                                onPressed: () {
+                                  setState(() {
+                                    _value = "Asfalto";
+                                  });
+                                },
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -115,6 +136,9 @@ class SelectReport extends StatelessWidget {
                             Expanded(
                               child: OutlinedButton(
                                 style: OutlinedButton.styleFrom(
+                                    backgroundColor: (_value == "Aseo Urbano"
+                                        ? Colors.lightBlue[50]
+                                        : Colors.white),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
@@ -122,7 +146,11 @@ class SelectReport extends StatelessWidget {
                                     textStyle: TextStyle(
                                       fontSize: 14,
                                     )),
-                                onPressed: () {},
+                                onPressed: () {
+                                  setState(() {
+                                    _value = "Aseo Urbano";
+                                  });
+                                },
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -149,6 +177,9 @@ class SelectReport extends StatelessWidget {
                             Expanded(
                               child: OutlinedButton(
                                 style: OutlinedButton.styleFrom(
+                                    backgroundColor: (_value == "Drenaje"
+                                        ? Colors.lightBlue[50]
+                                        : Colors.white),
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(10.0),
                                     ),
@@ -156,7 +187,11 @@ class SelectReport extends StatelessWidget {
                                     textStyle: TextStyle(
                                       fontSize: 14,
                                     )),
-                                onPressed: () {},
+                                onPressed: () {
+                                  setState(() {
+                                    _value = "Drenaje";
+                                  });
+                                },
                                 child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
@@ -171,6 +206,9 @@ class SelectReport extends StatelessWidget {
                             Expanded(
                               child: OutlinedButton(
                                 style: OutlinedButton.styleFrom(
+                                  backgroundColor: (_value == "Fumigación"
+                                      ? Colors.lightBlue[50]
+                                      : Colors.white),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
@@ -179,7 +217,11 @@ class SelectReport extends StatelessWidget {
                                     fontSize: 14,
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  setState(() {
+                                    _value = "Fumigación";
+                                  });
+                                },
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -195,6 +237,9 @@ class SelectReport extends StatelessWidget {
                             Expanded(
                               child: OutlinedButton(
                                 style: OutlinedButton.styleFrom(
+                                  backgroundColor: (_value == "Tránsito"
+                                      ? Colors.lightBlue[50]
+                                      : Colors.white),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
@@ -203,7 +248,11 @@ class SelectReport extends StatelessWidget {
                                     fontSize: 14,
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  setState(() {
+                                    _value = "Tránsito";
+                                  });
+                                },
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -226,6 +275,9 @@ class SelectReport extends StatelessWidget {
                             Expanded(
                               child: OutlinedButton(
                                 style: OutlinedButton.styleFrom(
+                                  backgroundColor: (_value == "Iluminación"
+                                      ? Colors.lightBlue[50]
+                                      : Colors.white),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
@@ -234,7 +286,11 @@ class SelectReport extends StatelessWidget {
                                     fontSize: 14,
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  setState(() {
+                                    _value = "Iluminación";
+                                  });
+                                },
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -250,6 +306,10 @@ class SelectReport extends StatelessWidget {
                             Expanded(
                               child: OutlinedButton(
                                 style: OutlinedButton.styleFrom(
+                                  backgroundColor:
+                                      (_value == "Espacios Públicos"
+                                          ? Colors.lightBlue[50]
+                                          : Colors.white),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
@@ -258,7 +318,11 @@ class SelectReport extends StatelessWidget {
                                     fontSize: 14,
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  setState(() {
+                                    _value = "Espacios Públicos";
+                                  });
+                                },
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -274,6 +338,10 @@ class SelectReport extends StatelessWidget {
                             Expanded(
                               child: OutlinedButton(
                                 style: OutlinedButton.styleFrom(
+                                  backgroundColor:
+                                      (_value == "Protección Animal"
+                                          ? Colors.lightBlue[50]
+                                          : Colors.white),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0),
                                   ),
@@ -282,7 +350,11 @@ class SelectReport extends StatelessWidget {
                                     fontSize: 14,
                                   ),
                                 ),
-                                onPressed: () {},
+                                onPressed: () {
+                                  setState(() {
+                                    _value = "Protección Animal";
+                                  });
+                                },
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
