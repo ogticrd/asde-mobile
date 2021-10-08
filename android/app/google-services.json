@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "418934792564",
+    "project_id": "email-signin-18396",
+    "storage_bucket": "email-signin-18396.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:418934792564:android:360fc6c48398bb160e0c21",
+        "android_client_info": {
+          "package_name": "com.example.asde_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "418934792564-0qreeanfuqjr57dvp5fsg9elqt68r85h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-XDqqEznn5E1gxxIMGHj6R_cVTcWQ8uw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "418934792564-0qreeanfuqjr57dvp5fsg9elqt68r85h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
