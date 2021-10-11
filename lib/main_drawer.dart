@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'pages/payment_page.dart';
+
 class MainDrawer extends StatelessWidget {
   const MainDrawer({
     Key? key,
@@ -65,6 +67,12 @@ class MainDrawer extends StatelessWidget {
               color: Color(0xFFDADADA),
             ),
             title: Text("Pagos de Facturas"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PaymentPage()),
+              );
+            },
           ),
           ListTile(
             leading: Image.asset(
