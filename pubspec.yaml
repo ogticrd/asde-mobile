@@ -36,6 +36,7 @@ dependencies:
   image_picker: ^0.8.4+2
   url_launcher: ^6.0.12
   http: ^0.13.4
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:

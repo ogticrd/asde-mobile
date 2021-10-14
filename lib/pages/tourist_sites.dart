@@ -3,8 +3,8 @@ import 'package:flutter/rendering.dart';
 
 import '../main_drawer.dart';
 
-class TouristSites extends StatelessWidget {
-  const TouristSites({Key? key}) : super(key: key);
+class TouristSitesPage extends StatelessWidget {
+  const TouristSitesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

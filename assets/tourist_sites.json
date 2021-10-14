@@ -1,0 +1,24 @@
+[
+    {
+        "id" : 1,
+        "title" : "Maravilla Natural: Los 3 ojos",
+        "image" : "https://www.cataloniahotels.com/es/blog/wp-content/uploads/2020/08/Lagos_Tres_Ojos-min-1920x1366.jpg",
+        "shortText" : "Los lagos son alimentados por un río subterráneo llamado brujuela, que llega hasta Boca Chica. El agua de los tres lagos subterráneos es muy clara y limpia, se puede ver algunos peces.",
+        "longText" : "El Parque Nacional Los Tres Ojos es una caverna que tiene un lago de agua dulce, dividido naturalmente en tres lagos que solo se ven desde adentro y un único lago que se puede ver sin necesidad de estar dentro.\nLos lagos son alimentados por un río subterráneo llamado brujuela, que llega hasta Boca Chica. El agua de los tres lagos subterráneos es muy clara y limpia, se puede ver algunos peces.",
+        "availability" : "Disponible todos los días",
+        "schedule" : "8:30 a.m. hasta 5:30 p.m.",
+        "location" : "C.Marginal Las Americas Este, Santo Domingo Este",
+        "contact" : "(809) 788 7056"
+    },
+    {
+        "id" : 2,
+        "title" : "Acuario Nacional",
+        "image" : "https://dominicanalifestyle.com/wp-content/uploads/2020/07/19932504_675265255997991_2286523786754785280_n.jpg",
+        "shortText" : "Los lagos son alimentados por un río subterráneo llamado brujuela, que llega hasta Boca Chica. El agua de los tres lagos subterráneos es muy clara y limpia, se puede ver algunos peces.",
+        "longText" : "El Parque Nacional Los Tres Ojos es una caverna que tiene un lago de agua dulce, dividido naturalmente en tres lagos que solo se ven desde adentro y un único lago que se puede ver sin necesidad de estar dentro.\nLos lagos son alimentados por un río subterráneo llamado brujuela, que llega hasta Boca Chica. El agua de los tres lagos subterráneos es muy clara y limpia, se puede ver algunos peces.",
+        "availability" : "Disponible todos los días",
+        "schedule" : "8:30 a.m. hasta 5:30 p.m.",
+        "location" : "C.Marginal Las Americas Este, Santo Domingo Este",
+        "contact" : "(809) 788 7056"
+    }
+]

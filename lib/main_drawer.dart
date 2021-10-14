@@ -1,3 +1,4 @@
+import 'package:asde_app/pages/contact_us.dart';
 import 'package:asde_app/pages/home_page.dart';
 import 'package:asde_app/pages/select_report.dart';
 import 'package:flutter/cupertino.dart';
@@ -60,6 +61,12 @@ class MainDrawer extends StatelessWidget {
               "assets/new_feeds.png",
             ),
             title: Text("Servicios"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
           ),
           ListTile(
             leading: Icon(
@@ -92,12 +99,24 @@ class MainDrawer extends StatelessWidget {
               color: Color(0xFFDADADA),
             ),
             title: Text("Mis Reclamaciones"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
           ),
           ListTile(
             leading: Image.asset(
               "assets/messages.png",
             ),
             title: Text("Servicio al cliente"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
           ),
           ListTile(
             leading: Icon(
@@ -105,12 +124,24 @@ class MainDrawer extends StatelessWidget {
               color: Color(0xFFDADADA),
             ),
             title: Text("Ruta y frecuencia"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
           ),
           ListTile(
             leading: Image.asset(
               "assets/messages.png",
             ),
             title: Text("Contactanos"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ContactUs()),
+              );
+            },
           ),
           ListTile(
             leading: Icon(
@@ -118,6 +149,12 @@ class MainDrawer extends StatelessWidget {
               color: Color(0xFFDADADA),
             ),
             title: Text("Ajustes"),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+              );
+            },
           ),
         ],
       ),
