@@ -287,7 +287,7 @@ class _HomePageState extends State<HomePage> {
                       }
                       return CarouselSlider(
                         options: CarouselOptions(
-                          height: 290.0,
+                          height: 270.0,
                           enableInfiniteScroll: false,
                           viewportFraction: 0.95,
                         ),

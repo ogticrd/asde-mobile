@@ -1,7 +1,11 @@
+import 'dart:convert';
 import 'dart:io';
-
+import 'package:asde_app/models/report.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive/hive.dart';
+import 'package:intl/intl.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:image_picker/image_picker.dart';
@@ -28,6 +32,7 @@ class _ReportFormState extends State<ReportForm> {
     sectorController.dispose();
     barrioController.dispose();
     locationController.dispose();
+    Hive.close();
     super.dispose();
   }
 
@@ -218,6 +223,17 @@ class _ReportFormState extends State<ReportForm> {
                                 ),
                               ),
                               onPressed: () async {
+                                DateTime now = DateTime.now();
+                                DateFormat formatter = DateFormat('yyyy-MM-dd');
+                                String date = formatter.format(now);
+                                var report = Report(
+                                    widget.reportType,
+                                    descriptionController.text,
+                                    sectorController.text,
+                                    barrioController.text,
+                                    locationController.text,
+                                    base64Encode(image!.readAsBytesSync()),
+                                    date);
                                 String username = 'pruebastriny@gmail.com';
                                 String password = 'triny1234TRINY';
                                 final smtpServer = gmail(username, password);
@@ -244,6 +260,9 @@ class _ReportFormState extends State<ReportForm> {
                                       await send(message, smtpServer);
                                   print(
                                       'Message sent: ' + sendReport.toString());
+
+                                  var box = Hive.box<Report>("reports");
+                                  box.add(report);
                                 } on MailerException catch (e) {
                                   print('Message not sent. ' + e.message);
                                   for (var p in e.problems) {

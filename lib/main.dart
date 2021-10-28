@@ -1,7 +1,15 @@
 import 'package:asde_app/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+import 'models/report.dart';
+
+void main() async {
+  await Hive.initFlutter();
+  Hive.registerAdapter<Report>(ReportAdapter());
+  await Hive.openBox<Report>("reports");
+
   runApp(MyApp());
 }
 

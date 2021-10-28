@@ -1,4 +1,7 @@
 import 'package:asde_app/pages/home_page.dart';
+import 'package:asde_app/pages/private_policy.dart';
+import 'package:asde_app/pages/terms_conditions_page.dart';
+import 'package:asde_app/pages/version_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../main_drawer.dart';
@@ -111,28 +114,30 @@ class SettingsPage extends StatelessWidget {
                   ListTile(
                     title: Text("Términos y condiciones"),
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => HomePage()),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TermsConditionsPage()),
+                      );
                     },
                   ),
                   ListTile(
                     title: Text("Versión de la aplicación"),
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => HomePage()),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => VersionPage()),
+                      );
                     },
                   ),
                   ListTile(
                     title: Text("Política de privacidad"),
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => HomePage()),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => PrivatePolicyPage()),
+                      );
                     },
                   ),
                   ListTile(

@@ -9,8 +9,10 @@ import 'package:intl/intl.dart';
 Future<List<News>> fetchAllNews() async {
   final DateFormat formatter = DateFormat('dd/MM/yyyy');
   List<News> newsList = [];
-  final response = await http
-      .get(Uri.parse('https://ayuntamientosde.gob.do/wp-json/wp/v2/posts'));
+  final response = await http.get(
+    Uri.parse(
+        'https://ayuntamientosde.gob.do/wp-json/wp/v2/posts?categories=5'),
+  );
 
   if (response.statusCode == 200) {
     // If the server did return a 200 OK response,
