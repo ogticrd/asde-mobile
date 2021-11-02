@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title" : "",
+        "description" : "",
+        "public": "",
+        "offerer": "",
+        "tel": "",
+        "email": "",
+        "requirements": [
+
+        ],
+        "procedures": [
+
+        ],
+        "availability_days": "",
+        "availability_time": "",
+        "cost": "",
+        "expected_time" : "",
+        "delivery_channel": "",
+        "additional_information": [
+            {
+                "text": "",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "",
+                "is_bold": true,
+                "color": ""
+            }
+        ]
+    }
+]

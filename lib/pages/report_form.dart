@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:asde_app/models/report.dart';
+import 'package:asde_app/models/sector.dart';
+import 'package:asde_app/services/api_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -13,8 +15,8 @@ import '../main_drawer.dart';
 
 class ReportForm extends StatefulWidget {
   const ReportForm({Key? key, required this.reportType}) : super(key: key);
-
   final String reportType;
+
   @override
   State<ReportForm> createState() => _ReportFormState();
 }
@@ -25,6 +27,11 @@ class _ReportFormState extends State<ReportForm> {
   final barrioController = TextEditingController();
   final locationController = TextEditingController();
   File? image;
+  late Future<List<Sector>> allSectors;
+  late Sector selectedSector;
+  late Future<List<String>> neighborhoodList = Future<List<String>>.value([]);
+
+  late String selectedNeighborhood;
 
   @override
   void dispose() {
@@ -34,6 +41,12 @@ class _ReportFormState extends State<ReportForm> {
     locationController.dispose();
     Hive.close();
     super.dispose();
+  }
+
+  @override
+  void initState() {
+    allSectors = fetchAllSectors();
+    super.initState();
   }
 
   @override
@@ -115,9 +128,9 @@ class _ReportFormState extends State<ReportForm> {
                         height: 15,
                       ),
                       TextFormField(
-                        controller: sectorController,
+                        controller: locationController,
                         decoration: InputDecoration(
-                          hintText: "Sector",
+                          hintText: "Dirección",
                           border: OutlineInputBorder(
                             borderSide: new BorderSide(
                               color: Color(0xFFDEDEDE),
@@ -125,6 +138,66 @@ class _ReportFormState extends State<ReportForm> {
                             borderRadius: BorderRadius.circular(5.0),
                           ),
                         ),
+                      ),
+                      FutureBuilder<List<Sector>>(
+                        future: allSectors,
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            return DropdownButton(
+                              items: snapshot.data!
+                                  .map<DropdownMenuItem<Sector>>(
+                                      (Sector sector) {
+                                return DropdownMenuItem<Sector>(
+                                  value: sector,
+                                  child: Text(sector.name),
+                                );
+                              }).toList(),
+                              hint: Text("Sector"),
+                              onChanged: (Sector? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    neighborhoodList =
+                                        fetchNeiborhoodBySector(value);
+                                    selectedSector = value;
+                                  }
+                                });
+                              },
+                            );
+                          } else if (snapshot.hasError) {
+                            return Text('${snapshot.error}');
+                          }
+                          // By default, show a loading spinner.
+                          return const CircularProgressIndicator();
+                        },
+                      ),
+                      FutureBuilder<List<String>>(
+                        future: neighborhoodList,
+                        builder: (context, snapshot) {
+                          if (snapshot.hasData) {
+                            return DropdownButton(
+                              items: snapshot.data!
+                                  .map<DropdownMenuItem<String>>(
+                                      (String neighborhood) {
+                                return DropdownMenuItem<String>(
+                                  value: neighborhood,
+                                  child: Text(neighborhood),
+                                );
+                              }).toList(),
+                              hint: Text("Barrio"),
+                              onChanged: (String? value) {
+                                setState(() {
+                                  if (value != null) {
+                                    selectedNeighborhood = value;
+                                  }
+                                });
+                              },
+                            );
+                          } else if (snapshot.hasError) {
+                            return Text('${snapshot.error}');
+                          }
+                          // By default, show a loading spinner.
+                          return const CircularProgressIndicator();
+                        },
                       ),
                       SizedBox(
                         height: 15,

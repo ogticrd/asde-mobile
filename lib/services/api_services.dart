@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:asde_app/models/news.dart';
+import 'package:asde_app/models/sector.dart';
 import 'package:asde_app/models/tourist_sites.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
@@ -69,4 +70,55 @@ Future<List<TouristSite>> fetchAllTouristSites() async {
     );
   }
   return sitesList;
+}
+
+Future<List<Sector>> fetchAllSectors() async {
+  List<Sector> sectorsList = [];
+  final response = await http.get(
+    Uri.parse(
+        'https://api.digital.gob.do/v1/territories/sections?municipalityCode=01&provinceCode=32&regionCode=10'),
+  );
+
+  if (response.statusCode == 200) {
+    // If the server did return a 200 OK response,
+    // then parse the JSON.
+    final data = await jsonDecode(response.body);
+
+    for (var i = 0; i < data["data"].length; i++) {
+      sectorsList.add(
+        Sector(
+            code: data["data"][i]["code"],
+            name: data["data"][i]["name"],
+            districtCode: data["data"][i]["districtCode"]),
+      );
+    }
+    return sectorsList;
+  } else {
+    // If the server did not return a 200 OK response,
+    // then throw an exception.
+    throw Exception('Failed to load sectors');
+  }
+}
+
+Future<List<String>> fetchNeiborhoodBySector(Sector section) async {
+  List<String> neighborhoodsList = [];
+  final response = await http.get(
+    Uri.parse(
+        'https://api.digital.gob.do/v1/territories/regions/10/provinces/32/municipalities/01/districts/${section.districtCode}/sections/${section.code}/neighborhoods'),
+  );
+
+  if (response.statusCode == 200) {
+    // If the server did return a 200 OK response,
+    // then parse the JSON.
+    final data = await jsonDecode(response.body);
+
+    for (var i = 0; i < data["data"].length; i++) {
+      neighborhoodsList.add(data["data"][i]["name"]);
+    }
+    return neighborhoodsList;
+  } else {
+    // If the server did not return a 200 OK response,
+    // then throw an exception.
+    throw Exception('Failed to load neighborhoods');
+  }
 }

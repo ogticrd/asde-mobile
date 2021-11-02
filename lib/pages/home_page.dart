@@ -1,6 +1,6 @@
 import 'package:asde_app/models/news.dart';
 import 'package:asde_app/models/tourist_sites.dart';
-import 'package:asde_app/services/services.dart';
+import 'package:asde_app/services/api_services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
