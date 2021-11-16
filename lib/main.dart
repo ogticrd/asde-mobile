@@ -1,11 +1,19 @@
-import 'package:asde_app/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-
 import 'models/report.dart';
+import 'pages/home_page.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+//   // Get a location using getDatabasesPath
+//   var databasesPath = await getDatabasesPath();
+//   String path = join(databasesPath, 'routes.db');
+
+// // Delete the database
+//   await deleteDatabase(path);
+
   await Hive.initFlutter();
   Hive.registerAdapter<Report>(ReportAdapter());
   await Hive.openBox<Report>("reports");
@@ -19,7 +27,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+      home: HomePage(),
       theme: ThemeData(
         fontFamily: "Gotham",
         backgroundColor: Colors.white,

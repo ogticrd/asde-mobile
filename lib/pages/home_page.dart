@@ -23,9 +23,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
-    super.initState();
     allTouristSites = fetchAllTouristSites();
     allNews = fetchAllNews();
+    super.initState();
   }
 
   @override

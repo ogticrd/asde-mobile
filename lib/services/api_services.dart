@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:asde_app/models/news.dart';
 import 'package:asde_app/models/sector.dart';
+import 'package:asde_app/models/service.dart';
 import 'package:asde_app/models/tourist_sites.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
@@ -41,13 +42,13 @@ Future<List<News>> fetchAllNews() async {
 
 getNewsImage(href) async {
   final response = await http.get(Uri.parse(href));
-
   if (response.statusCode == 200) {
     return jsonDecode(response.body)["guid"]["rendered"];
   } else {
     // If the server did not return a 200 OK response,
     // then throw an exception.
-    throw Exception('Failed to load news image');
+    print('Failed to load news image for: ' + href);
+    return "";
   }
 }
 
@@ -100,7 +101,7 @@ Future<List<Sector>> fetchAllSectors() async {
   }
 }
 
-Future<List<String>> fetchNeiborhoodBySector(Sector section) async {
+Future<List<String>> fetchNeiborhoodsBySector(Sector section) async {
   List<String> neighborhoodsList = [];
   final response = await http.get(
     Uri.parse(
@@ -121,4 +122,51 @@ Future<List<String>> fetchNeiborhoodBySector(Sector section) async {
     // then throw an exception.
     throw Exception('Failed to load neighborhoods');
   }
+}
+
+Future<List<Service>> fetchAllServices() async {
+  List<Service> servicesList = [];
+  String response = await rootBundle.loadString('assets/services.json');
+  final data = await jsonDecode(response);
+  try {
+    for (var i = 0; i < data.length; i++) {
+      servicesList.add(
+        Service(
+          id: data[i]["id"],
+          title: data[i]["title"],
+          image: data[i]["image"],
+          description: data[i]["description"],
+          public: data[i]["public"],
+          offerer: data[i]["offerer"],
+          tel: data[i]["tel"],
+          email: data[i]["email"].cast<String>(),
+          requirements: data[i]["requirements"].cast<String>(),
+          procedures: data[i]["procedures"].cast<String>(),
+          availableDays: data[i]["available_days"],
+          availableTime: data[i]["available_time"],
+          cost: data[i]["cost"],
+          expectedTime: data[i]["expected_time"],
+          deliveryChannel: data[i]["delivery_channel"],
+          additionalInformation: converToAdditionalInformationList(
+              data[i]["additional_information"]),
+        ),
+      );
+    }
+  } catch (e) {
+    print("ERROR");
+    print(e.toString());
+  }
+  return servicesList;
+}
+
+List<AdditionalInformation> converToAdditionalInformationList(data) {
+  List<AdditionalInformation> additionalInformationList = [];
+  for (var i = 0; i < data.length; i++) {
+    additionalInformationList.add(AdditionalInformation(
+      text: data[i]["text"],
+      isBold: data[i]["is_bold"],
+      color: data[i]["color"],
+    ));
+  }
+  return additionalInformationList;
 }

@@ -8,10 +8,10 @@ class PaymentPage extends StatefulWidget {
   const PaymentPage({Key? key}) : super(key: key);
 
   @override
-  State<PaymentPage> createState() => _SelectReportState();
+  State<PaymentPage> createState() => _PaymentPageState();
 }
 
-class _SelectReportState extends State<PaymentPage> {
+class _PaymentPageState extends State<PaymentPage> {
   String _value = "One";
   final _scaffoldKey = GlobalKey<ScaffoldState>();
 

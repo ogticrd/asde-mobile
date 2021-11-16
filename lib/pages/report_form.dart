@@ -28,10 +28,10 @@ class _ReportFormState extends State<ReportForm> {
   final locationController = TextEditingController();
   File? image;
   late Future<List<Sector>> allSectors;
-  late Sector selectedSector;
+  Sector? selectedSector;
   late Future<List<String>> neighborhoodList = Future<List<String>>.value([]);
 
-  late String selectedNeighborhood;
+  String? selectedNeighborhood;
 
   @override
   void dispose() {
@@ -127,23 +127,16 @@ class _ReportFormState extends State<ReportForm> {
                       SizedBox(
                         height: 15,
                       ),
-                      TextFormField(
-                        controller: locationController,
-                        decoration: InputDecoration(
-                          hintText: "Dirección",
-                          border: OutlineInputBorder(
-                            borderSide: new BorderSide(
-                              color: Color(0xFFDEDEDE),
-                            ),
-                            borderRadius: BorderRadius.circular(5.0),
-                          ),
-                        ),
-                      ),
                       FutureBuilder<List<Sector>>(
                         future: allSectors,
                         builder: (context, snapshot) {
                           if (snapshot.hasData) {
-                            return DropdownButton(
+                            return DropdownButtonFormField(
+                              value: selectedSector,
+                              decoration: InputDecoration(
+                                isDense: true,
+                                border: OutlineInputBorder(),
+                              ),
                               items: snapshot.data!
                                   .map<DropdownMenuItem<Sector>>(
                                       (Sector sector) {
@@ -157,7 +150,7 @@ class _ReportFormState extends State<ReportForm> {
                                 setState(() {
                                   if (value != null) {
                                     neighborhoodList =
-                                        fetchNeiborhoodBySector(value);
+                                        fetchNeiborhoodsBySector(value);
                                     selectedSector = value;
                                   }
                                 });
@@ -170,11 +163,19 @@ class _ReportFormState extends State<ReportForm> {
                           return const CircularProgressIndicator();
                         },
                       ),
+                      SizedBox(
+                        height: 15,
+                      ),
                       FutureBuilder<List<String>>(
                         future: neighborhoodList,
                         builder: (context, snapshot) {
                           if (snapshot.hasData) {
-                            return DropdownButton(
+                            return DropdownButtonFormField(
+                              value: selectedNeighborhood,
+                              decoration: InputDecoration(
+                                isDense: true,
+                                border: OutlineInputBorder(),
+                              ),
                               items: snapshot.data!
                                   .map<DropdownMenuItem<String>>(
                                       (String neighborhood) {
@@ -201,17 +202,6 @@ class _ReportFormState extends State<ReportForm> {
                       ),
                       SizedBox(
                         height: 15,
-                      ),
-                      TextFormField(
-                        controller: barrioController,
-                        decoration: InputDecoration(
-                          hintText: "Barrio",
-                          border: OutlineInputBorder(
-                            borderSide:
-                                new BorderSide(color: Color(0xFFDEDEDE)),
-                            borderRadius: BorderRadius.circular(5.0),
-                          ),
-                        ),
                       ),
                       SizedBox(
                         height: 15,

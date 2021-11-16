@@ -1,6 +1,7 @@
 import 'package:asde_app/pages/contact_us.dart';
 import 'package:asde_app/pages/home_page.dart';
 import 'package:asde_app/pages/select_report.dart';
+import 'package:asde_app/pages/services_page.dart';
 import 'package:asde_app/pages/settings_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'pages/my_reports_page.dart';
 import 'pages/payment_page.dart';
+import 'pages/routes_page.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({
@@ -67,7 +69,7 @@ class MainDrawer extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomePage()),
+                MaterialPageRoute(builder: (context) => ServicesPage()),
               );
             },
           ),
@@ -207,7 +209,7 @@ class MainDrawer extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomePage()),
+                MaterialPageRoute(builder: (context) => RoutesPage()),
               );
             },
           ),

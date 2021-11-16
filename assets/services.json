@@ -1,32 +1,125 @@
 [
     {
         "id": 1,
-        "title" : "",
-        "description" : "",
-        "public": "",
-        "offerer": "",
-        "tel": "",
-        "email": "",
+        "title" : "Registro de documentos",
+        "image" : "registro_de_documentos.png",
+        "description" : "El servicio consiste en dar fecha cierta a todos los documentos civiles, judiciales y extrajudiciales ademas son transcritos en los libros de registro civil y conservaduría de hipotecas.",
+        "public": "Público en General",
+        "offerer": "el Departamento de Registro Civil de la Dirección de Ingresos Municipales",
+        "tel": "(809) 788-7676 Ext: 1064",
+        "email": [
+            "ingresos@asde.gov.do",
+            "registrocivil@asde.gov.do"
+        ],
         "requirements": [
-
+            "Traer los documentos a registrar en original y copia"
         ],
         "procedures": [
-
+            "Solicitud verbal",
+            "Presentar original y copia del documento a registrar",
+            "Realizar el pago del mismo en caja" 
         ],
-        "availability_days": "",
-        "availability_time": "",
-        "cost": "",
-        "expected_time" : "",
-        "delivery_channel": "",
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 4:00 p.m.",
+        "cost": "Varía según el servicio",
+        "expected_time" : "Inmediato",
+        "delivery_channel": "Presencial",
         "additional_information": [
             {
-                "text": "",
+                "text": "Costos:",
                 "is_bold": true,
                 "color": ""
             },
             {
-                "text": "",
+                "text": "RD$ 200.00 del registro fijo y del registro proporcional dependerá del valor envuelto en el documento a registrar.",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Información importante:",
                 "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Amparados en la Ley 2334 del 20 de mayo 1885 de los activos civiles judiciales y extrajudiciales y Ley 483.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title" : "Expedición certificaciones sepelio",
+        "image" : "expedicion_sepelio.png",
+        "description" : "El servicio consiste en emitir una certificación de sepelio del fallecido en caso de necesitarla, la misma tiene un costo de $300.00 pesos dominicanos",
+        "public": "Público en General",
+        "offerer": "el Departamento de Administración Cementerio",
+        "tel": "(809) 937-0842 Ext: 0",
+        "email": [
+            "ingresos@asde.gov.do"
+        ],
+        "requirements": [
+            "Llevar al cementerio una copia de cédula del solicitante y copia de cédula del fallecido"
+        ],
+        "procedures": [
+            "El munícipe solicita en la oficina del Cementerio la Certificación de Sepelio para saber si la persona esta enterrada en dicho cementerio.",
+            "Presentar original y copia del documento a registrar"
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 5:00 p.m.",
+        "cost": "RD$300.00",
+        "expected_time" : "Inmediata",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Si necesita alguna otra información adicional, favor de comunicarse con nosotros al teléfono 809-788-7676.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title" : "Registro de venta condicional",
+        "image" : "registro_venta_condicional.png",
+        "description" : "El servicio consiste en el registro de documentos tales como contrato de ventas condicionales de muebles, para ser inscritos y legalizados en los libros de registro civil y financiamiento de vehículos.",
+        "public": "Público en General",
+        "offerer": "el Departamento de Registro Civil, Dirección de Ingresos Municipales",
+        "tel": "(809) 788-7676 Ext: 1064",
+        "email": [],
+        "requirements": [
+            "Solicitar mediante carta a Registro Civil la informaicón que se requiere",
+            "Traer Contrato de Venta Original y una copia"
+        ],
+        "procedures": [
+            "Presentar original y copia del documento a registrar",
+            "Esperar 3 a 5 días para recibir respuesta en caso de certificación",
+            "Realizar el pago correspondiente."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 4:00 p.m.",
+        "cost": "Varía según servicio",
+        "expected_time" : "2 día(s) laborable",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Costos",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "1% del valor del contrato y un 6% del 1%. RD$200 por cada documento",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Información importante",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Ley 482 y Ley 2334.",
+                "is_bold": false,
                 "color": ""
             }
         ]
