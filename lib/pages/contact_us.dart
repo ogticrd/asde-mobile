@@ -1,3 +1,5 @@
+import 'package:asde_app/models/contact.dart';
+import 'package:asde_app/services/api_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -12,7 +14,11 @@ class ContactUs extends StatefulWidget {
 }
 
 class _ContactUsState extends State<ContactUs> {
+  late List<Contact> _allContacts;
+  late List<Contact> _shownContacts;
+  final searchController = TextEditingController();
   final _scaffoldKey = GlobalKey<ScaffoldState>();
+
   void showInSnackBar(String value) {
     ScaffoldMessenger.of(context)
         .showSnackBar(new SnackBar(content: new Text(value)));
@@ -24,6 +30,9 @@ class _ContactUsState extends State<ContactUs> {
     WidgetsBinding.instance?.addPostFrameCallback((_) =>
         ScaffoldMessenger.of(_scaffoldKey.currentContext!)
             .showSnackBar(WhatsAppSnackBar()));
+
+    _allContacts = getContacts();
+    _shownContacts = _allContacts;
   }
 
   SnackBar WhatsAppSnackBar() => SnackBar(
@@ -69,7 +78,7 @@ class _ContactUsState extends State<ContactUs> {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       );
@@ -109,6 +118,7 @@ class _ContactUsState extends State<ContactUs> {
                 height: 20,
               ),
               TextField(
+                controller: searchController,
                 decoration: InputDecoration(
                   hintText: "BUSCAR",
                   suffixIcon: Icon(Icons.search, color: Color(0xFF1BBC9B)),
@@ -122,720 +132,68 @@ class _ContactUsState extends State<ContactUs> {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
+                onChanged: (value) {
+                  setState(() {
+                    _shownContacts = _allContacts
+                        .where((contact) => contact.name
+                            .toLowerCase()
+                            .contains(value.toLowerCase()))
+                        .toList();
+                  });
+                },
               ),
               SizedBox(
                 height: 20,
               ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Ayuntamiento Municipal SDE",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
+              ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                itemCount: _shownContacts.length,
+                itemBuilder: (context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(bottom: 20.0),
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          elevation: 0,
+                          shadowColor: Colors.transparent,
+                          minimumSize: Size(double.infinity, 0),
+                          onPrimary: Colors.black,
+                          primary: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          )),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              _shownContacts[index].name,
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                            Divider(
+                              thickness: 2,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Image.asset("assets/phone.png"),
+                                SizedBox(width: 15),
+                                Text(_shownContacts[index].formattedPhone),
+                              ],
+                            )
+                          ],
                         ),
                       ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7056"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887056"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Recepción acaldía",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7676 Ext: 1001"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887676"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Cuerpo de Bomberos",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-238-5312"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8092385312"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Recepción acaldía",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7676 Ext: 1001"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887676"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "9-1-1",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("911"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://911"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Recepción acaldía",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7676 Ext: 1001"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887676"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "DIGESETT",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-686-6520"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8096866520"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Recepción acaldía",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7676 Ext: 1001"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887676"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Drenaje Pluvial ASDE",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7676 Ext: 2852"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887676"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Recepción acaldía",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7676 Ext: 1001"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887676"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Ingeniería y Obras ASDE",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7676 Ext:2521"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887676"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Recepción acaldía",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7676 Ext: 1001"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887676"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Cementerio Cristo Salvador",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-937-0842"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8099370842"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Recepción acaldía",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7676 Ext: 1001"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887676"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Funeraria Villa Carmen",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-728-2762"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097282762"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Recepción acaldía",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-788-7676 Ext: 1001"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8097887676"),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shadowColor: Colors.transparent,
-                    minimumSize: Size(double.infinity, 0),
-                    onPrimary: Colors.black,
-                    primary: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    )),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16.0, bottom: 16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Funeraria Isabelita",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      Divider(
-                        thickness: 2,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/phone.png"),
-                          SizedBox(width: 15),
-                          Text("809-599-2798"),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                onPressed: () => launch("tel://8095992798"),
+                      onPressed: () => launch(
+                          "tel://" + _shownContacts[index].unformattedPhone),
+                    ),
+                  );
+                },
               ),
             ],
           ),

@@ -74,9 +74,10 @@ class _ServicesPageState extends State<ServicesPage> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => ServiceDetailPage(
-                                              service: snapshot.data![index],
-                                            )),
+                                      builder: (context) => ServiceDetailPage(
+                                        service: snapshot.data![index],
+                                      ),
+                                    ),
                                   );
                                 },
                                 child: Card(

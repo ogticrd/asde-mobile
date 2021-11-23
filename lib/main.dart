@@ -1,3 +1,5 @@
+import 'package:asde_app/services/api_services.dart';
+import 'package:asde_app/singleton.dart';
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -7,22 +9,16 @@ import 'pages/home_page.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-//   // Get a location using getDatabasesPath
-//   var databasesPath = await getDatabasesPath();
-//   String path = join(databasesPath, 'routes.db');
-
-// // Delete the database
-//   await deleteDatabase(path);
-
+  Singleton.allNews = fetchAllNews();
   await Hive.initFlutter();
   Hive.registerAdapter<Report>(ReportAdapter());
   await Hive.openBox<Report>("reports");
 
-  runApp(MyApp());
+  runApp(ASDEApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class ASDEApp extends StatelessWidget {
+  const ASDEApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

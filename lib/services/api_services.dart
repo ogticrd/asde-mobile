@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+import 'package:asde_app/models/contact.dart';
 import 'package:asde_app/models/news.dart';
 import 'package:asde_app/models/sector.dart';
 import 'package:asde_app/models/service.dart';
@@ -24,13 +25,15 @@ Future<List<News>> fetchAllNews() async {
     for (var i = 0; i < data.length; i++) {
       //String dateformatted =
       //  formatter.format(DateTime.parse(data[i]["date"].substring(1, 11)));
-      newsList.add(News(
-          id: data[i]["id"],
-          title: data[i]["title"]["rendered"],
-          image: await getNewsImage(
-              data[i]["_links"]["wp:featuredmedia"][0]["href"]),
-          date: formatter.format(DateTime.parse(data[i]["date"])),
-          text: data[i]["content"]["rendered"]));
+      newsList.add(
+        News(
+            id: data[i]["id"],
+            title: data[i]["title"]["rendered"],
+            image: await getNewsImage(
+                data[i]["_links"]["wp:featuredmedia"][0]["href"]),
+            date: formatter.format(DateTime.parse(data[i]["date"])),
+            text: data[i]["content"]["rendered"]),
+      );
     }
     return newsList;
   } else {
@@ -169,4 +172,48 @@ List<AdditionalInformation> converToAdditionalInformationList(data) {
     ));
   }
   return additionalInformationList;
+}
+
+List<Contact> getContacts() {
+  List<Contact> contacts = [
+    new Contact(
+        name: "Ayuntamiento Municipal SDE",
+        formattedPhone: "809-788-7056",
+        unformattedPhone: "8097887056"),
+    new Contact(
+        name: "Recepción acaldía",
+        formattedPhone: "809-788-7676 Ext: 1001",
+        unformattedPhone: "8097887676"),
+    new Contact(
+        name: "Cuerpo de Bomberos",
+        formattedPhone: "809-238-5312",
+        unformattedPhone: "8092385312"),
+    new Contact(name: "9-1-1", formattedPhone: "911", unformattedPhone: "911"),
+    new Contact(
+        name: "DIGESETT",
+        formattedPhone: "809-686-6520",
+        unformattedPhone: "8096866520"),
+    new Contact(
+        name: "Drenaje Pluvial ASDE",
+        formattedPhone: "809-788-7676 Ext: 2852",
+        unformattedPhone: "8097887676"),
+    new Contact(
+        name: "Ingeniería y Obras ASDE",
+        formattedPhone: "809-788-7676 Ext:2521",
+        unformattedPhone: "8097887676"),
+    new Contact(
+        name: "Cementerio Cristo Salvador",
+        formattedPhone: "809-937-0842",
+        unformattedPhone: "8099370842"),
+    new Contact(
+        name: "Funeraria Villa Carmen",
+        formattedPhone: "809-728-2762",
+        unformattedPhone: "8097282762"),
+    new Contact(
+        name: "Funeraria Isabelita",
+        formattedPhone: "809-599-2798",
+        unformattedPhone: "8095992798"),
+  ];
+
+  return contacts;
 }
