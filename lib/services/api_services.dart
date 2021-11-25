@@ -14,7 +14,7 @@ Future<List<News>> fetchAllNews() async {
   List<News> newsList = [];
   final response = await http.get(
     Uri.parse(
-        'https://ayuntamientosde.gob.do/wp-json/wp/v2/posts?categories=5'),
+        'https://ayuntamientosde.gob.do/wp-json/wp/v2/posts?categories=5&_embed=wp:featuredmedia'),
   );
 
   if (response.statusCode == 200) {
@@ -23,14 +23,11 @@ Future<List<News>> fetchAllNews() async {
     final data = await jsonDecode(response.body);
 
     for (var i = 0; i < data.length; i++) {
-      //String dateformatted =
-      //  formatter.format(DateTime.parse(data[i]["date"].substring(1, 11)));
       newsList.add(
         News(
             id: data[i]["id"],
             title: data[i]["title"]["rendered"],
-            image: await getNewsImage(
-                data[i]["_links"]["wp:featuredmedia"][0]["href"]),
+            image: data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"],
             date: formatter.format(DateTime.parse(data[i]["date"])),
             text: data[i]["content"]["rendered"]),
       );

@@ -15,6 +15,7 @@ import 'tourist_sites.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+  String get routeName => '/home';
 
   @override
   State<HomePage> createState() => _HomePageState();

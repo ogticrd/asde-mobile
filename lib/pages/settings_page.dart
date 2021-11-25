@@ -34,7 +34,7 @@ class SettingsPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 16.0),
               child: Text(
-                "TU PERFIL",
+                "AJUSTES",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -47,61 +47,61 @@ class SettingsPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 16.0),
               child: Text(
-                "Esta es tu información y configuración",
+                "Aquí está la configuración",
                 //style: TextStyle(fontWeight: FontWeight.w600),
               ),
             ),
             SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.person,
-                    size: 70,
-                  ),
-                  Text("Francifelly Bencosme"),
-                ],
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 16.0),
+            //   child: Row(
+            //     children: [
+            //       Icon(
+            //         Icons.person,
+            //         size: 70,
+            //       ),
+            //       Text("Francifelly Bencosme"),
+            //     ],
+            //   ),
+            // ),
             ListView(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               children: ListTile.divideTiles(
                 context: context,
                 tiles: [
-                  ListTile(
-                    title: Text(
-                      "Cuenta",
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => HomePage()),
-                      // );
-                    },
-                  ),
-                  ListTile(
-                    title: Text("Información personal"),
-                    onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => HomePage()),
-                      // );
-                    },
-                  ),
-                  ListTile(
-                    title: Text("Notificaciones"),
-                    onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => HomePage()),
-                      // );
-                    },
-                  ),
+                  // ListTile(
+                  //   title: Text(
+                  //     "Cuenta",
+                  //     style: TextStyle(fontWeight: FontWeight.bold),
+                  //   ),
+                  //   onTap: () {
+                  //     // Navigator.push(
+                  //     //   context,
+                  //     //   MaterialPageRoute(builder: (context) => HomePage()),
+                  //     // );
+                  //   },
+                  // ),
+                  // ListTile(
+                  //   title: Text("Información personal"),
+                  //   onTap: () {
+                  //     // Navigator.push(
+                  //     //   context,
+                  //     //   MaterialPageRoute(builder: (context) => HomePage()),
+                  //     // );
+                  //   },
+                  // ),
+                  // ListTile(
+                  //   title: Text("Notificaciones"),
+                  //   onTap: () {
+                  //     // Navigator.push(
+                  //     //   context,
+                  //     //   MaterialPageRoute(builder: (context) => HomePage()),
+                  //     // );
+                  //   },
+                  // ),
                   ListTile(
                     title: Text("Soporte técnico"),
                     onTap: () {
@@ -214,15 +214,15 @@ class SettingsPage extends StatelessWidget {
                       );
                     },
                   ),
-                  ListTile(
-                    title: Text("Cerrar sesión"),
-                    onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(builder: (context) => HomePage()),
-                      // );
-                    },
-                  ),
+                  // ListTile(
+                  //   title: Text("Cerrar sesión"),
+                  //   onTap: () {
+                  //     // Navigator.push(
+                  //     //   context,
+                  //     //   MaterialPageRoute(builder: (context) => HomePage()),
+                  //     // );
+                  //   },
+                  // ),
                 ],
               ).toList(),
             ),

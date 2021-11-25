@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import 'pages/my_reports_page.dart';
 import 'pages/payment_page.dart';
 import 'pages/routes_page.dart';
@@ -33,16 +32,16 @@ class MainDrawer extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Icon(
-                      Icons.person,
-                      size: 100,
-                    ),
-                    Text(
-                      "Francifelly Bencosme",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    // Icon(
+                    //   Icons.person,
+                    //   size: 100,
+                    // ),
+                    // Text(
+                    //   "Francifelly Bencosme",
+                    //   style: TextStyle(
+                    //     fontWeight: FontWeight.bold,
+                    //   ),
+                    // ),
                   ],
                 ),
               ),
@@ -55,10 +54,11 @@ class MainDrawer extends StatelessWidget {
             ),
             title: Text("Inicio"),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => HomePage()),
-              );
+              Navigator.pop(context);
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                  (Route<dynamic> route) => route is HomePage);
             },
           ),
           ListTile(
@@ -67,35 +67,36 @@ class MainDrawer extends StatelessWidget {
             ),
             title: Text("Servicios"),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ServicesPage()),
-              );
+              Navigator.pop(context);
+              Navigator.of(context).pushAndRemoveUntil(
+                  MaterialPageRoute(builder: (context) => ServicesPage()),
+                  (Route<dynamic> route) => route.isFirst);
             },
           ),
-          ListTile(
-            leading: Icon(
-              FontAwesomeIcons.solidBell,
-              color: Color(0xFFDADADA),
-            ),
-            title: Text("Pagos de Facturas"),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => PaymentPage()),
-              );
-            },
-          ),
+          // ListTile(
+          //   leading: Icon(
+          //     FontAwesomeIcons.solidBell,
+          //     color: Color(0xFFDADADA),
+          //   ),
+          //   title: Text("Pagos de Facturas"),
+          //   onTap: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => PaymentPage()),
+          //     );
+          //   },
+          // ),
           ListTile(
             leading: Image.asset(
               "assets/new_feeds.png",
             ),
             title: Text("Crear Reclamación"),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SelectReport()),
-              );
+              Navigator.pop(context);
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => SelectReport()),
+                  (Route<dynamic> route) => route.isFirst);
             },
           ),
           ListTile(
@@ -105,10 +106,11 @@ class MainDrawer extends StatelessWidget {
             ),
             title: Text("Mis Reclamaciones"),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => MyReportsPage()),
-              );
+              Navigator.pop(context);
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyReportsPage()),
+                  (Route<dynamic> route) => route.isFirst);
             },
           ),
           ListTile(
@@ -194,10 +196,6 @@ class MainDrawer extends StatelessWidget {
                   ),
                 ),
               );
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => HomePage()),
-              // );
             },
           ),
           ListTile(
@@ -207,22 +205,24 @@ class MainDrawer extends StatelessWidget {
             ),
             title: Text("Ruta y frecuencia"),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => RoutesPage()),
-              );
+              Navigator.pop(context);
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => RoutesPage()),
+                  (Route<dynamic> route) => route.isFirst);
             },
           ),
           ListTile(
             leading: Image.asset(
               "assets/messages.png",
             ),
-            title: Text("Contactanos"),
+            title: Text("Contáctanos"),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ContactUs()),
-              );
+              Navigator.pop(context);
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => ContactUs()),
+                  (Route<dynamic> route) => route.isFirst);
             },
           ),
           ListTile(
@@ -232,10 +232,11 @@ class MainDrawer extends StatelessWidget {
             ),
             title: Text("Ajustes"),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SettingsPage()),
-              );
+              Navigator.pop(context);
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => SettingsPage()),
+                  (Route<dynamic> route) => route.isFirst);
             },
           ),
         ],

@@ -41,12 +41,21 @@ dependencies:
   hive_flutter: ^1.1.0
   sqflite:
   path:
+  flutter_launcher_icons: ^0.9.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   hive_generator: ^1.1.1
   build_runner: ^2.1.4
+
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#07684F"
+  adaptive_icon_foreground: "assets/icon/ic_launcher_foreground.png"
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
