@@ -3,7 +3,7 @@ name: Demo App Android Release
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   version:
