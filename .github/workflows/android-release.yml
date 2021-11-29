@@ -50,12 +50,12 @@ jobs:
       with:
         path: version.txt
     - run: flutter pub get
-    - run: flutter build apk --release --split-per-abi
-    - run: flutter build appbundle
+    - run: flutter build apk --release # --split-per-abi
+    #- run: flutter build appbundle
     - name: Create a Release in GitHub
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "build/app/outputs/apk/release/*.apk,build/app/outputs/bundle/release/app-release.aab"
+        artifacts: "build/app/outputs/apk/release/*.apk # ,build/app/outputs/bundle/release/app-release.aab"
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ steps.version.outputs.content }}
         commit: ${{ github.sha }}
