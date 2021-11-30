@@ -123,5 +123,610 @@
                 "color": ""
             }
         ]
+    },
+    {
+        "id": 4,
+        "title" : "Inhumación",
+        "image" : "inhumacion.png",
+        "description" : "Consiste en la acción de enterrar un cadáver en el cementerio Cristo Salvador.",
+        "public": "Público en General",
+        "offerer": "el Departamento de Administración Cementerio",
+        "tel": "(809) 788-7676 Ext: 8055",
+        "email": [
+            "cementeriocristosalvador@asde.gov.do"
+        ],
+        "requirements": [
+            "Llevar a la oficina del cementerio una copia del contrato de propiedad o arrendamiento de terreno recibido de la compra del mismo.",
+            "Acta de defunción.",
+            "Cédula original del fallecido"
+        ],
+        "procedures": [
+            "Presentar los documentos que lo avalan como propietarios arrendatario de un terreno o nicho en el Cementerio y el acta de defunción."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 5:00 p.m.",
+        "cost": "Ver información adicional",
+        "expected_time" : "Inmediato",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Costo:",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Dependerá de la categoría del terreno donde será sepultado:",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Categoría / Precio",
+                "is_bold": true,
+                "color": "FFAB36"
+            },
+            {
+                "text": "A-1 \t\t RD$2,621.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "A-2 \t\t RD$2,097.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "B-1 \t\t RD$1,782.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "B-2 \t\t RD$1,572.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "C \t\t RD$524.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Ordenanza 02-11",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Los fines de semana y días feriados de 8:00 am. a 6:00pm.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title" : "Exhumación",
+        "image" : "inhumacion.png",
+        "description" : "Este consiste en extraer un cuerpo que se encuentra sepultado los restos para ser trasladado a otro nicho dento del mismo cementerio y/o fuera de este.",
+        "public": "Público en General",
+        "offerer": "el Departamento de Administración Cementerio",
+        "tel": "(809) 788-7676 Ext: 8055",
+        "email": [
+            "cementeriocristosalvador@asde.gov.do"
+        ],
+        "requirements": [
+            "Llevar a la oficina del cementerio copia del Contrato de arrendamiento del terreno.",
+            "Solicitar una certificacion de Exhumacion cuyo costo es de RD$ 350.00 pesos.",
+            "Copia cédula del Solicitante."
+        ],
+        "procedures": [
+            "El Solicitante debe presentar los documentos que lo avalan como arrendatario de un terreno en el Cementerio.",
+            "El solicitante debe tener parentesco sanguíneo con el fallecido.",
+            "Debe dirigirse al palacio municipal, especificamente al departamento de servicio publicos, con los documentos entregado en el cementerio; una vez alli, dicho departamento le entregara una certificacion."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 5:00 p.m.",
+        "cost": "Ver requerimientos o requisitos",
+        "expected_time" : "1 día laborable",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Costo:",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Dependerá de la categoría del terreno:",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Categoría / Precio",
+                "is_bold": true,
+                "color": "FFAB36"
+            },
+            {
+                "text": "A-1 \t\t RD$2,621.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "A-2 \t\t RD$2,097.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "B-1 \t\t RD$1,782.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "B-2 \t\t RD$1,572.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "C \t\t RD$524.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Ordenanza 02-11",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Los fines de semana y días feriados de 8:00 am. a 6:00pm.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title" : "Exhumación",
+        "image" : "arrendamiento_de_terreno_cementerio.png",
+        "description" : "Consiste en la venta terreno dentro del cementerio de acuerdo a la categoría, manzana y cantidad de mt2.",
+        "public": "Público en General",
+        "offerer": "el Departamento de Administración Cementerio",
+        "tel": "(809) 788-7676 Ext: 8055",
+        "email": [
+            "cementeriocristosalvador@asde.gov.do"
+        ],
+        "requirements": [
+            "Llevar a la oficina del cementerio copia cédula del arrendatario y completar formulario."
+        ],
+        "procedures": [
+            "El munícipe debe solicitar en la administración la compra de un terreno en el cementerio y se verifica la disponibilidad del mismo de acuerdo a la manzana y categoría demandada.",
+            "Una vez aceptado por el munícipe el terreno, se completa el formulario de orden de compra por concepto de venta donde se hace constar la manzana, la categoría y cantidad de mt2 vendido."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 5:00 p.m.",
+        "cost": "Ver información adicional",
+        "expected_time" : "Inmediato",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Costo:",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Dependerá de la categoría del terreno y la cantidad mt²:",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Categoría / Precio",
+                "is_bold": true,
+                "color": "FFAB36"
+            },
+            {
+                "text": "A1 \t\t RD$5,242.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "A2 \t\t RD$3,145.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "B1 \t\t RD$2,097.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "B2 \t\t RD$1,048.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "C \t\t RD$524.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Ordenanza 02-11",
+                "is_bold": true,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title" : "Arrendamiento de nicho o terreno",
+        "image" : "arrendamiento_nicho.png",
+        "description" : "El servicio consiste en el arrendamiento de Nichos de pared o Terreno Cementerio Cristo Salvador.",
+        "public": "Público en General",
+        "offerer": "el Departamento de Administración Cementerio",
+        "tel": "(809) 937-0842 Ext: 0",
+        "email": [
+            "ingresos@asde.gov.do"
+        ],
+        "requirements": [
+            "Llevar a la oficina del cementerio, copia cédula del solicitante y completar el formulario de solicitud."
+        ],
+        "procedures": [
+            "El munícipe debe solicitar el arrendamiento de un terreno o nicho y se verifica la disponibilidad de acuerdo a la manzana y categoría.",
+            "Los arrendamientos pueden ser por 5 años si es para sepultar en tierra y de 7 años si es para sepultar en nichos."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 5:00 p.m.",
+        "cost": "Ver información adicional",
+        "expected_time" : "Inmediato",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Costo:",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Dependerá de la categoría del terreno.",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Categoría / Precio",
+                "is_bold": true,
+                "color": "FFAB36"
+            },
+            {
+                "text": "A \t\t RD$7,500.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "B \t\t RD$5,000.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "C \t\t RD$3,000.00",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Información adicional",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Ordenanza 02-11",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "title" : "Permiso construcción nicho",
+        "image" : "arrendamiento_nicho.png",
+        "description" : "Este consiste en emitir un permiso para construcción de un nicho en un terreno arrendado.",
+        "public": "Público en General",
+        "offerer": "el Departamento de Administración Cementerio",
+        "tel": "(809) 937-0842 Ext: 0",
+        "email": [
+            "ingresos@asde.gov.do"
+        ],
+        "requirements": [
+            "Llevar a la oficina del cementerio Cristo Salvador copia del contrato de venta terreno y copia de la cédula del solicitante."
+        ],
+        "procedures": [
+            "El munícipe solicita en la oficina del Cementerio la construcción de un nicho en el terreno adquirido.",
+            "Debe presentar los documentos que lo avalan como arrendatario de un terreno en el Cementerio."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 5:00 p.m.",
+        "cost": "RD$ 262.00 o RD$ 315.00 por nicho",
+        "expected_time" : "1 día laborable",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Ordenanza 02-11, Sobre contruccion y gestion de cementerios y funerarias.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "title" : "Expedición certificaciones exhumación",
+        "image" : "certificado_exhumacion.png",
+        "description" : "El servicio consiste en emitir una certificación para los restos de fallecido, la cual se realiza cuando una persona desea trasladar los restos de un familiar (En tierra 5 años y en nicho 7) de un terreno a otro o a otros cementerios.",
+        "public": "Público en General",
+        "offerer": "el Departamento de Administración Cementerio",
+        "tel": "(809) 788-7676 Ext: 8055",
+        "email": [
+            "cementeriocristosalvador@asde.gov.do"
+        ],
+        "requirements": [
+            "Llevar al cementerio copia cédula del solicitante y datos del fallecido y copia del contrato del terreno."
+        ],
+        "procedures": [
+            "El munícipe solicita en la oficina del cementerio la certificación de exhumación de cadáver."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 5:00 p.m.",
+        "cost": "RD$ 524.00",
+        "expected_time" : "1 día laborable",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Los fines de semana y días feriados de 8:00 a.m a 6:00 p.m.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "title" : "Funerarias Municipales",
+        "image" : "funerarias_municipales.png",
+        "description" : "Este servicio consiste en facilitar a los munícipes las diferentes capillas y funerarias disponibles en el municipio, donde se les informa sobre los diferentes planes de servicios de velatorio que ofrecemos en nuestras, los cuales incluyen venta de ataúdes, preparación de fallecido, capillas y más.",
+        "public": "Público en General",
+        "offerer": "el Departamento de División de Funerarias.",
+        "tel": "(809) 788-7676 Ext: 1057",
+        "email": [
+            "coodinacionfunerarias@asde.gov.do"
+        ],
+        "requirements": [
+            "2 Copias del Acta de defunción.",
+            "2 Copias de la cédula del fallecido.",
+            "2 Copias de la cédula del solicitante."
+        ],
+        "procedures": [
+            "Dirigirse a unas de nuestras funerarias municipales y solicitar el servicio velatorio de acuerdo a los planes establecidos y se completa el formulario de registro de servicios funerarios."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 10:00 p.m.",
+        "cost": "Precios individuales y combos desde RD$6,800.00 hasta RD$17,500.00 según servicios.",
+        "expected_time" : "Inmediato (sujeto a disponibilidad de capillas)",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Para mayor información sobre este servicio, puede llamar:",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Funeraria Villa Carmen",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Av. Charles de Gaulle, #99, frente al Parque Villa Carmen.",
+                "is_bold": false,
+                "color": ""
+            }
+            ,
+            {
+                "text": "Teléfono: 809-728-2762",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Funeraria La Isabelita",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Av. Estados Unidos # 14, detrás de Los Tres Ojos.",
+                "is_bold": false,
+                "color": ""
+            }
+            ,
+            {
+                "text": "Teléfono: 809-599-2798",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Funeraria Los Frailes",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Av. Marginal Las Americas KM. 12",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Teléfono: 809-599-6850",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Funeraria Municipal Los Mina",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Av. Venezuela, al lado de los bomberos, los mina viejo.",
+                "is_bold": false,
+                "color": ""
+            }
+            ,
+            {
+                "text": "Teléfono: 809-388-1048",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "title" : "Duplicado contrato arrendamiento de terreno cementerio",
+        "image" : "duplicado_contrato.png",
+        "description" : "El servicio consiste en emitir un duplicado del contrato de arrendamiento terreno en caso de pérdida, el cual es tramitado en el Cementerio Cristo Salvador.",
+        "public": "Público en General",
+        "offerer": "el Departamento de Administración Cementerio.",
+        "tel": "(809) 937-0842 Ext: 0",
+        "email": [
+            "ingresos@asde.gov.do"
+        ],
+        "requirements": [
+            "Llevar a la oficina del cementerio una copia de la cédula del solicitante y suministrar datos de fecha arrendamiento de terreno, manzana y categoría entre otros, fecha de inhumación y recibo de pago del arrendamiento."
+        ],
+        "procedures": [
+            "El munícipe debe pasar por la oficina del cementerio Cristo Salvador y solicitar el duplicado del contrato de arrendamiento de terreno y pagar los impuestos correspondientes."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 5:00 p.m.",
+        "cost": "RD$ 2,000.00",
+        "expected_time" : "1 mes",
+        "delivery_channel": "Presencial o por mandato",
+        "additional_information": [
+            {
+                "text": "Ordenanza 02-11",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title" : "Pozos filtrantes",
+        "image" : "pozos_filtrantes.png",
+        "description" : "El servicio consiste en orientar e informar a los munícipes sobre la documentación requerida para la  obtención del permiso para la excavación de pozos filtrantes.",
+        "public": "Público en General",
+        "offerer": "el departamento de Tramitación, Dirección de Planeamiento.",
+        "tel": "(809) 788-7676 Ext: 1013",
+        "email": [
+            "tramitacion@asde.gov.do"
+        ],
+        "requirements": [
+            "Todo proyecto que se vaya a realizar dentro de un lote que pase de 200 mt2, deberá pagar los  arbitrios establecidos en el renglón de los barrios consolidados.",
+            "No se aceptará el pago de manera informal de ninguna construcción que pase de 100m2, el  mismo deberá tramitar normalmente."
+        ],
+        "procedures": [
+            "Realizar inspección al solar (por el inspector) el día asignado.",
+            "Revisión del expediente por la Encargada de Tramitación. ","Debe dirigirse al palacio municipal, especificamente al departamento de servicio publicos, con los documentos entregado en el cementerio; una vez alli, dicho departamento le entregara una certificacion.",
+            "Se remite al Dpto. de Catastro para revisión de documentos legales.",
+            "Entrada del Exp. al Depto. de Urbanismo para realizar el Uso de Suelo; si el proyecto está  realizado se elabora uso y no objeción.",
+            "Se remite a la Asistente de la Dirección, para pasarla al Director(a).",
+            "Retorna a Tramitación de Planos, para mandarlo al Depto. de Tasación.",
+            "Retorna otra vez a Tramitación para llamar al munícipe para gestionar los cobros de los  arbitrios.",
+            "Se envía al Departamento de Seguimiento a los fines de verificar con lo aprobado.",
+            "Dirigirse a espacio publico con una objeción de la CAASD."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 3:00 p.m.",
+        "cost": "RD$3,194.59 y RD$5,324.32, Depende la zona (Ver información adicional)",
+        "expected_time" : "15 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Costo",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Se crea un arbitrio que establece el pago de RD$5,324.32 en urbanizaciones, calles y avenidas  principales y de RD$3,194.59 en otros sectores del Municipio.",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Otra información:",
+                "is_bold": true,
+                "color": ""
+            },
+            {
+                "text": "Toda persona física o jurídica que sea sorprendida realizando un pozo filtrante sin el permiso de las  autoridades municipales se le aplicará una penalildad equivalente a cinco veces al costo  anteriormente indicado y las autoridades tienen la facultad para retener los equipos hasta tanto se  pague dicha penalidad.",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "El pago de arbitrios de los barrios mas precarios en condiciones de asentamientos informales, y que  conllevan normativas especiales serán exoneradas del pago de los mismos ya que el ASDE no  deberá promover las construcciones en zonas de alto riesgo además de ser áreas protegidas, y que  están a la orilla del rio Ozama, estos barrios son:",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "1- El Dique",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "2- Oxígeno",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "3- El Barco",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "4- La Barquita",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "5- Canta la rana",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "6- Rivera del Ozama",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Nota: A estas tasas, cada año, se les aplicarán la indexación por inflación de conformidad con las  estadísticas oficiales que al respecto ofrezca el Banco Central de la República.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "title" : "Publicidad exterior",
+        "image" : "publicidad_exterior.png",
+        "description" : "Este servicio consiste en otorgar los permisos correspondiente a la instalación para a diferentes  elementos publicitarios, tales como: letreros, vallas, rampa, entre otros.",
+        "public": "Público en General",
+        "offerer": "la Dirección de Defensoría y Uso de Espacios",
+        "tel": "(809) 788-7676 Ext: 1026, 1027, 1028, 1031, 1029",
+        "email": [
+            "alendof@asde.gov.do"
+        ],
+        "requirements": [
+            "Carta de solicitud en original y copia, dirigida a la Dirección de Defensoria y Uso de Espacios  Públicos."
+        ],
+        "procedures": [
+            "Entregar carta de solicitud en la Dirección.",
+            "Realizar el pago del mismo.",
+            "Esperar entrega del permiso."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 4:30 p.m.",
+        "cost": "Varia según el servicio",
+        "expected_time" : "Inmediata",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "La tabla de arbitrios varia de acuerdo a las dimensiones de los elementos publicitarios.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
     }
 ]
