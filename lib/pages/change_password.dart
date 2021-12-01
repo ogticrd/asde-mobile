@@ -1,4 +1,4 @@
-import 'package:asde_app/pages/password_email_sent.dart';
+import 'package:asde/pages/password_email_sent.dart';
 import 'package:flutter/material.dart';
 
 class ChangePassword extends StatelessWidget {

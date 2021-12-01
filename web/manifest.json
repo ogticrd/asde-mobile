@@ -1,6 +1,6 @@
 {
-    "name": "asde_app",
-    "short_name": "asde_app",
+    "name": "asde",
+    "short_name": "asde",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

@@ -1,8 +1,8 @@
-import 'package:asde_app/pages/contact_us.dart';
-import 'package:asde_app/pages/home_page.dart';
-import 'package:asde_app/pages/select_report.dart';
-import 'package:asde_app/pages/services_page.dart';
-import 'package:asde_app/pages/settings_page.dart';
+import 'package:asde/pages/contact_us.dart';
+import 'package:asde/pages/home_page.dart';
+import 'package:asde/pages/select_report.dart';
+import 'package:asde/pages/services_page.dart';
+import 'package:asde/pages/settings_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';

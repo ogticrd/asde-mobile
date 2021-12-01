@@ -1,4 +1,4 @@
-import 'package:asde_app/models/route.dart';
+import 'package:asde/models/route.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
 

@@ -1,5 +1,5 @@
-import 'package:asde_app/pages/forgot_password.dart';
-import 'package:asde_app/pages/register_id.dart';
+import 'package:asde/pages/forgot_password.dart';
+import 'package:asde/pages/register_id.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'home_page.dart';

@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:convert';
-import 'package:asde_app/models/contact.dart';
-import 'package:asde_app/models/news.dart';
-import 'package:asde_app/models/sector.dart';
-import 'package:asde_app/models/service.dart';
-import 'package:asde_app/models/tourist_sites.dart';
+import 'package:asde/models/contact.dart';
+import 'package:asde/models/news.dart';
+import 'package:asde/models/sector.dart';
+import 'package:asde/models/service.dart';
+import 'package:asde/models/tourist_sites.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';

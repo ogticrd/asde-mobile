@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:asde_app/models/report.dart';
+import 'package:asde/models/report.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:hive/hive.dart';

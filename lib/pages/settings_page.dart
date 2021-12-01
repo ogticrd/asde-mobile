@@ -1,6 +1,6 @@
-import 'package:asde_app/pages/private_policy.dart';
-import 'package:asde_app/pages/terms_conditions_page.dart';
-import 'package:asde_app/pages/version_page.dart';
+import 'package:asde/pages/private_policy.dart';
+import 'package:asde/pages/terms_conditions_page.dart';
+import 'package:asde/pages/version_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';

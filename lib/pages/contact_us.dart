@@ -1,5 +1,5 @@
-import 'package:asde_app/models/contact.dart';
-import 'package:asde_app/services/api_services.dart';
+import 'package:asde/models/contact.dart';
+import 'package:asde/services/api_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';

@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
-import 'package:asde_app/models/report.dart';
-import 'package:asde_app/models/sector.dart';
-import 'package:asde_app/services/api_services.dart';
+import 'package:asde/models/report.dart';
+import 'package:asde/models/sector.dart';
+import 'package:asde/services/api_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';

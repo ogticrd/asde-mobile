@@ -1,4 +1,4 @@
-import 'package:asde_app/pages/register_id.dart';
+import 'package:asde/pages/register_id.dart';
 import 'package:flutter/material.dart';
 
 class WelcomePage extends StatelessWidget {

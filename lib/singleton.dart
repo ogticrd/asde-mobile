@@ -1,4 +1,4 @@
-import 'package:asde_app/models/news.dart';
+import 'package:asde/models/news.dart';
 import 'models/tourist_sites.dart';
 
 class Singleton {

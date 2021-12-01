@@ -1,4 +1,4 @@
-import 'package:asde_app/models/news.dart';
+import 'package:asde/models/news.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_html/flutter_html.dart';

@@ -1,4 +1,4 @@
-# asde_app
+# asde
 
 A new Flutter project.
 

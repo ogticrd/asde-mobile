@@ -1,4 +1,4 @@
-import 'package:asde_app/pages/register_user.dart';
+import 'package:asde/pages/register_user.dart';
 import 'package:flutter/material.dart';
 
 class RegisterId extends StatefulWidget {

@@ -1,7 +1,8 @@
-import 'package:asde_app/models/news.dart';
-import 'package:asde_app/models/tourist_sites.dart';
-import 'package:asde_app/services/api_services.dart';
-import 'package:asde_app/singleton.dart';
+import 'package:asde/models/news.dart';
+import 'package:asde/models/tourist_sites.dart';
+import 'package:asde/pages/select_report.dart';
+import 'package:asde/services/api_services.dart';
+import 'package:asde/singleton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -124,6 +125,23 @@ class _HomePageState extends State<HomePage> {
                             .toList());
                   });
                 },
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(16.0),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SelectReport(),
+                      ),
+                    );
+                  },
+                  child: Image.asset("assets/request_image.png"),
+                ),
               ),
               FutureBuilder<List<News>>(
                 future: allNews,

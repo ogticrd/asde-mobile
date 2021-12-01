@@ -1,4 +1,4 @@
-import 'package:asde_app/models/tourist_sites.dart';
+import 'package:asde/models/tourist_sites.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 

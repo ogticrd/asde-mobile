@@ -1,5 +1,5 @@
-import 'package:asde_app/models/news.dart';
-import 'package:asde_app/singleton.dart';
+import 'package:asde/models/news.dart';
+import 'package:asde/singleton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

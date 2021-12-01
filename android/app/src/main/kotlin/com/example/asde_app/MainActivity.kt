@@ -1,4 +1,4 @@
-package com.example.asde_app
+package x_do.gob.ogtic.asde
 
 import io.flutter.embedding.android.FlutterActivity
 
