@@ -282,7 +282,7 @@
     },
     {
         "id": 6,
-        "title" : "Exhumación",
+        "title" : "Arrendamiento de terreno cementerio",
         "image" : "arrendamiento_de_terreno_cementerio.png",
         "description" : "Consiste en la venta terreno dentro del cementerio de acuerdo a la categoría, manzana y cantidad de mt2.",
         "public": "Público en General",
@@ -724,6 +724,500 @@
         "additional_information": [
             {
                 "text": "La tabla de arbitrios varia de acuerdo a las dimensiones de los elementos publicitarios.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title" : "Recogida de desechos sólidos",
+        "image" : "recogida_desechos.png",
+        "description" : "Este servicio consiste en la recolección de los residuos sólidos generados en las circunscripciones 1, 2 y 3 del municipio Santo Domingo Este de cualesquiera de las fuentes generadoras.",
+        "public": "Público en General",
+        "offerer": "el departamento de Limpieza y aseo urbano",
+        "tel": "(809) 788-7676 Ext: 7007",
+        "email": [
+            "limpiaasde@gmail.com"
+        ],
+        "requirements": [
+            "Solicitar el servicio mediante llamada o comunicación dirigida a la Dirección de Limpieza y Aseo.",
+            "Se debe especificar el tipo de basura y/o residuo al que se le prestara atención, así como una estimación primaria respecto del volumen o posibles volúmenes a manejar",
+            "Dirección exacta del lugar y teléfono de contacto.",
+            "En caso de ser una denuncia de un tercero, se guardará el anonimato pero se requerirán todos los pasos anteriores."
+        ],
+        "procedures": [
+            "Una vez realizado el registro de las informaciones antes detalladas se procede a asignar el supervisor de la zona el cual evaluara físicamente la situación y recomendara la forma correcta de manejar y solucionar la situación.",
+            "Con la información levantada por el supervisor se procede a enviar el expediente a la dirección de ingresos municipales a los fines de fijar la tasa de cobro por el servicio",
+            "Mediante vía telefónica desde la dirección de ingresos municipales se comunicara con el solicitante o denunciante de la situación y comunicara el monto a pagar por dicho servicio.",
+            "Si el solicitante está de acuerdo se le comunica que debe realizar el pago del mismo.",
+            "Una vez realizado el pago la dirección de ingresos municipales remite el expediente a la dirección correspondiente para la ejecución del servicio.",
+            "La dirección correspondiente emitirá una notificación de servicio realizado a la dirección de ingresos municipales.",
+            "En caso de no ejecutarse el mismo ya sea porque el solicitante no está de acuerdo con el precio a pagar o por algún otro contratiempo se realiza una notificación de NO EJECUCIÓN DEL SERVICIO. Esto inmediatamente dispara una alarma de seguimiento continuo."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 4:30 p.m.",
+        "cost": "Depende de la tasa de cobranza fijada por la Dirección de Recaudación de Rentas y Arbitrios",
+        "expected_time" : "De 1.5 a 3 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Para los casos de servicios y denuncias propias al sistema de recolección de residuos sólidos de nuestra Alcaldía, dichas denuncias son atendidas en tiempo récord, ya que el mecanismo de actuación es más directo y se maneja a nivel de los generantes de operaciones y supervisión de zonas. El horario en este caso es de 6:00 am a 10:00 pm.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "title" : "Recogida de desechos sólidos",
+        "image" : "recogida_desechos.png",
+        "description" : "Este servicio consiste en la recolección de los residuos sólidos generados en las circunscripciones 1, 2 y 3 del municipio Santo Domingo Este de cualesquiera de las fuentes generadoras.",
+        "public": "Público en General",
+        "offerer": "el departamento de Limpieza y aseo urbano",
+        "tel": "(809) 788-7676 Ext: 7007",
+        "email": [
+            "limpiaasde@gmail.com"
+        ],
+        "requirements": [
+            "Solicitar el servicio mediante llamada o comunicación dirigida a la Dirección de Limpieza y Aseo.",
+            "Se debe especificar el tipo de basura y/o residuo al que se le prestara atención, así como una estimación primaria respecto del volumen o posibles volúmenes a manejar",
+            "Dirección exacta del lugar y teléfono de contacto.",
+            "En caso de ser una denuncia de un tercero, se guardará el anonimato pero se requerirán todos los pasos anteriores."
+        ],
+        "procedures": [
+            "Una vez realizado el registro de las informaciones antes detalladas se procede a asignar el supervisor de la zona el cual evaluara físicamente la situación y recomendara la forma correcta de manejar y solucionar la situación.",
+            "Con la información levantada por el supervisor se procede a enviar el expediente a la dirección de ingresos municipales a los fines de fijar la tasa de cobro por el servicio",
+            "Mediante vía telefónica desde la dirección de ingresos municipales se comunicara con el solicitante o denunciante de la situación y comunicara el monto a pagar por dicho servicio.",
+            "Si el solicitante está de acuerdo se le comunica que debe realizar el pago del mismo.",
+            "Una vez realizado el pago la dirección de ingresos municipales remite el expediente a la dirección correspondiente para la ejecución del servicio.",
+            "La dirección correspondiente emitirá una notificación de servicio realizado a la dirección de ingresos municipales.",
+            "En caso de no ejecutarse el mismo ya sea porque el solicitante no está de acuerdo con el precio a pagar o por algún otro contratiempo se realiza una notificación de NO EJECUCIÓN DEL SERVICIO. Esto inmediatamente dispara una alarma de seguimiento continuo."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 4:30 p.m.",
+        "cost": "Depende de la tasa de cobranza fijada por la Dirección de Recaudación de Rentas y Arbitrios",
+        "expected_time" : "De 1.5 a 3 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Para los casos de servicios y denuncias propias al sistema de recolección de residuos sólidos de nuestra Alcaldía, dichas denuncias son atendidas en tiempo récord, ya que el mecanismo de actuación es más directo y se maneja a nivel de los generantes de operaciones y supervisión de zonas. El horario en este caso es de 6:00 am a 10:00 pm.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "title" : "Resellado de planos con certificado solo de la Dirección de Planeamiento Urbano",
+        "image" : "resellado_planos.png",
+        "description" : "El servicio consiste en el resellado de planos con certificado solo de la Dirección de Planeamiento Urbano, se le informar al munícipes sobre la documentación requerida para dicho resellado de planos.",
+        "public": "Público en General",
+        "offerer": "el departamento de Tramitación, Dirección de Planeamiento Urbano.",
+        "tel": "(809) 788-7676 Ext: 1013",
+        "email": [
+            "tramitacion@asde.gov.do"
+        ],
+        "requirements": [
+            "Carta de solicitud expresando justificación. Especificando el número del expediente.",
+            "Juego de planos a resellar.",
+            "Juego de planos a resellar en formato 11” X 17” para ser anexado al expediente.",
+            "Recibo de pago de resellado por Valor RD$300.00 por hoja."
+        ],
+        "procedures": [
+            "Inspección hecha por el inspector al solar el dia asignado.",
+            "Revisión del expediente por la Encargada de Tramitación",
+            "Se remite al Dpto. de Catastro para revisión de documentos legales.",
+            "Entrada del Exp. al Depto. de Urbanismo para realizar el Uso de Suelo; si el proyecto está realizado se elabora uso y no objeción.",
+            "Se remite a la Asistente de la Dirección, para pasarla al Director(a)",
+            "Retorna a Tramitación de Planos, para mandarlo al Depto. de Tasación.",
+            "Retorna otra vez a Tramitación para llamar al munícipe para gestionar los cobros de los arbitrios.",
+            "Se envía al Departamento de Seguimiento a los fines de verificar con lo aprobado."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 3:00 p.m.",
+        "cost": "RD$300.00 por cada hoja a resellar",
+        "expected_time" : "15 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "El municipio tiene la opción de verificar sus proyectos con una consulta previa a la entrada en el departamento de urbanismo, verificando lo que son: linderos y altura permitidos en la zona a realizar dicho proyecto. (Días de consulta Martes y Jueves).",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Nota: A estas tasas,  cada año, se les aplicarán la indexación por inflación de conformidad con las estadísticas oficiales que  al respecto ofrezca el Banco Central de la República.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 16,
+        "title" : "Resellado de planos con licencia de construción del Ministerio de Obras Públicas y Comunicaciones",
+        "image" : "resellado_planos.png",
+        "description" : "El servicio consiste en el resellado de planos con licencia de construcción del Ministerio de Obras Públicas y Comunicaciones. Se le informa al munícipe sobre la documentación requerida para el proceso de resellado.",
+        "public": "Público en General",
+        "offerer": "el departamento de Tramitación, Dirección de Planeamiento Urbano.",
+        "tel": "(809) 788-7676 Ext: 1013",
+        "email": [
+            "tramitacion@asde.gov.do"
+        ],
+        "requirements": [
+            "Carta de solicitud expresando justificación. Especificando el número del expediente.",
+            "Juego de planos a resellar.",
+            "Juego de planos a resellar en formato 11” X 17” para ser anexado al expediente.",
+            "Recibo de pago de resellado por Valor RD$300.00 por hoja.",
+            "Plano de ubicación y localización indicando retiros aprobados.",
+            "Recibo de Inspección por el Valor RD$1,000.00"
+        ],
+        "procedures": [
+            "Inspección realizada por el inspector al solar el dia asignado.",
+            "Revisión del expediente por la Encargada de Tramitación",
+            "Se remite al Dpto. de Catastro para revisión de documentos legales.",
+            "Entrada del Exp. al Depto. de Urbanismo para realizar el Uso de Suelo; si el proyecto está realizado se elabora uso y no objeción",
+            "Se remite a la Asistente de la Dirección, para pasarla al Director(a)",
+            "Retorna a Tramitación de Planos, para mandarlo al Depto. de Tasación.",
+            "Retorna otra vez a Tramitación para llamar al munícipe para gestionar los cobros de los arbitrios.",
+            "Se envía al Departamento de Seguimiento a los fines de verificar con lo aprobado."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 3:00 p.m.",
+        "cost": "RD$300.00 por hoja a resellar y RD$1000.00 por derecho a inspección",
+        "expected_time" : "15 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "El municipio tiene la opción de verificar sus proyectos con una consulta previa a la entrada en el departamento de urbanismo, verificando lo que son: linderos y altura permitidos en la zona a realizar dicho proyecto. (Días de consulta Martes y Jueves).",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Nota: A estas tasas,  cada año, se les aplicarán la indexación por inflación de conformidad con las estadísticas oficiales que  al respecto ofrezca el Banco Central de la República.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 17,
+        "title" : "Permiso de verja",
+        "image" : "verjas.png",
+        "description" : "Consiste en emitir certificados de permisos para la construcción de verjas, se Ies informa a los munícipes sobre la documentación requerida para permiso de verja.",
+        "public": "Público en General",
+        "offerer": "el departamento de Tramitación, Dirección de Planeamiento Urbano.",
+        "tel": "(809) 788-7676 Ext: 1013",
+        "email": [
+            "tramitacion@asde.gov.do"
+        ],
+        "requirements": [
+            "Carta de solicitud dirigida a la Dirección de Planeamiento Urbano.",
+            "Título de propiedad (original y copia de ambos lados) si tiene gravamen, presentar carta de no objeción del acreedor hipotecario con la firma legalizada por un Notario Público.",
+            "Plano de Mensura Catastral (copia) Aprobado por la Dirección de Mensura Catastral.",
+            "Plano de localización del proyecto.",
+            "Recibo de inspección, por el valor RD$1,000.00.",
+            "El pago de taza para obtener el certificado de permiso de verja será de cien pesos por ML RD$100.00 por ML.",
+            "Acto de alguacil de los colindantes."
+        ],
+        "procedures": [
+            "Inspección hecha por el inspector al solar el dia asignado.",
+            "Revisión del expediente por la Encargada de Tramitación",
+            "Se remite al Dpto. de Catastro para revisión de documentos legales.",
+            "Entrada del Exp. al Depto. de Urbanismo para realizar el Uso de Suelo; si el proyecto está realizado se elabora uso y no objeción",
+            "Se remite a la Asistente de la Dirección, para pasarla al Director(a)",
+            "Retorna a Tramitación de Planos, para mandarlo al Depto. de Tasación.",
+            "Retorna otra vez a Tramitación para llamar al munícipe para gestionar los cobros de los arbitrios.",
+            "Se envía al Departamento de Seguimiento a los fines de verificar con lo aprobado."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 3:00 p.m.",
+        "cost": "RD$300.00 por hoja a resellar y RD$1000.00 por derecho a inspección",
+        "expected_time" : "15 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "El municipio tiene la opción de verificar sus proyectos con una consulta previa a la entrada en el departamento de urbanismo, verificando lo que son: linderos y altura permitidos en la zona a realizar dicho proyecto. (Días de consulta Martes y Jueves).",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Nota: A estas tasas,  cada año, se les aplicarán la indexación por inflación de conformidad con las estadísticas oficiales que  al respecto ofrezca el Banco Central de la República.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 18,
+        "title" : "Certificados de permiso para demolición de estructuras",
+        "image" : "permiso_demolicion.png",
+        "description" : "Consiste en emitir al solicitante un certificado de permiso para demolición. En el Depto. se le  informa al munícipe sobre la documentación requerida para la obtención de dicho Certificado.",
+        "public": "Público en General",
+        "offerer": "el departamento de Tramitación, Dirección de Planeamiento Urbano.",
+        "tel": "(809) 788-7676 Ext: 1013",
+        "email": [
+            "tramitacion@asde.gov.do"
+        ],
+        "requirements": [
+            "Carta de solicitud dirigida a la Dirección de Planeamiento Urbano.",
+            "Título de propiedad (original y copia de ambos lados) si tiene gravamen, presentar carta de no objeción del acreedor hipotecario con la firma legalizada por un Notario Público.",
+            "Plano de Mensura Catastral (copia).",
+            "Fotografía de la construcción a demoler (en alguna foto debe aparecer la calle en primer plano).",
+            "Plano de ubicación y localización del proyecto.",
+            "Plano de edificación existente.",
+            "El pago de la tasa obtener el certificado de permiso para la demolición será de RD$10.00 por M2 y RD$20.00 por M2 de la edificación a demoler.",
+            "Recibo de inspección, por el valor RD$1,000.00.",
+            "Acto de alguacil de los colindantes."
+        ],
+        "procedures": [
+            "Inspección hecha por el inspector al solar el dia asignado.",
+            "Revisión del expediente por la Encargada de Tramitación",
+            "Se remite al Dpto. de Catastro para revisión de documentos legales.",
+            "Entrada del Exp. al Depto. de Urbanismo para realizar el Uso de Suelo; si el proyecto está realizado se elabora uso y no objeción",
+            "Se remite a la Asistente de la Dirección, para pasarla al Director(a)",
+            "Retorna a Tramitación de Planos, para mandarlo al Depto. de Tasación.",
+            "Retorna otra vez a Tramitación para llamar al munícipe para gestionar los cobros de los arbitrios.",
+            "Se envía al Departamento de Seguimiento a los fines de verificar con lo aprobado."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 3:00 p.m.",
+        "cost": "RD$1000.00 por concepto de recibo de inspección",
+        "expected_time" : "15 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "El municipio tiene la opción de verificar sus proyectos con una consulta previa a la entrada en el departamento de urbanismo, verificando lo que son: linderos y altura permitidos en la zona a realizar dicho proyecto. (Días de consulta Martes y Jueves).",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Nota: A estas tasas,  cada año, se les aplicarán la indexación por inflación de conformidad con las estadísticas oficiales que  al respecto ofrezca el Banco Central de la República.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 19,
+        "title" : "Certificados para cambios de Usos de Suelo",
+        "image" : "uso_suelo.png",
+        "description" : "Este servicio consiste en emitir certificación para cambios de uso de suelo, en el Departamento se le informa al munícipe sobre la documentación requerida para la obtención de dicha certificación.",
+        "public": "Público en General",
+        "offerer": "el departamento de Tramitación, Dirección de Planeamiento Urbano.",
+        "tel": "(809) 788-7676 Ext: 1013",
+        "email": [
+            "tramitacion@asde.gov.do"
+        ],
+        "requirements": [
+            "Carta de solicitud dirigida a la Dirección de Planeamiento Urbano.",
+            "Título de propiedad (original y copia de ambos lados) si tiene gravamen, traer carta de no objeción del acreedor hipotecario con la firma legalizada por un Notario Público.",
+            "Plano de Mensura Catastral (copia).",
+            "Certificado de uso de suelo vigente. Valor según el proyecto a ejecutar RD$2,000.00 a RD$40,000.00.",
+            "Plano de lo existente y levantamiento de uso de suelo y densidad circundante.",
+            "Recibo de Inspección, valor RD$1,000.00.",
+            "Acta de notificación a los colindantes."
+        ],
+        "procedures": [
+            "Inspección hecha por el inspector al solar el dia asignado.",
+            "Revisión del expediente por la Encargada de Tramitación",
+            "Se remite al Dpto. de Catastro para revisión de documentos legales.",
+            "Entrada del Exp. al Depto. de Urbanismo para realizar el Uso de Suelo; si el proyecto está realizado se elabora uso y no objeción",
+            "Se remite a la Asistente de la Dirección, para pasarla al Director(a)",
+            "Retorna a Tramitación de Planos, para mandarlo al Depto. de Tasación.",
+            "Retorna otra vez a Tramitación para llamar al munícipe para gestionar los cobros de los arbitrios.",
+            "Se envía al Departamento de Seguimiento a los fines de verificar con lo aprobado."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 3:00 p.m.",
+        "cost": "Desde RD$2,000.00 a RD$40,000.00, según el proyecto a ejecutar.",
+        "expected_time" : "15 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Al nuevo uso de suelo se le aplicará la tasa por servicio correspondiente. Si el cambio de uso implica la intervención de la estructura debe solicitar el proceso de remodelación.",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Nota: A estas tasas,  cada año, se les aplicarán la indexación por inflación de conformidad con las estadísticas oficiales que  al respecto ofrezca el Banco Central de la República.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 20,
+        "title" : "Requisitos para tramitar proyectos definitivos",
+        "image" : "tramitar_proyectos.png",
+        "description" : "Este servicio consiste en informar a los munícipes cuales son los requisitos y la documentación requerida para presentar proyectos definitivos.",
+        "public": "Público en General",
+        "offerer": "el departamento de Tramitación, Dirección de Planeamiento Urbano.",
+        "tel": "(809) 788-7676 Ext: 1013",
+        "email": [
+            "tramitacion@asde.gov.do"
+        ],
+        "requirements": [
+            "Carta de solicitud dirigida al Director de Planeamiento Urbano, Arq. Ángel Sosa Frías.",
+            "Título de propiedad (original y copia de ambos lados) si tiene gravamen, traer carta de no objeción del acreedor hipotecario con la firma legalizada por un Notario Público.",
+            "Plano de Mensura Catastral (copia).",
+            "Certificado de uso de suelo vigente. Valor según el proyecto a ejecutar RD$2,000.00 a RD$20,000.00.",
+            "Recibo de no objeción: Valor: a) RD$1,500.00 Vivienda unifamiliar. b) RD$2,000.00 Remodelación y anexos. c) RD$5,000.00 Edificios de apartamentos. d) RD$45,000.00 Urbanizaciones e) RD$50,000.00 Bombas de gasolina, colegios, naves industriales, metaleras,",
+            "Aprobación de proyecto definitivo, ficha técnica (F3): Valor RD$2,000.00",
+            "4 juegos de planos completos, contenido: Plano de ubicación y localización, indicando retiros a linderos, planta arquitectónica, dimensionadas, planos técnicos: estructural, eléctrico y sanitario, 4 elevaciones y 2 secciones.",
+            "Luego de planos arquitectónicos en formato 11” X 17” y encuadernado en carpeta 8 1/2” X 11” en carpeta azul claro.",
+            "Los planos deben presentarse también en formato digital (CD)."
+        ],
+        "procedures": [
+            "Inspección hecha por el inspector al solar el día asignado.",
+            "Revisión del expediente por la Encargada de Tramitación",
+            "Se remite al Dpto. de Catastro para revisión de documentos legales.",
+            "Entrada del Exp. al Depto. de Urbanismo para realizar el Uso de Suelo; si el proyecto está realizado se elabora uso y no objeción",
+            "Se remite a la Asistente de la Dirección, para pasarla al Director(a)",
+            "Retorna a Tramitación de Planos, para mandarlo al Depto. de Tasación.",
+            "Retorna otra vez a Tramitación para llamar al munícipe para gestionar los cobros de los arbitrios.",
+            "Se envía al Departamento de Seguimiento a los fines de verificar con lo aprobado.",
+            "Las certificaciones emitidas tendrán un costo de RD$300.00 (trescientos pesos)."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 3:00 p.m.",
+        "cost": "Desde RD$2,000.00 a RD$40,000.00, según el proyecto a ejecutar.",
+        "expected_time" : "15 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Al proyecto definitivo se le convalidarán los requisitos y pagos que se habían realizado cuando se presentó el anteproyecto. La aprobación definitiva del proyecto quedará certificada con el sellado de los planos y firma del titular de la Dirección de Planeamiento Urbano.",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Nota: A estas tasas,  cada año, se les aplicarán la indexación por inflación de conformidad con las estadísticas oficiales que  al respecto ofrezca el Banco Central de la República.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 21,
+        "title" : "Requisitos para presentar anteproyectos",
+        "image" : "presentar_anteproyectos.png",
+        "description" : "El servicio consiste en informar a los munícipes sobre la documentación requerida y el proceso para la tramitación de Anteproyectos en el Departamento de Tramitación de Planos.",
+        "public": "Público en General",
+        "offerer": "el departamento de Tramitación, Dirección de Planeamiento Urbano.",
+        "tel": "(809) 788-7676 Ext: 1013",
+        "email": [
+            "tramitacion@asde.gov.do"
+        ],
+        "requirements": [
+            "Carta de solicitud dirigida a la Dirección de Planeamiento Urbano.",
+            "Título de propiedad (original y copia de ambos lados) si tiene gravamen, traer carta de no objeción del acreedor hipotecario con la firma legalizada por un Notario Público.",
+            "Plano de Mensura Catastral (copia).",
+            "Certificado de uso de suelo vigente. Valor según el proyecto a ejecutar RD$2,000.00 a RD$20,000.00.",
+            "Recibo de no objeción: Valor: a) RD$1,500.00 Vivienda unifamiliar. b) RD$2,000.00 Remodelación y anexos. c) RD$5,000.00 Edificios de apartamentos. d) RD$45,000.00 Urbanizaciones e) RD$50,000.00 Bombas de gasolina, naves industriales, etc.",
+            "Juego de planos arquitectónicos en formato 11” X 17” y encuadernado en carpeta 8 1/2” X 11”, contenido: • Plano de ubicación y localización, indicando retiros a linderos • Planta arquitectónica, dimensionadas • 2 elevaciones • 2 secciones."
+        ],
+        "procedures": [
+            "Inspección hecha por el inspector al solar el día asignado.",
+            "Revisión del expediente por la Encargada de Tramitación",
+            "Se remite al Dpto. de Catastro para revisión de documentos legales.",
+            "Entrada del Exp. al Depto. de Urbanismo para realizar el Uso de Suelo; si el proyecto está realizado se elabora uso y no objeción",
+            "Se remite a la Asistente de la Dirección, para pasarla al Director(a)",
+            "Retorna a Tramitación de Planos, para mandarlo al Depto. de Tasación.",
+            "Retorna otra vez a Tramitación para llamar al munícipe para gestionar los cobros de los arbitrios.",
+            "Se envía al Departamento de Seguimiento a los fines de verificar con lo aprobado."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 3:00 p.m.",
+        "cost": "Ver requerimientos o requisitos",
+        "expected_time" : "15 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "El municipio tiene la opción de verificar sus proyectos con una consulta previa a la entrada en el departamento de urbanismo, verificando lo que son: linderos y altura permitidos en la zona a realizar dicho proyecto. (Días de consulta Martes y Jueves).",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Nota: A estas tasas,  cada año, se les aplicarán la indexación por inflación de conformidad con las estadísticas oficiales que  al respecto ofrezca el Banco Central de la República.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 22,
+        "title" : "Solicitud de Certificado de No Objeción al Uso de Suelo",
+        "image" : "no_objecion_uso_suelo.png",
+        "description" : "El servicio consiste en orientar al munícipe sobre la documentación requerida y el proceso a seguir para la tramitación de Solicitud de Certificado de No Objeción al Uso de Suelo en el Departamento de Tramitación de Planos.",
+        "public": "Público en General",
+        "offerer": "el departamento de Tramitación, Dirección de Planeamiento Urbano.",
+        "tel": "(809) 788-7676 Ext: 1013",
+        "email": [
+            "tramitacion@asde.gov.do"
+        ],
+        "requirements": [
+            "Carta de solicitud dirigida a la Dirección de Planeamiento Urbano.",
+            "Certificado de Titulo de Propiedad (original y copia de ambos lados).",
+            "Plano de Mensura Catastral (copia).",
+            "Plano de Localización del Proyecto y levantamiento de uso de suelo y densidad circundante.",
+            "Pago de recibo de uso de suelo: Valor RD$2,000.00. Duración 1 año.",
+            "Pago de recibo de inspección: Valor RD$1,000.00. Duración 1 año.",
+            "Pago de recibo de uso de suelo de urbanización y/o lotificación: Valor RD$30,000.00.",
+            "Pago de recibo de uso de suelo de estaciones de expendio de combustible:RD$40,000.00.",
+            "Pago de recibo de inspección de urbanización y estaciones de expendio de combustible: Valor RD$5,000.00."
+        ],
+        "procedures": [
+            "Inspección hecha por el inspector al solar el día asignado.",
+            "Revisión del expediente por la Encargada de Tramitación",
+            "Se remite al Dpto. de Catastro para revisión de documentos legales.",
+            "Entrada del Exp. al Depto. de Urbanismo para realizar el Uso de Suelo; si el proyecto está realizado se elabora uso y no objeción",
+            "Se remite a la Asistente de la Dirección, para pasarla al Director(a)",
+            "Retorna a Tramitación de Planos, para mandarlo al Depto. de Tasación.",
+            "Retorna otra vez a Tramitación para llamar al munícipe para gestionar los cobros de los arbitrios.",
+            "Se envía al Departamento de Seguimiento a los fines de verificar con lo aprobado."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 3:00 p.m.",
+        "cost": "Ver requerimientos o requisitos",
+        "expected_time" : "15 días laborables",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "El municipio tiene la opción de verificar sus proyectos con una consulta previa a la entrada en el departamento de urbanismo, verificando lo que son: linderos y altura permitidos en la zona a realizar dicho proyecto. (Días de consulta Martes y Jueves).",
+                "is_bold": false,
+                "color": ""
+            },
+            {
+                "text": "Nota: A estas tasas,  cada año, se les aplicarán la indexación por inflación de conformidad con las estadísticas oficiales que  al respecto ofrezca el Banco Central de la República.",
+                "is_bold": false,
+                "color": ""
+            }
+        ]
+    },
+    {
+        "id": 23,
+        "title" : "Duplicado contrato venta terreno cementerio",
+        "image" : "duplicado_contrato.png",
+        "description" : "El servicio consiste en emitir un duplicado del contrato de venta terreno en caso de pérdida, el cual es tramitado en el Cementerio Cristo Salvador.",
+        "public": "Público en General",
+        "offerer": "el departamento de Administración Cementerio.",
+        "tel": "(809) 937-0842 Ext: 0",
+        "email": [
+            "ingresos@asde.gov.do"
+        ],
+        "requirements": [
+            "Llevar a la oficina del cementerio una copia cédula del solicitante y suministrar datos de fecha compra terreno, manzana y categoría entre otros, fecha de enterramiento."
+        ],
+        "procedures": [
+            "El munícipe debe pasar por la oficina del cementerio Cristo Salvador y solicitar el duplicado del contrato de venta terreno y pagar impuesto correspondiente."
+        ],
+        "available_days": "Disponibles de lunes a viernes",
+        "available_time": "8:00 a.m. hasta 3:00 p.m.",
+        "cost": "Ver requerimientos o requisitos",
+        "expected_time" : "3 meses laborables.",
+        "delivery_channel": "Presencial",
+        "additional_information": [
+            {
+                "text": "Ordenanza 02-11",
                 "is_bold": false,
                 "color": ""
             }
