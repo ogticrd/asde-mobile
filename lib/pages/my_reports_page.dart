@@ -51,102 +51,111 @@ class MyReportsPage extends StatelessWidget {
               ValueListenableBuilder(
                 valueListenable: Hive.box<Report>('reports').listenable(),
                 builder: (context, Box<Report> box, widget) {
-                  return ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    shrinkWrap: true,
-                    itemCount: box.length,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 16.0),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      height: 100,
-                                      width: 100,
-                                      decoration: new BoxDecoration(
-                                        borderRadius: BorderRadius.circular(10),
-                                        image: new DecorationImage(
-                                          image: new MemoryImage(
-                                            base64Decode(
-                                                box.getAt(index)!.image),
+                  if (box.length == 0) {
+                    return Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: Text("No hay reclamaciones hechas"),
+                    );
+                  } else {
+                    return ListView.builder(
+                      physics: NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: box.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 16.0),
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Column(
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Container(
+                                        height: 100,
+                                        width: 100,
+                                        decoration: new BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(10),
+                                          image: new DecorationImage(
+                                            image: new MemoryImage(
+                                              base64Decode(
+                                                  box.getAt(index)!.image),
+                                            ),
+                                            fit: BoxFit.cover,
                                           ),
-                                          fit: BoxFit.cover,
                                         ),
                                       ),
-                                    ),
-                                    SizedBox(
-                                      width: 20,
-                                    ),
-                                    Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          children: [
-                                            Image.asset(
-                                              "assets/location_icon.png",
-                                              scale: 0.8,
-                                            ),
-                                            SizedBox(
-                                              width: 10,
-                                            ),
-                                            Text(
-                                              box.getAt(index)!.location,
-                                              style: TextStyle(
-                                                fontWeight: FontWeight.bold,
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Image.asset(
+                                                "assets/location_icon.png",
+                                                scale: 0.8,
                                               ),
-                                            ),
-                                          ],
-                                        ),
-                                        SizedBox(
-                                          height: 20,
-                                        ),
-                                        Text(box.getAt(index)!.description),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Divider(
-                                  thickness: 2,
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(children: [
-                                      Image.asset(
-                                        GetReportTypeImage(
-                                            box.getAt(index)!.type),
+                                              SizedBox(
+                                                width: 10,
+                                              ),
+                                              Text(
+                                                box.getAt(index)!.location,
+                                                style: TextStyle(
+                                                  fontWeight: FontWeight.bold,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          SizedBox(
+                                            height: 20,
+                                          ),
+                                          Text(box.getAt(index)!.description),
+                                        ],
                                       ),
-                                      SizedBox(width: 15),
-                                      Text(box.getAt(index)!.type),
-                                    ]),
-                                    Text(box.getAt(index)!.date),
-                                  ],
-                                ),
-                              ],
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10,
+                                  ),
+                                  Divider(
+                                    thickness: 2,
+                                  ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Row(children: [
+                                        Image.asset(
+                                          GetReportTypeImage(
+                                              box.getAt(index)!.type),
+                                        ),
+                                        SizedBox(width: 15),
+                                        Text(box.getAt(index)!.type),
+                                      ]),
+                                      Text(box.getAt(index)!.date),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      );
-                    },
-                  );
+                        );
+                      },
+                    );
+                  }
                 },
               )
             ],

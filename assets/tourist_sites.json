@@ -20,5 +20,82 @@
         "schedule" : "8:30 a.m. hasta 5:30 p.m.",
         "location" : "C.Marginal Las Americas Este, Santo Domingo Este",
         "contact" : "(809) 788 7056"
+    },
+    {
+        "id" : 3,
+        "title" : "Faro a Colón",
+        "image" : "faro_colon.jpg",
+        "shortText" : "El Faro a Colón limita al norte con la Av. Faro a Colón, al sur con la Av. Estados Unidos, al este con el parque Mirador del Este y al Oeste con la Av. Mirador del Este.",
+        "longText" : "El Faro a Colón limita al norte con la Av. Faro a Colón, al sur con la Av. Estados Unidos, al este con el parque Mirador del Este y al Oeste con la Av. Mirador del Este.\n\n El faro a colón es un monumento y museo dominicano, construido en honor a cristóbal colón, quien descubrió el nuevo mundo.\n\nSe empezó a construir en 1986, concluyéndose en 1992 que coincidió con la celebración de los «500 años del descubrimiento de américa».\n\nEl faro a colón, es el único en su especie, en forma de cruz latina con 70 metros de alto y 230 metros de largo, con 251 faroles dirigidos al cielo. Se encuentra ubicado en la Avenida Boulevard del Faro, en el sector de Villa Duarte.\n\n",
+        "availability" : "Disponible martes a domingo",
+        "schedule" : "9:00 a.m. hasta 5:00 p.m.",
+        "location" : "Av Mirador del Este, Santo Domingo Este",
+        "contact" : "(809) 591-4844"
+    },
+    {
+        "id" : 4,
+        "title" : "Capilla del Rosario",
+        "image" : "capilla_rosario.jpg",
+        "shortText" : "La Capilla del Rosario se encuentra ubicada en el Sector de Villa Duarte, en el sitio original de la Fundación de Santo Domingo, al norte del edificio de la empresa Molinos Modernos y al sur de la marina en la rivera oriental del río Ozama.",
+        "longText" : "La Capilla del Rosario se encuentra ubicada en el Sector de Villa Duarte, en el sitio original de la Fundación de Santo Domingo, al norte del edificio de la empresa Molinos Modernos y al sur de la marina en la rivera oriental del río Ozama.",
+        "availability" : "Disponible todos los días",
+        "schedule" : "8:00 a.m. hasta 5:00 p.m.",
+        "location" : "Villa Duarte, Santo Domingo Este",
+        "contact" : "(809) 238-7555"
+    },
+    {
+        "id" : 5,
+        "title" : "Plaza Juan Pablo Duarte",
+        "image" : "busto_duarte.png",
+        "shortText" : "Plaza Juan Pablo Duarte. Popularmente conocida como Plaza de la Cultura, es una amplia extensión de terreno ubicada en la zona oriental de Santo Domingo. Es un lugar especial para honrar la memoria, vida y obra del principal Padre de la Patria de República Dominicana, también fundador de La Trinitaria.",
+        "longText" : "Plaza Juan Pablo Duarte. Popularmente conocida como Plaza de la Cultura, es una amplia extensión de terreno ubicada en la zona oriental de Santo Domingo. Es un lugar especial para honrar la memoria, vida y obra del principal Padre de la Patria de República Dominicana, también fundador de La Trinitaria.\n\nEn la plaza, su principal atractivo es el enorme busto de Juan Pablo Duarte escoltado por dos banderas, una de ellas la dominicana. Además allí encontraras una serie de escalinatas, dos plazoletas y un pequeño anfiteatro llamada la dramática donde se realizan sesiones fotográficas y demás actividades.",
+        "availability" : "Disponible todos los días",
+        "schedule" : "Abierto las 24 horas",
+        "location" : "Autopista Las Américas, Santo Domingo Este",
+        "contact" : ""
+    },
+    {
+        "id" : 6,
+        "title" : "Parque Manantial Cachón de la rubia",
+        "image" : "cachon_rubia.jpg",
+        "shortText" : "El parque manantial Cachón de la Rubia, se encuentra localizado al norte de la calle Horizontal, del sector Cancino y al este del sector Los Mina Norte.",
+        "longText" : "El parque manantial Cachón de la Rubia, se encuentra localizado al norte de la calle Horizontal, del sector Cancino y al este del sector Los Mina Norte.\n\nEl parque Mirador manantiales del Cachón de la Rubia está ubicado sobre el río Ozama, en la zona noreste del municipio de Santo Domingo Este, en el sector de Cancino. Creado por decreto 207-02 del 20 de marzo de 2002, es un parque urbano catalogado como reserva natural y con una superficie de 1,9 KM2. Es el pulmón de la ciudad.",
+        "availability" : "Disponible todos los días",
+        "schedule" : "8:00 a.m. hasta 5:00 p.m.",
+        "location" : "Sector Lucerna, Santo Domingo Este",
+        "contact" : ""
+    },
+    {
+        "id" : 7,
+        "title" : "Malecón de la Avenida España",
+        "image" : "malon_espana.jpg",
+        "shortText" : "El malecón de Santo Domingo Este se encuentra localizado en todo el litoral sur, desde el puente Juan Carlos hasta punta torrecilla.",
+        "longText" : "El malecón de Santo Domingo Este se encuentra localizado en todo el litoral sur, desde el puente Juan Carlos hasta punta torrecilla.",
+        "availability" : "Disponible todos los días",
+        "schedule" : "Abierto las 24 horas",
+        "location" : "Av. España, Santo Domingo Este",
+        "contact" : "(809) 688-7441"
+    },
+    {
+        "id" : 8,
+        "title" : "Monumento a la caña",
+        "image" : "monumento_cana.jpg",
+        "shortText" : "El monumento a la caña se encuentra ubicado en la avenida España, en lo que es el sector de Villa Duarte, frente a la plaza marina Bartolomé Colón. El monumento a la caña fue inaugurado en el año 1992 en la avenida España del municipio.",
+        "longText" : "El monumento a la caña se encuentra ubicado en la avenida España, en lo que es el sector de Villa Duarte, frente a la plaza marina Bartolomé Colón. El monumento a la caña fue inaugurado en el año 1992 en la avenida España del municipio.",
+        "availability" : "Disponible todos los días",
+        "schedule" : "Abierto las 24 horas",
+        "location" : "Av. España, Santo Domingo Este",
+        "contact" : ""
+    },
+    {
+        "id" : 8,
+        "title" : "Parque Mirador del Este",
+        "image" : "mirador_este.png",
+        "shortText" : "El Parque Mirador del Este es el pulmón verde del municipio, en el mismo los habitantes lo utilizan para realizar sus actividades recreativas, de esparcimientos, ejercitarse al aire libre y efectuar encuentros sociales de familias y jóvenes residentes en el sector.",
+        "longText" : "El Parque Mirador del Este es el pulmón verde del municipio, en el mismo los habitantes lo utilizan para realizar sus actividades recreativas, de esparcimientos, ejercitarse al aire libre y efectuar encuentros sociales de familias y jóvenes residentes en el sector.\n\nEsos diez importantes atractivos turísticos del municipio hay que agregarles el activo más valiosos en materia de turismo que son las atenciones y el positivo calor humano que ofrecen los laboriosos y alegres pobladores del municipio santo domingo este, el municipio cabecera de la provincia santo domingo, de lo cual nos sentimos muy orgullosos.",
+        "availability" : "Disponible todos los días",
+        "schedule" : "Abierto las 24 horas",
+        "location" : "Santo Domingo Este",
+        "contact" : "(809) 692-4719"
     }
 ]

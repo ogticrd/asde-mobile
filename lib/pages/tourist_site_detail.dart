@@ -52,16 +52,27 @@ class TouristSiteDetailPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(8.0),
-                        child: Image.asset(
-                          "assets/" + touristSite.image,
+                      Container(
+                        height: 200,
+                        decoration: new BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: new DecorationImage(
+                            image: new AssetImage(
+                              "assets/" + touristSite.image,
+                            ),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                       SizedBox(
                         height: 10,
                       ),
-                      Text(touristSite.longText),
+                      Text(
+                        touristSite.longText,
+                        style: TextStyle(
+                          height: 1.4,
+                        ),
+                      ),
                       SizedBox(
                         height: 20,
                       ),

@@ -69,26 +69,22 @@ class _HomePageState extends State<HomePage> {
                   SizedBox(
                     width: 10,
                   ),
-                  Expanded(
-                    child: RichText(
-                      text: TextSpan(
-                        style: Theme.of(context).textTheme.bodyText2,
-                        children: <TextSpan>[
-                          TextSpan(
-                            text: "ASDE: ",
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 18,
-                            ),
-                          ),
-                          TextSpan(
-                            text: "UNA CIUDAD JUSTA Y CREATIVA",
-                            style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w500),
-                          ),
-                        ],
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "ASDE",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 22,
+                        ),
                       ),
-                    ),
+                      Text(
+                        "UNA CIUDAD JUSTA Y CREATIVA",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w500),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -99,7 +95,16 @@ class _HomePageState extends State<HomePage> {
                 controller: searchController,
                 decoration: InputDecoration(
                   hintText: "BUSCAR",
-                  suffixIcon: Icon(Icons.search, color: Color(0xFF1BBC9B)),
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 20, horizontal: 25),
+                  suffixIcon: Padding(
+                    padding: EdgeInsets.only(right: 10),
+                    child: Icon(
+                      Icons.search,
+                      color: Color(0xFF1BBC9B),
+                      size: 40,
+                    ),
+                  ),
                   filled: true,
                   fillColor: Colors.white,
                   border: OutlineInputBorder(
@@ -154,7 +159,7 @@ class _HomePageState extends State<HomePage> {
                           builder: (BuildContext context) {
                             return Container(
                               width: MediaQuery.of(context).size.width,
-                              margin: EdgeInsets.symmetric(horizontal: 5.0),
+                              margin: EdgeInsets.only(right: 5.0),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -179,7 +184,7 @@ class _HomePageState extends State<HomePage> {
                                           color: Colors.white,
                                         ),
                                         child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
+                                          padding: const EdgeInsets.all(11.0),
                                           child: Column(
                                             crossAxisAlignment:
                                                 CrossAxisAlignment.start,
@@ -219,12 +224,19 @@ class _HomePageState extends State<HomePage> {
                                                 ),
                                               ),
                                               Expanded(child: Container()),
-                                              Text(
-                                                "Leer más >",
-                                                style: TextStyle(
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Colors.orange,
-                                                ),
+                                              Row(
+                                                children: [
+                                                  Text(
+                                                    "Leer más ",
+                                                    style: TextStyle(
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color: Colors.orange,
+                                                    ),
+                                                  ),
+                                                  Image.asset(
+                                                      "assets/flecha.png")
+                                                ],
                                               ),
                                               SizedBox(
                                                 height: 10,
@@ -260,7 +272,7 @@ class _HomePageState extends State<HomePage> {
                                               ),
                                               child: Padding(
                                                 padding:
-                                                    const EdgeInsets.all(8.0),
+                                                    const EdgeInsets.all(11.0),
                                                 child: Column(
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
@@ -313,13 +325,21 @@ class _HomePageState extends State<HomePage> {
                                                     Expanded(
                                                       child: Container(),
                                                     ),
-                                                    Text(
-                                                      "Leer más >",
-                                                      style: TextStyle(
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        color: Colors.orange,
-                                                      ),
+                                                    Row(
+                                                      children: [
+                                                        Text(
+                                                          "Leer más ",
+                                                          style: TextStyle(
+                                                            fontWeight:
+                                                                FontWeight.bold,
+                                                            color:
+                                                                Colors.orange,
+                                                          ),
+                                                        ),
+                                                        Image.asset(
+                                                          "assets/flecha.png",
+                                                        )
+                                                      ],
                                                     ),
                                                     SizedBox(
                                                       height: 10,
@@ -375,8 +395,8 @@ class _HomePageState extends State<HomePage> {
                           CarouselSlider(
                             options: CarouselOptions(
                               height: 270.0,
-                              enableInfiniteScroll: false,
-                              viewportFraction: 0.95,
+                              enableInfiniteScroll: true,
+                              viewportFraction: 1,
                             ),
                             items: carrouselItems,
                           ),
@@ -439,20 +459,19 @@ class _HomePageState extends State<HomePage> {
                           ),
                           CarouselSlider(
                               options: CarouselOptions(
-                                height: 330.0,
+                                height: 350.0,
                                 enableInfiniteScroll: false,
-                                viewportFraction: 0.95,
+                                viewportFraction: 1,
                               ),
                               items: snapshot.data!.map((i) {
                                 return Builder(
                                   builder: (BuildContext context) {
                                     return Container(
                                       width: MediaQuery.of(context).size.width,
-                                      margin:
-                                          EdgeInsets.symmetric(horizontal: 5.0),
+                                      margin: EdgeInsets.only(right: 5.0),
                                       child: Padding(
                                         padding: const EdgeInsets.only(
-                                            bottom: 10.0, top: 10.0),
+                                            bottom: 10.0, top: 0.0),
                                         child: InkWell(
                                           onTap: () {
                                             Navigator.push(
@@ -473,7 +492,7 @@ class _HomePageState extends State<HomePage> {
                                             ),
                                             child: Padding(
                                               padding:
-                                                  const EdgeInsets.all(8.0),
+                                                  const EdgeInsets.all(11.0),
                                               child: Column(
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.start,
@@ -495,7 +514,7 @@ class _HomePageState extends State<HomePage> {
                                                     ),
                                                   ),
                                                   SizedBox(
-                                                    height: 10,
+                                                    height: 20,
                                                   ),
                                                   Text(
                                                     i.title,
@@ -514,17 +533,28 @@ class _HomePageState extends State<HomePage> {
                                                     i.shortText,
                                                     style: TextStyle(
                                                       color: Colors.black,
-                                                      fontSize: 15,
+                                                      fontSize: 14,
+                                                      height: 1.4,
                                                     ),
+                                                    maxLines: 4,
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
                                                   ),
                                                   Expanded(child: Container()),
-                                                  Text(
-                                                    "Conoce más detalles >",
-                                                    style: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Colors.orange,
-                                                    ),
+                                                  Row(
+                                                    children: [
+                                                      Text(
+                                                        "Conoce más detalles ",
+                                                        style: TextStyle(
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color: Colors.orange,
+                                                        ),
+                                                      ),
+                                                      Image.asset(
+                                                        "assets/flecha.png",
+                                                      )
+                                                    ],
                                                   ),
                                                   SizedBox(
                                                     height: 10,

@@ -111,9 +111,10 @@ class _ReportFormState extends State<ReportForm> {
                           border: OutlineInputBorder(
                             borderSide:
                                 new BorderSide(color: Color(0xFFDEDEDE)),
-                            borderRadius: BorderRadius.circular(5.0),
+                            borderRadius: BorderRadius.circular(8.0),
                           ),
                         ),
+                        maxLines: 6,
                       ),
                       SizedBox(
                         height: 15,
@@ -135,7 +136,8 @@ class _ReportFormState extends State<ReportForm> {
                               value: selectedSector,
                               decoration: InputDecoration(
                                 isDense: true,
-                                border: OutlineInputBorder(),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(8.0)),
                               ),
                               items: snapshot.data!
                                   .map<DropdownMenuItem<Sector>>(
@@ -174,7 +176,8 @@ class _ReportFormState extends State<ReportForm> {
                               value: selectedNeighborhood,
                               decoration: InputDecoration(
                                 isDense: true,
-                                border: OutlineInputBorder(),
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(8.0)),
                               ),
                               items: snapshot.data!
                                   .map<DropdownMenuItem<String>>(
@@ -203,9 +206,6 @@ class _ReportFormState extends State<ReportForm> {
                       SizedBox(
                         height: 15,
                       ),
-                      SizedBox(
-                        height: 15,
-                      ),
                       TextFormField(
                         controller: locationController,
                         decoration: InputDecoration(
@@ -213,7 +213,7 @@ class _ReportFormState extends State<ReportForm> {
                           border: OutlineInputBorder(
                             borderSide:
                                 new BorderSide(color: Color(0xFFDEDEDE)),
-                            borderRadius: BorderRadius.circular(5.0),
+                            borderRadius: BorderRadius.circular(8.0),
                           ),
                         ),
                       ),

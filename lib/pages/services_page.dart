@@ -81,11 +81,13 @@ class _ServicesPageState extends State<ServicesPage> {
                                   );
                                 },
                                 child: Card(
+                                  margin: EdgeInsets.fromLTRB(0, 4.0, 0, 4.0),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15.0),
                                   ),
                                   child: Padding(
-                                    padding: const EdgeInsets.all(20.0),
+                                    padding: const EdgeInsets.fromLTRB(
+                                        20.0, 25.0, 20.0, 20.0),
                                     child: Row(
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
@@ -121,7 +123,7 @@ class _ServicesPageState extends State<ServicesPage> {
                                                                 .image),
                                                   ),
                                                   SizedBox(
-                                                    width: 10,
+                                                    width: 20,
                                                   ),
                                                   Expanded(
                                                     child: Text(

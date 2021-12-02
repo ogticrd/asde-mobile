@@ -101,8 +101,8 @@ b. Jurisdicción.
 El Organismo Gubernamental y el Usuario, con renuncia tácita a cualquier otro fuero, se someten al de los tribunales de la República Dominicana. Para cualquier sugerencia o propuesta de colaboración escríbanos a nuestro correo electrónico info@asde.gov.do. Esta dirección de correo electrónico está siendo protegida de \”spam bots\”, necesita habilitar Javascript para poder verla, o llámenos al siguiente número de teléfono: (809) 788-7676.
                 """,
                 style: TextStyle(
-                  fontWeight: FontWeight.w500,
                   fontSize: 12,
+                  height: 1.4,
                 ),
               ),
             ],

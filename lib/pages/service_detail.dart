@@ -19,8 +19,11 @@ class ServiceDetailPage extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-          icon: Image.asset("assets/drawer_button.png"),
-          onPressed: () => _scaffoldKey.currentState?.openDrawer(),
+          icon: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.orange,
+          ),
+          onPressed: () => Navigator.pop(context),
         ),
       ),
       drawer: MainDrawer(),
@@ -70,7 +73,12 @@ class ServiceDetailPage extends StatelessWidget {
                       SizedBox(
                         height: 20,
                       ),
-                      Text(service.description),
+                      Text(
+                        service.description,
+                        style: TextStyle(
+                          height: 1.4,
+                        ),
+                      ),
                       SizedBox(
                         height: 20,
                       ),
@@ -334,6 +342,7 @@ class ServiceDetailPage extends StatelessWidget {
                 : Colors.black,
             fontWeight:
                 information.isBold ? FontWeight.bold : FontWeight.normal,
+            height: 1.4,
           ),
         ),
         SizedBox(
@@ -354,7 +363,13 @@ Widget displayEmails({String email = ""}) {
       SizedBox(
         width: 15,
       ),
-      Expanded(child: Text(email)),
+      Expanded(
+          child: Text(
+        email,
+        style: TextStyle(
+          height: 1.4,
+        ),
+      )),
     ],
   );
 }
@@ -362,11 +377,20 @@ Widget displayEmails({String email = ""}) {
 Widget bulletListElement(String text) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.start,
-    crossAxisAlignment: CrossAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.start,
     children: [
-      Text("•"),
+      Padding(
+        padding: const EdgeInsets.only(top: 7.0),
+        child: Text("•"),
+      ),
       SizedBox(width: 10),
-      Expanded(child: Text(text)),
+      Expanded(
+          child: Text(
+        text,
+        style: TextStyle(
+          height: 1.4,
+        ),
+      )),
     ],
   );
 }

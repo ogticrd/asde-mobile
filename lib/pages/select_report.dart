@@ -83,6 +83,14 @@ class _SelectReportState extends State<SelectReport> {
                                     setState(() {
                                       _value = "Basura";
                                     });
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReportForm(
+                                          reportType: _value,
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -127,6 +135,14 @@ class _SelectReportState extends State<SelectReport> {
                                     setState(() {
                                       _value = "Asfalto";
                                     });
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReportForm(
+                                          reportType: _value,
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -170,6 +186,14 @@ class _SelectReportState extends State<SelectReport> {
                                     setState(() {
                                       _value = "Aseo Urbano";
                                     });
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReportForm(
+                                          reportType: _value,
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -217,6 +241,14 @@ class _SelectReportState extends State<SelectReport> {
                                     setState(() {
                                       _value = "Drenaje";
                                     });
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReportForm(
+                                          reportType: _value,
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -255,6 +287,14 @@ class _SelectReportState extends State<SelectReport> {
                                     setState(() {
                                       _value = "Fumigación";
                                     });
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReportForm(
+                                          reportType: _value,
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -293,6 +333,14 @@ class _SelectReportState extends State<SelectReport> {
                                     setState(() {
                                       _value = "Tránsito";
                                     });
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReportForm(
+                                          reportType: _value,
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -376,6 +424,14 @@ class _SelectReportState extends State<SelectReport> {
                                     setState(() {
                                       _value = "Espacios Públicos";
                                     });
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReportForm(
+                                          reportType: _value,
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -418,6 +474,14 @@ class _SelectReportState extends State<SelectReport> {
                                     setState(() {
                                       _value = "Protección Animal";
                                     });
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReportForm(
+                                          reportType: _value,
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -464,6 +528,14 @@ class _SelectReportState extends State<SelectReport> {
                                     setState(() {
                                       _value = "Poda de árboles";
                                     });
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReportForm(
+                                          reportType: _value,
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -491,41 +563,6 @@ class _SelectReportState extends State<SelectReport> {
               ),
               SizedBox(
                 height: 20,
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(32),
-                child: Stack(
-                  children: [
-                    Positioned.fill(
-                      child: Container(
-                        decoration: new BoxDecoration(
-                          color: Colors.orange,
-                        ),
-                      ),
-                    ),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        padding: const EdgeInsets.all(16.0),
-                        primary: Colors.white,
-                        minimumSize: Size(double.infinity, 20),
-                        textStyle: TextStyle(
-                          fontSize: 18,
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ReportForm(
-                              reportType: _value,
-                            ),
-                          ),
-                        );
-                      },
-                      child: Text('Continuar'),
-                    ),
-                  ],
-                ),
               ),
             ],
           ),

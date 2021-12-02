@@ -122,75 +122,92 @@ class MainDrawer extends StatelessWidget {
               showDialog(
                 context: context,
                 builder: (BuildContext context) => AlertDialog(
-                  content: Column(
-                    mainAxisSize: MainAxisSize.min,
+                  content: Stack(
                     children: [
-                      Image.asset("assets/servicio_cliente.png"),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      Text(
-                        "Asistencia Directa de Servicio al Cliente",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 13,
+                      Positioned(
+                        right: 0.0,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: Align(
+                            alignment: Alignment.topRight,
+                            child: Icon(Icons.close, color: Colors.orange),
+                          ),
                         ),
-                        textAlign: TextAlign.center,
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Text(
-                        "Si desea communicarse con nuestro servicio de ayuda puedes comentarnos directamente vía WhatsApp. Estamos aquí para ayudarte",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 12,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(32),
-                        child: Stack(
-                          children: [
-                            Positioned.fill(
-                              child: Container(
-                                decoration: new BoxDecoration(
-                                  color: Color(0xFF62D266),
-                                ),
-                              ),
+                      Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Image.asset("assets/servicio_cliente.png"),
+                          SizedBox(
+                            height: 30,
+                          ),
+                          Text(
+                            "Asistencia Directa de Servicio al Cliente",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 13,
                             ),
-                            TextButton(
-                              style: TextButton.styleFrom(
-                                padding: const EdgeInsets.all(16.0),
-                                primary: Colors.white,
-                                minimumSize: Size(double.infinity, 20),
-                                textStyle: TextStyle(
-                                  fontSize: 18,
-                                ),
-                              ),
-                              onPressed: () async {
-                                String number = "18097887676";
-                                await launch("https://wa.me/$number");
-                              },
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Image.asset("assets/whatsapp.png"),
-                                  SizedBox(width: 10),
-                                  Text(
-                                    'Contactar vía WhatsApp',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            "Si desea communicarse con nuestro servicio de ayuda puedes comentarnos directamente vía WhatsApp. Estamos aquí para ayudarte",
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 12,
+                              height: 1.4,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(32),
+                            child: Stack(
+                              children: [
+                                Positioned.fill(
+                                  child: Container(
+                                    decoration: new BoxDecoration(
+                                      color: Color(0xFF62D266),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                                TextButton(
+                                  style: TextButton.styleFrom(
+                                    padding: const EdgeInsets.all(16.0),
+                                    primary: Colors.white,
+                                    minimumSize: Size(double.infinity, 20),
+                                    textStyle: TextStyle(
+                                      fontSize: 18,
+                                    ),
+                                  ),
+                                  onPressed: () async {
+                                    String number = "18097887676";
+                                    await launch("https://wa.me/$number");
+                                  },
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Image.asset("assets/whatsapp.png"),
+                                      SizedBox(width: 10),
+                                      Text(
+                                        'Contactar vía WhatsApp',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
