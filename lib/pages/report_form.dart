@@ -12,6 +12,7 @@ import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:image_picker/image_picker.dart';
 import '../main_drawer.dart';
+import 'my_reports_page.dart';
 
 class ReportForm extends StatefulWidget {
   const ReportForm({Key? key, required this.reportType}) : super(key: key);
@@ -262,6 +263,7 @@ class _ReportFormState extends State<ReportForm> {
                         },
                         child: Text('Adjuntar Archivo'),
                       ),
+                      if (this.image != null) Text("1 Imagen seleccionada"),
                       SizedBox(
                         height: 15,
                       ),
@@ -286,16 +288,21 @@ class _ReportFormState extends State<ReportForm> {
                                 ),
                               ),
                               onPressed: () async {
+                                buildShowDialog(context);
                                 DateTime now = DateTime.now();
                                 DateFormat formatter = DateFormat('yyyy-MM-dd');
                                 String date = formatter.format(now);
+
                                 var report = Report(
                                     widget.reportType,
                                     descriptionController.text,
-                                    sectorController.text,
-                                    barrioController.text,
+                                    selectedSector!.name,
+                                    selectedNeighborhood!,
                                     locationController.text,
-                                    base64Encode(image!.readAsBytesSync()),
+                                    (image == null)
+                                        ? ""
+                                        : base64Encode(
+                                            image!.readAsBytesSync()),
                                     date);
                                 String username = 'pruebastriny@gmail.com';
                                 String password = 'triny1234TRINY';
@@ -316,21 +323,29 @@ class _ReportFormState extends State<ReportForm> {
                                       <p>${barrioController.text}</p>
                                       <p>${sectorController.text}</p>
                                       <p>${locationController.text}</p>
-                                      """
-                                  ..attachments = [FileAttachment(image!)];
+                                      """;
+
+                                if (image != null) {
+                                  message.attachments = [
+                                    FileAttachment(image!)
+                                  ];
+                                }
                                 try {
                                   final sendReport =
                                       await send(message, smtpServer);
                                   print(
                                       'Message sent: ' + sendReport.toString());
 
-                                  var box = Hive.box<Report>("reports");
+                                  var box =
+                                      await Hive.openBox<Report>("reports");
                                   box.add(report);
+                                  showSucessDialog();
                                 } on MailerException catch (e) {
                                   print('Message not sent. ' + e.message);
                                   for (var p in e.problems) {
                                     print('Problem: ${p.code}: ${p.msg}');
                                   }
+                                  showFailedDialog();
                                 }
                               },
                               child: Text('Crear Reclamación'),
@@ -348,4 +363,202 @@ class _ReportFormState extends State<ReportForm> {
       ),
     );
   }
+
+  void showSucessDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) => AlertDialog(
+        content: Stack(
+          children: [
+            Positioned(
+              right: 0.0,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+                child: Align(
+                  alignment: Alignment.topRight,
+                  child: Icon(Icons.close, color: Colors.orange),
+                ),
+              ),
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset("assets/email_sent.png"),
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  "Reclamación anviada correctamente.",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 13,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "Su reclamación ha sido enviada, un equipo técnico estará dando seguimiento a sus solicitud",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12,
+                    height: 1.4,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(32),
+                  child: Stack(
+                    children: [
+                      Positioned.fill(
+                        child: Container(
+                          decoration: new BoxDecoration(
+                            color: Color(0xFF1CAF82),
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.all(16.0),
+                          primary: Colors.white,
+                          minimumSize: Size(double.infinity, 20),
+                          textStyle: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                        onPressed: () async {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => MyReportsPage(),
+                            ),
+                          );
+                        },
+                        child: Text(
+                          'Aceptar',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void showFailedDialog() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) => AlertDialog(
+        content: Stack(
+          children: [
+            Positioned(
+              right: 0.0,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.of(context).pop();
+                },
+                child: Align(
+                  alignment: Alignment.topRight,
+                  child: Icon(Icons.close, color: Colors.orange),
+                ),
+              ),
+            ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.error,
+                  color: Colors.red,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                Text(
+                  "Error",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 13,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  "Ha ocurrido un error, continuar de nuevo más tarde",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12,
+                    height: 1.4,
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(32),
+                  child: Stack(
+                    children: [
+                      Positioned.fill(
+                        child: Container(
+                          decoration: new BoxDecoration(
+                            color: Color(0xFF1CAF82),
+                          ),
+                        ),
+                      ),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          padding: const EdgeInsets.all(16.0),
+                          primary: Colors.white,
+                          minimumSize: Size(double.infinity, 20),
+                          textStyle: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                        onPressed: () async {
+                          Navigator.pop(context);
+                        },
+                        child: Text(
+                          'Continuar',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+buildShowDialog(BuildContext context) {
+  return showDialog(
+    context: context,
+    barrierDismissible: false,
+    builder: (BuildContext context) {
+      return Center(
+        child: CircularProgressIndicator(),
+      );
+    },
+  );
 }

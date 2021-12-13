@@ -8,11 +8,13 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_svg/svg.dart';
 import '../main_drawer.dart';
 import 'news_detail.dart';
 import 'news_page.dart';
 import 'tourist_site_detail.dart';
 import 'tourist_sites.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -61,30 +63,40 @@ class _HomePageState extends State<HomePage> {
           child: Column(
             children: [
               Row(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   SizedBox(
                     width: 10,
                   ),
-                  Image.asset("assets/logo.png"),
+                  SvgPicture.asset("assets/logo.svg"),
+                  //Image.asset("assets/logo.png"),
                   SizedBox(
                     width: 10,
                   ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        "ASDE",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 22,
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "ASDE",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22,
+                          ),
                         ),
-                      ),
-                      Text(
-                        "UNA CIUDAD JUSTA Y CREATIVA",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w500),
-                      ),
-                    ],
+                        SizedBox(
+                          height: 10,
+                        ),
+                        AutoSizeText(
+                          "UNA CIUDAD JUSTA Y CREATIVA",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          maxLines: 1,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -406,7 +418,8 @@ class _HomePageState extends State<HomePage> {
                       return Container();
                     }
                   } else if (snapshot.hasError) {
-                    return Text('${snapshot.error}');
+                    return Text(
+                        'Hubo un problema de conexión. Las Novedades no se podrán mostrar ahora mismo');
                   }
 
                   return Column(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../main_drawer.dart';
 
@@ -30,7 +31,7 @@ class VersionPage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset("assets/triny.png"),
+              SvgPicture.asset("assets/sde.svg"),
               SizedBox(
                 height: 60,
               ),

@@ -1,4 +1,5 @@
 import 'package:asde/pages/report_form.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 import '../main_drawer.dart';
@@ -101,9 +102,10 @@ class _SelectReportState extends State<SelectReport> {
                                             : "assets/trash_icon.png",
                                         scale: 0.8,
                                       ),
-                                      Text(
+                                      AutoSizeText(
                                         "Basura",
                                         textAlign: TextAlign.center,
+                                        maxLines: 1,
                                       ),
                                     ],
                                   ),
@@ -152,9 +154,10 @@ class _SelectReportState extends State<SelectReport> {
                                             ? "assets/street_white_icon.png"
                                             : "assets/street_icon.png",
                                       ),
-                                      Text(
+                                      AutoSizeText(
                                         "Asfalto",
                                         textAlign: TextAlign.center,
+                                        maxLines: 1,
                                       ),
                                     ],
                                   ),
@@ -203,9 +206,10 @@ class _SelectReportState extends State<SelectReport> {
                                             ? "assets/urban_cleaning_white_icon.png"
                                             : "assets/urban_cleaning_icon.png",
                                       ),
-                                      Text(
+                                      AutoSizeText(
                                         "Aseo Urbano",
                                         textAlign: TextAlign.center,
+                                        maxLines: 2,
                                       ),
                                     ],
                                   ),
@@ -256,7 +260,10 @@ class _SelectReportState extends State<SelectReport> {
                                       Image.asset(_value == "Drenaje"
                                           ? "assets/drainage_white_icon.png"
                                           : "assets/drainage_icon.png"),
-                                      Text("Drenaje"),
+                                      AutoSizeText(
+                                        "Drenaje",
+                                        maxLines: 1,
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -302,7 +309,10 @@ class _SelectReportState extends State<SelectReport> {
                                       Image.asset(_value == "Fumigación"
                                           ? "assets/fumigation_white_icon.png"
                                           : "assets/fumigation_icon.png"),
-                                      Text("Fumigación"),
+                                      AutoSizeText(
+                                        "Fumigación",
+                                        maxLines: 1,
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -348,7 +358,10 @@ class _SelectReportState extends State<SelectReport> {
                                       Image.asset(_value == "Tránsito"
                                           ? "assets/transit_white_icon.png"
                                           : "assets/transit_icon.png"),
-                                      Text("Tránsito"),
+                                      AutoSizeText(
+                                        "Tránsito",
+                                        maxLines: 1,
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -392,7 +405,10 @@ class _SelectReportState extends State<SelectReport> {
                                             ? "assets/ilumination_white_icon.png"
                                             : "assets/ilumination_icon.png",
                                       ),
-                                      Text("Iluminación"),
+                                      AutoSizeText(
+                                        "Iluminación",
+                                        maxLines: 1,
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -439,9 +455,10 @@ class _SelectReportState extends State<SelectReport> {
                                       Image.asset(_value == "Espacios Públicos"
                                           ? "assets/park_white_icon.png"
                                           : "assets/park_icon.png"),
-                                      Text(
+                                      AutoSizeText(
                                         "Espacios Públicos",
                                         textAlign: TextAlign.center,
+                                        maxLines: 2,
                                       ),
                                     ],
                                   ),
@@ -489,9 +506,10 @@ class _SelectReportState extends State<SelectReport> {
                                       Image.asset(_value == "Protección Animal"
                                           ? "assets/animal_protection_white_icon.png"
                                           : "assets/animal_protection_icon.png"),
-                                      Text(
+                                      AutoSizeText(
                                         "Protección Animal",
                                         textAlign: TextAlign.center,
+                                        maxLines: 2,
                                       ),
                                     ],
                                   ),
@@ -543,9 +561,10 @@ class _SelectReportState extends State<SelectReport> {
                                       Image.asset(_value == "Poda de árboles"
                                           ? "assets/poda_white_icon.png"
                                           : "assets/poda_icon.png"),
-                                      Text(
+                                      AutoSizeText(
                                         "Poda de árboles",
                                         textAlign: TextAlign.center,
+                                        maxLines: 3,
                                       ),
                                     ],
                                   ),

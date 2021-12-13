@@ -148,7 +148,7 @@ class _TouristSitesPageState extends State<TouristSitesPage> {
                                 ),
                                 Text(
                                   snapshot.data![index].shortText,
-                                  style: TextStyle(fontSize: 14),
+                                  style: TextStyle(fontSize: 14, height: 1.4),
                                 ),
                                 SizedBox(
                                   height: 15,

@@ -8,7 +8,8 @@
         "availability" : "Disponible todos los días",
         "schedule" : "8:30 a.m. hasta 5:30 p.m.",
         "location" : "C.Marginal Las Americas Este, Santo Domingo Este",
-        "contact" : "(809) 788 7056"
+        "contact" : "(809) 788 7056",
+        "google_map" : "https://goo.gl/maps/wF9tsW5rajSShGSA9"
     },
     {
         "id" : 2,
@@ -19,7 +20,8 @@
         "availability" : "Disponible todos los días",
         "schedule" : "8:30 a.m. hasta 5:30 p.m.",
         "location" : "C.Marginal Las Americas Este, Santo Domingo Este",
-        "contact" : "(809) 788 7056"
+        "contact" : "(809) 788 7056",
+        "google_map" : "https://goo.gl/maps/kofa8PEXpoNC3xXr7"
     },
     {
         "id" : 3,
@@ -30,7 +32,8 @@
         "availability" : "Disponible martes a domingo",
         "schedule" : "9:00 a.m. hasta 5:00 p.m.",
         "location" : "Av Mirador del Este, Santo Domingo Este",
-        "contact" : "(809) 591-4844"
+        "contact" : "(809) 591-4844",
+        "google_map" : "https://goo.gl/maps/rsdsJ2QXiuzrk4iRA"
     },
     {
         "id" : 4,
@@ -41,7 +44,8 @@
         "availability" : "Disponible todos los días",
         "schedule" : "8:00 a.m. hasta 5:00 p.m.",
         "location" : "Villa Duarte, Santo Domingo Este",
-        "contact" : "(809) 238-7555"
+        "contact" : "(809) 238-7555",
+        "google_map" : "https://goo.gl/maps/nm5XESfRUqMBzvfV7"
     },
     {
         "id" : 5,
@@ -52,7 +56,8 @@
         "availability" : "Disponible todos los días",
         "schedule" : "Abierto las 24 horas",
         "location" : "Autopista Las Américas, Santo Domingo Este",
-        "contact" : ""
+        "contact" : "",
+        "google_map" : "https://goo.gl/maps/cEKo9s7mJbw9jSvC7"
     },
     {
         "id" : 6,
@@ -63,7 +68,8 @@
         "availability" : "Disponible todos los días",
         "schedule" : "8:00 a.m. hasta 5:00 p.m.",
         "location" : "Sector Lucerna, Santo Domingo Este",
-        "contact" : ""
+        "contact" : "",
+        "google_map" : "https://goo.gl/maps/7UUutTNPRE5JpWnp9"
     },
     {
         "id" : 7,
@@ -74,7 +80,8 @@
         "availability" : "Disponible todos los días",
         "schedule" : "Abierto las 24 horas",
         "location" : "Av. España, Santo Domingo Este",
-        "contact" : "(809) 688-7441"
+        "contact" : "(809) 688-7441",
+        "google_map" : "https://goo.gl/maps/4dgxYz3WjVDUhvwx6"
     },
     {
         "id" : 8,
@@ -85,7 +92,8 @@
         "availability" : "Disponible todos los días",
         "schedule" : "Abierto las 24 horas",
         "location" : "Av. España, Santo Domingo Este",
-        "contact" : ""
+        "contact" : "",
+        "google_map" : "https://goo.gl/maps/AUvi6wegdMMGjJU4A"
     },
     {
         "id" : 8,
@@ -96,6 +104,7 @@
         "availability" : "Disponible todos los días",
         "schedule" : "Abierto las 24 horas",
         "location" : "Santo Domingo Este",
-        "contact" : "(809) 692-4719"
+        "contact" : "(809) 692-4719",
+        "google_map" : "https://goo.gl/maps/43gQPmYFp8qAwNM79"
     }
 ]

@@ -1,6 +1,7 @@
 import 'package:asde/models/tourist_sites.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../main_drawer.dart';
 
@@ -103,16 +104,6 @@ class TouristSiteDetailPage extends StatelessWidget {
                         ],
                       ),
                       SizedBox(
-                        height: 5,
-                      ),
-                      Row(
-                        children: [
-                          Image.asset("assets/location.png"),
-                          SizedBox(width: 15),
-                          Expanded(child: Text(touristSite.location)),
-                        ],
-                      ),
-                      SizedBox(
                         height: 15,
                       ),
                       Divider(
@@ -136,6 +127,36 @@ class TouristSiteDetailPage extends StatelessWidget {
                           SizedBox(width: 15),
                           Expanded(child: Text(touristSite.contact)),
                         ],
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Divider(
+                        thickness: 1,
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        "Dirección",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      GestureDetector(
+                        onTap: () async {
+                          await launch(touristSite.googleMapsURL);
+                        },
+                        child: Row(
+                          children: [
+                            Image.asset("assets/location.png"),
+                            SizedBox(width: 15),
+                            Expanded(child: Text(touristSite.location)),
+                          ],
+                        ),
                       ),
                       SizedBox(
                         height: 15,

@@ -67,7 +67,8 @@ Future<List<TouristSite>> fetchAllTouristSites() async {
           availability: data[i]["availability"],
           schedule: data[i]["schedule"],
           location: data[i]["location"],
-          contact: data[i]["contact"]),
+          contact: data[i]["contact"],
+          googleMapsURL: data[i]["google_map"]),
     );
   }
   return sitesList;

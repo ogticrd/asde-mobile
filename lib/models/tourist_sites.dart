@@ -8,6 +8,7 @@ class TouristSite {
   final String schedule;
   final String location;
   final String contact;
+  final String googleMapsURL;
 
   TouristSite({
     required this.id,
@@ -19,5 +20,6 @@ class TouristSite {
     required this.schedule,
     required this.location,
     required this.contact,
+    required this.googleMapsURL,
   });
 }

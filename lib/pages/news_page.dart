@@ -101,7 +101,7 @@ class _NewsPageState extends State<NewsPage> {
                     physics: NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     crossAxisCount: 2,
-                    childAspectRatio: 1 / 1.45,
+                    childAspectRatio: 1 / 1.5,
                     children: List.generate(snapshot.data!.length, (index) {
                       return InkWell(
                         onTap: () {
@@ -156,8 +156,8 @@ class _NewsPageState extends State<NewsPage> {
                                     fontSize: 11,
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 15,
+                                Expanded(
+                                  child: Container(),
                                 ),
                                 Text(
                                   "Leer más >",

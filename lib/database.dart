@@ -84,7 +84,7 @@ class DatabaseHelper {
       'isAvailableSaturday': 1,
       'isAvailableSunday': 0,
       'startTime': "7:30AM",
-      'endTime': "4:30AM",
+      'endTime': "4:30PM",
     });
 
     batch.insert("routes", {
@@ -100,7 +100,7 @@ class DatabaseHelper {
       'isAvailableSaturday': 0,
       'isAvailableSunday': 0,
       'startTime': "7:30AM",
-      'endTime': "4:30AM",
+      'endTime': "4:30PM",
     });
 
     batch.insert("routes", {
@@ -116,7 +116,7 @@ class DatabaseHelper {
       'isAvailableSaturday': 0,
       'isAvailableSunday': 0,
       'startTime': "7:30AM",
-      'endTime': "4:30AM",
+      'endTime': "4:30PM",
     });
 
     batch.insert("routes", {
@@ -692,7 +692,7 @@ class DatabaseHelper {
       'isAvailableSaturday': 0,
       'isAvailableSunday': 0,
       'startTime': "3:00PM",
-      'endTime': "4::00PM",
+      'endTime': "4:00PM",
     });
 
     batch.insert("routes", {
@@ -771,7 +771,7 @@ class DatabaseHelper {
       'isAvailableFriday': 0,
       'isAvailableSaturday': 1,
       'isAvailableSunday': 0,
-      'startTime': "8:00PM",
+      'startTime': "8:00AM",
       'endTime': "2:30PM",
     });
 
@@ -1139,7 +1139,7 @@ class DatabaseHelper {
       'isAvailableFriday': 1,
       'isAvailableSaturday': 0,
       'isAvailableSunday': 0,
-      'startTime': "300PM",
+      'startTime': "3:00PM",
       'endTime': "4:00PM",
     });
 
@@ -1354,7 +1354,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 81,
       'circumscription': 1,
-      'sector': "Av.Charles De Gaulle",
+      'sector': "Av. Charles De Gaulle",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2378,7 +2378,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 145,
       'circumscription': 2,
-      'sector': "Av.San Vicente De Paul",
+      'sector': "Av. San Vicente De Paul",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2394,7 +2394,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 146,
       'circumscription': 2,
-      'sector': "Av.Charles De Gaulle ",
+      'sector': "Av. Charles De Gaulle ",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2410,7 +2410,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 147,
       'circumscription': 2,
-      'sector': "Av.Carretera Mella ",
+      'sector': "Av. Carretera Mella ",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2426,7 +2426,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 148,
       'circumscription': 2,
-      'sector': "Av.4 De Agosto ",
+      'sector': "Av. 4 De Agosto ",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2442,7 +2442,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 149,
       'circumscription': 2,
-      'sector': "Av.Santa Luisa De Marillac ",
+      'sector': "Av. Santa Luisa De Marillac ",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2458,7 +2458,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 150,
       'circumscription': 2,
-      'sector': "Av.Hector J Diaz ",
+      'sector': "Av. Hector J Diaz ",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2474,7 +2474,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 151,
       'circumscription': 2,
-      'sector': "Av.Fernandez De Navarrete",
+      'sector': "Av. Fernandez De Navarrete",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2490,7 +2490,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 152,
       'circumscription': 2,
-      'sector': "Av.Presidente Estrella Ureña",
+      'sector': "Av. Presidente Estrella Ureña",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2506,7 +2506,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 153,
       'circumscription': 2,
-      'sector': "Av.Marcos Del Rosario",
+      'sector': "Av. Marcos Del Rosario",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2522,7 +2522,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 154,
       'circumscription': 2,
-      'sector': "Av.Francisco Segura Y Sandoval",
+      'sector': "Av. Francisco Segura Y Sandoval",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2538,7 +2538,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 155,
       'circumscription': 2,
-      'sector': "Av.Sabana Larga ",
+      'sector': "Av. Sabana Larga ",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2554,7 +2554,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 156,
       'circumscription': 2,
-      'sector': "Av.Venezuela ",
+      'sector': "Av. Venezuela ",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2570,7 +2570,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 157,
       'circumscription': 2,
-      'sector': "Av.Prolongacion Venezuela ",
+      'sector': "Av. Prolongacion Venezuela ",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
@@ -2586,7 +2586,7 @@ class DatabaseHelper {
     batch.insert("routes", {
       'id': 158,
       'circumscription': 2,
-      'sector': "Av.Ozama ",
+      'sector': "Av. Ozama ",
       'subSector': "",
       'isAvailableMonday': 0,
       'isAvailableTuesday': 0,
