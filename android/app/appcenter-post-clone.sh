@@ -19,8 +19,8 @@ echo "Installed flutter to `pwd`/flutter"
 
 # build APK
 # if you get "Execution failed for task ':app:lintVitalRelease'." error, uncomment next two lines
-# flutter build apk --debug
-# flutter build apk --profile
+flutter build apk --debug
+flutter build apk --profile
 flutter build apk --release
 
 # if you need build bundle (AAB) in addition to your APK, uncomment line below and last line of this script.
