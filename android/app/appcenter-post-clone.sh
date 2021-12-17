@@ -13,7 +13,7 @@ git clone -b stable https://github.com/flutter/flutter.git
 export PATH=`pwd`/flutter/bin:$PATH
 
 flutter channel stable
-flutter doctor
+flutter doctor -v
 
 echo "Installed flutter to `pwd`/flutter"
 
