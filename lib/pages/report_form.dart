@@ -309,7 +309,7 @@ class _ReportFormState extends State<ReportForm> {
                                 final smtpServer = gmail(username, password);
                                 final message = Message()
                                   ..from = Address(username, 'Test ASDE')
-                                  ..recipients.add('pruebastriny@gmail.com')
+                                  ..recipients.add('info@asde.gov.do')
                                   // ..ccRecipients.addAll([
                                   //   'destCc1@example.com',
                                   //   'destCc2@example.com'
