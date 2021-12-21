@@ -53,7 +53,7 @@ class VersionPage extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                "Aplicactivos de Santo Domingo Oeste",
+                "Aplicactivo de Santo Domingo Este",
                 style: TextStyle(
                   fontSize: 19,
                   fontWeight: FontWeight.bold,
