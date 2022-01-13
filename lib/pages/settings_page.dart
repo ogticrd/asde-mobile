@@ -22,6 +22,20 @@ class SettingsPage extends StatelessWidget {
           icon: Image.asset("assets/drawer_button.png"),
           onPressed: () => _scaffoldKey.currentState?.openDrawer(),
         ),
+        actions: <Widget>[
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () async {
+                  await launch("https://voztrinitaria.com/");
+                },
+                child: Image.asset("assets/voz_trinitaria.png"),
+              ),
+            ),
+          ),
+        ],
       ),
       drawer: MainDrawer(),
       body: SingleChildScrollView(

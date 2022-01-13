@@ -1,6 +1,7 @@
 import 'package:asde/pages/report_form.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../main_drawer.dart';
 
@@ -27,6 +28,20 @@ class _SelectReportState extends State<SelectReport> {
           icon: Image.asset("assets/drawer_button.png"),
           onPressed: () => _scaffoldKey.currentState?.openDrawer(),
         ),
+        actions: <Widget>[
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () async {
+                  await launch("https://voztrinitaria.com/");
+                },
+                child: Image.asset("assets/voz_trinitaria.png"),
+              ),
+            ),
+          ),
+        ],
       ),
       drawer: MainDrawer(),
       body: SingleChildScrollView(

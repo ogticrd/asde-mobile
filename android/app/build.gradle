@@ -32,6 +32,10 @@ if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }   
 
+if(System.getenv('APPCENTER_BUILD_ID') != null){
+    flutterVersionCode = System.getenv('APPCENTER_BUILD_ID').toInteger();
+}
+
 android {
     compileSdkVersion 30
 
@@ -49,7 +53,7 @@ android {
         applicationId "x_do.gob.ogtic.asde"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode System.getenv('APPCENTER_BUILD_ID').toInteger()
+        versionCode flutterVersionCode.toInteger();
         versionName flutterVersionName
     }
 

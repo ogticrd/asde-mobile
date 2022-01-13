@@ -11,6 +11,7 @@ import 'package:intl/intl.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../main_drawer.dart';
 import 'my_reports_page.dart';
 
@@ -64,6 +65,20 @@ class _ReportFormState extends State<ReportForm> {
           icon: Image.asset("assets/drawer_button.png"),
           onPressed: () => _scaffoldKey.currentState?.openDrawer(),
         ),
+        actions: <Widget>[
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () async {
+                  await launch("https://voztrinitaria.com/");
+                },
+                child: Image.asset("assets/voz_trinitaria.png"),
+              ),
+            ),
+          ),
+        ],
       ),
       drawer: MainDrawer(),
       body: SingleChildScrollView(

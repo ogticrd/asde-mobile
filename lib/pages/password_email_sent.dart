@@ -11,21 +11,22 @@ class PasswordEmailSent extends StatelessWidget {
       child: Center(
         child: Column(
           children: [
-            Text("Recibirás un correo con los pasos a seguir para poder reiniciar la contraseña"),
+            Text(
+                "Recibirás un correo con los pasos a seguir para poder reiniciar la contraseña"),
             OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      primary: Color(0xFF009245),
-                      padding: const EdgeInsets.all(16.0),
-                      side: BorderSide(color: Color(0xFF009245), width: 3),
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => LoginPage()),
-                      );
-                    },
-                    child: Text('ACEPTAR'),
-                  ),
+              style: OutlinedButton.styleFrom(
+                primary: Color(0xFF009245),
+                padding: const EdgeInsets.all(16.0),
+                side: BorderSide(color: Color(0xFF009245), width: 3),
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
+              },
+              child: Text('ACEPTAR'),
+            ),
           ],
         ),
       ),

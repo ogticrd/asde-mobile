@@ -1,5 +1,6 @@
 import 'package:asde/pages/register_user.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'profile_created.dart';
 
@@ -28,6 +29,20 @@ class _RegisterUserState extends State<RegisterUser> {
           ),
           onPressed: () => Navigator.pop(context),
         ),
+        actions: <Widget>[
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () async {
+                  await launch("https://voztrinitaria.com/");
+                },
+                child: Image.asset("assets/voz_trinitaria.png"),
+              ),
+            ),
+          ),
+        ],
       ),
       body: CustomScrollView(
         slivers: [
