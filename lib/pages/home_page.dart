@@ -9,6 +9,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../main_drawer.dart';
 import 'news_detail.dart';
 import 'news_page.dart';
@@ -55,6 +56,20 @@ class _HomePageState extends State<HomePage> {
           icon: Image.asset("assets/drawer_button.png"),
           onPressed: () => _scaffoldKey.currentState?.openDrawer(),
         ),
+        actions: <Widget>[
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () async {
+                  await launch("https://voztrinitaria.com/");
+                },
+                child: Image.asset("assets/voz_trinitaria.png"),
+              ),
+            ),
+          ),
+        ],
       ),
       drawer: MainDrawer(),
       body: SingleChildScrollView(
