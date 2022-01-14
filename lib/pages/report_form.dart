@@ -462,8 +462,8 @@ class _ReportFormState extends State<ReportForm> {
                                   ];
                                 }
                                 try {
-                                  final sendReport = "";
-                                  // await send(message, smtpServer);
+                                  final sendReport =
+                                      await send(message, smtpServer);
                                   print(
                                       'Message sent: ' + sendReport.toString());
 
