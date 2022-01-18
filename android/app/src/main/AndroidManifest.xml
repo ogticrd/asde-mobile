@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="x_do.gob.ogtic.asde">
+    package="gob.ogtic.asde">
    <application
         android:label="ASDE"
         android:icon="@mipmap/ic_launcher">
