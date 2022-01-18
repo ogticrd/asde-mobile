@@ -103,7 +103,7 @@ class _HomePageState extends State<HomePage> {
                           height: 10,
                         ),
                         AutoSizeText(
-                          "UNA CIUDAD JUSTA Y CREATIVA",
+                          "CIUDAD JUSTA Y CREATIVA",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
