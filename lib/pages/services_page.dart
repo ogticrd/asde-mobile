@@ -2,6 +2,7 @@ import 'package:asde/models/service.dart';
 import 'package:asde/services/api_services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../main_drawer.dart';
 import 'service_detail.dart';
@@ -35,6 +36,20 @@ class _ServicesPageState extends State<ServicesPage> {
           icon: Image.asset("assets/drawer_button.png"),
           onPressed: () => _scaffoldKey.currentState?.openDrawer(),
         ),
+        actions: <Widget>[
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () async {
+                  await launch("https://voztrinitaria.com/");
+                },
+                child: Image.asset("assets/voz_trinitaria.png"),
+              ),
+            ),
+          ),
+        ],
       ),
       drawer: MainDrawer(),
       body: SingleChildScrollView(

@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:asde/models/report.dart';
 import 'package:asde/models/sector.dart';
 import 'package:asde/services/api_services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -11,6 +12,7 @@ import 'package:intl/intl.dart';
 import 'package:mailer/mailer.dart';
 import 'package:mailer/smtp_server.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../main_drawer.dart';
 import 'my_reports_page.dart';
 
@@ -27,12 +29,20 @@ class _ReportFormState extends State<ReportForm> {
   final sectorController = TextEditingController();
   final barrioController = TextEditingController();
   final locationController = TextEditingController();
+  final idController = TextEditingController();
+  final nameController = TextEditingController();
+  final phoneController = TextEditingController();
   File? image;
   late Future<List<Sector>> allSectors;
   Sector? selectedSector;
   late Future<List<String>> neighborhoodList = Future<List<String>>.value([]);
-
   String? selectedNeighborhood;
+
+  String _id = "";
+
+  String _name = "";
+
+  String _phone = "";
 
   @override
   void dispose() {
@@ -48,12 +58,12 @@ class _ReportFormState extends State<ReportForm> {
   void initState() {
     allSectors = fetchAllSectors();
     super.initState();
+    _loadInfo();
   }
 
   @override
   Widget build(BuildContext context) {
     final _scaffoldKey = GlobalKey<ScaffoldState>();
-
     return Scaffold(
       backgroundColor: Color(0xFFEEEEEE),
       key: _scaffoldKey,
@@ -64,6 +74,20 @@ class _ReportFormState extends State<ReportForm> {
           icon: Image.asset("assets/drawer_button.png"),
           onPressed: () => _scaffoldKey.currentState?.openDrawer(),
         ),
+        actions: <Widget>[
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () async {
+                  await launch("https://voztrinitaria.com/");
+                },
+                child: Image.asset("assets/voz_trinitaria.png"),
+              ),
+            ),
+          ),
+        ],
       ),
       drawer: MainDrawer(),
       body: SingleChildScrollView(
@@ -97,9 +121,108 @@ class _ReportFormState extends State<ReportForm> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
+                        "Tipo de reclamación",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      OutlinedButton(
+                        style: OutlinedButton.styleFrom(
+                          backgroundColor: Color(0xFF1BBC9B),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          primary: Colors.white,
+                          textStyle: TextStyle(
+                            fontSize: 14,
+                          ),
+                        ),
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.fromLTRB(0, 12.0, 8.0, 12.0),
+                              child: Image.asset(
+                                GetReportTypeWhiteImage(widget.reportType),
+                                scale: 1.3,
+                              ),
+                            ),
+                            Text(
+                              widget.reportType,
+                              textAlign: TextAlign.center,
+                              maxLines: 1,
+                            ),
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
+                        "Información",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      TextFormField(
+                        controller: idController,
+                        decoration: InputDecoration(
+                          hintText: "Cédula",
+                          border: OutlineInputBorder(
+                            borderSide:
+                                new BorderSide(color: Color(0xFFDEDEDE)),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      TextFormField(
+                        controller: nameController,
+                        decoration: InputDecoration(
+                          hintText: "Nombre",
+                          border: OutlineInputBorder(
+                            borderSide:
+                                new BorderSide(color: Color(0xFFDEDEDE)),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      TextFormField(
+                        controller: phoneController,
+                        decoration: InputDecoration(
+                          hintText: "Teléfono móvil",
+                          border: OutlineInputBorder(
+                            borderSide:
+                                new BorderSide(color: Color(0xFFDEDEDE)),
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Text(
                         "Descripción",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
                         ),
                       ),
                       SizedBox(
@@ -118,12 +241,13 @@ class _ReportFormState extends State<ReportForm> {
                         maxLines: 6,
                       ),
                       SizedBox(
-                        height: 15,
+                        height: 20,
                       ),
                       Text(
                         "Dirección",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
                         ),
                       ),
                       SizedBox(
@@ -219,12 +343,13 @@ class _ReportFormState extends State<ReportForm> {
                         ),
                       ),
                       SizedBox(
-                        height: 15,
+                        height: 20,
                       ),
                       Text(
                         "Pruebas",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
+                          fontStyle: FontStyle.italic,
                         ),
                       ),
                       SizedBox(
@@ -289,6 +414,12 @@ class _ReportFormState extends State<ReportForm> {
                               ),
                               onPressed: () async {
                                 buildShowDialog(context);
+                                final prefs =
+                                    await SharedPreferences.getInstance();
+                                // set value
+                                prefs.setString('id', idController.text);
+                                prefs.setString('name', nameController.text);
+                                prefs.setString('phone', phoneController.text);
                                 DateTime now = DateTime.now();
                                 DateFormat formatter = DateFormat('yyyy-MM-dd');
                                 String date = formatter.format(now);
@@ -549,6 +680,15 @@ class _ReportFormState extends State<ReportForm> {
       ),
     );
   }
+
+  void _loadInfo() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() {
+      idController.text = prefs.getString('id') ?? "";
+      nameController.text = prefs.getString('name') ?? "";
+      phoneController.text = prefs.getString('phone') ?? "";
+    });
+  }
 }
 
 buildShowDialog(BuildContext context) {
@@ -561,4 +701,43 @@ buildShowDialog(BuildContext context) {
       );
     },
   );
+}
+
+String GetReportTypeWhiteImage(String type) {
+  String result;
+  switch (type) {
+    case "Basura":
+      result = "assets/trash_white_icon.png";
+      break;
+    case "Asfalto":
+      result = "assets/street_white_icon.png";
+      break;
+    case "Aseo Urbano":
+      result = "assets/urban_cleaning_white_icon.png";
+      break;
+    case "Drenaje":
+      result = "assets/drainage_white_icon.png";
+      break;
+    case "Fumigación":
+      result = "assets/fumigation_white_icon.png";
+      break;
+    case "Tránsito":
+      result = "assets/transit_white_icon.png";
+      break;
+    case "Iluminación":
+      result = "assets/ilumination_white_icon.png";
+      break;
+    case "Espacios Públicos":
+      result = "assets/park_white_icon.png";
+      break;
+    case "Protección Animal":
+      result = "assets/animal_protection_white_icon.png";
+      break;
+    case "Poda de árboles":
+      result = "assets/poda_white_icon.png";
+      break;
+    default:
+      result = "assets/trash_white_icon.png";
+  }
+  return result;
 }

@@ -1,10 +1,10 @@
 import 'dart:convert';
-
 import 'package:asde/models/report.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../main_drawer.dart';
 
@@ -24,6 +24,20 @@ class MyReportsPage extends StatelessWidget {
           icon: Image.asset("assets/drawer_button.png"),
           onPressed: () => _scaffoldKey.currentState?.openDrawer(),
         ),
+        actions: <Widget>[
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Padding(
+              padding: EdgeInsets.only(right: 20.0),
+              child: GestureDetector(
+                onTap: () async {
+                  await launch("https://voztrinitaria.com/");
+                },
+                child: Image.asset("assets/voz_trinitaria.png"),
+              ),
+            ),
+          ),
+        ],
       ),
       drawer: MainDrawer(),
       body: SingleChildScrollView(
@@ -79,8 +93,12 @@ class MyReportsPage extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Container(
-                                        height: 100,
-                                        width: 100,
+                                        height: box.getAt(index)!.image == ""
+                                            ? 0
+                                            : 100,
+                                        width: box.getAt(index)!.image == ""
+                                            ? 0
+                                            : 100,
                                         decoration: new BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(10),
