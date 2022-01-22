@@ -46,6 +46,9 @@ dependencies:
   flutter_svg: ^0.23.0+1
   shared_preferences: ^2.0.12
 
+#dependency_overrides: (workaround)
+  wakelock: 0.5.3+3
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
