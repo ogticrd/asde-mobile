@@ -15,10 +15,33 @@
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# Visual Studio Code related
+.classpat
+.proect
+.settings/
+.vscode/
+
+# Flutter repo-specific
+/bin/cache/
+/bin/internal/bootstrap.bat
+/bin/internal/bootstrap.sh
+/bin/mingit/
+/dev/benchmarks/mega_gallery/
+/dev/bots/.recipe_deps
+/dev/bots/android_tools/
+/dev/devicelab/ABresults*.json
+/dev/docs/doc/
+/dev/docs/flutter.docs.zip
+/dev/docs/lib/
+/dev/docs/pubspec.yaml
+/dev/integration_tets/**/xcuserdata
+/dev/integration_tests/**/Pods
+/packages/lutter/coverage/
+version
+analysis_enchmark.json
+
+# packages file containing multi-root paths
+.packages.generated
 
 # Flutter/Dart/Pub related
 **/doc/api/
@@ -26,10 +49,15 @@
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
+**/generated_plugin_registrant.dart
 .packages
 .pub-cache/
 .pub/
-/build/
+build/
+flutter_*.png
+linked_*.ds
+unlinked.ds
+unlinked_spec.ds
 
 # Web related
 lib/generated_plugin_registrant.dart
@@ -44,3 +72,62 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Android related
+**/android/**/gradle-wrapper.jar
+.gradle/
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+*/android/local.properties
+*/android/**/GeneratedPluginRegistrant.java
+*/android/key.properties
+.jks
+
+# iOS/XCode related
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/.perspectivev3
+**/ios/*/*sync/
+**/ios/*/.sconsign.dblite
+**/ios/*/.tags*
+**/ios/**/.vagrant/
+**/ios/**/DerivedData/
+**/ios/*/Icon?
+**/ios/*/Pods/
+**/ios/*/.symlinks/
+**/ios/**/profile
+**/ios/*/xcuserdata
+*/ios/.generated/
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/App.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+*/ios/lutter/enerated.xcconfig
+*/ios/lutter/ephemeral
+**/ios/Flutter/app.flx
+**/ios/Flutter/app.zip
+**/ios/Flutter/flutterassets/
+**/ios/lutter/flutter_exportenvironment.sh
+**/ios/SVICEDefnitjson
+**/ios/RunneraedPluginRegisrant.*
+
+# macOS
+**/macos/lutter/GeeratedPluginRegistrant.swift
+
+# Coverage
+coverage/
+
+
+# Symbols
+app.*.symbols
+
+# Exceptions to above rules.
+!**/ios/**/default.mode1v3
+!**/ios/*/default.mode2v3
+*/ios/**/default.pbxuser
+!**/ios/**/defult.perspectivev
+!/packaes/flutter_tools/test/data/dart_dependencies_test/**/.packages
+!/dev/ci/*/emfile.lock
