@@ -100,13 +100,13 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         AutoSizeText(
                           "CIUDAD JUSTA Y CREATIVA",
                           style: TextStyle(
                             fontSize: 18,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                           ),
                           maxLines: 1,
                         ),
