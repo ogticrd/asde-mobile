@@ -1,6 +1,7 @@
 import 'package:asde/services/api_services.dart';
 import 'package:asde/singleton.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path/path.dart';
@@ -45,6 +46,14 @@ class ASDEApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        appBarTheme: AppBarTheme(
+            elevation: 0,
+            backgroundColor: Colors.transparent,
+            systemOverlayStyle: SystemUiOverlayStyle(
+              //statusBarColor: Colors.green,
+              statusBarBrightness: Brightness.light
+            ),
+          ),
       ),
       routes: {
         '/home': (context) => HomePage(),
