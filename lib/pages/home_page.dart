@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../main_drawer.dart';
@@ -50,8 +51,6 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: Color(0xFFEEEEEE),
       key: _scaffoldKey,
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
         leading: IconButton(
           icon: Image.asset("assets/drawer_button.png"),
           onPressed: () => _scaffoldKey.currentState?.openDrawer(),
