@@ -18,16 +18,18 @@ Future<List<News>> fetchAllNews() async {
   );
 
   if (response.statusCode == 200) {
+    print("ok");
     // If the server did return a 200 OK response,
     // then parse the JSON.
     final data = await jsonDecode(response.body);
 
     for (var i = 0; i < data.length; i++) {
+      print(data[i]["title"]["rendered"]);
       newsList.add(
         News(
             id: data[i]["id"],
             title: data[i]["title"]["rendered"],
-            image: data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"],
+            image: data[i].containsKey("_embedded") ? data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"] : "",
             date: formatter.format(DateTime.parse(data[i]["date"])),
             text: data[i]["content"]["rendered"]),
       );
