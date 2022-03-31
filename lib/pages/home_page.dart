@@ -237,7 +237,7 @@ class _HomePageState extends State<HomePage> {
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                 ),
-                                                maxLines: 2,
+                                                maxLines: 3,
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                               SizedBox(
@@ -333,7 +333,7 @@ class _HomePageState extends State<HomePage> {
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
-                                                      maxLines: 2,
+                                                      maxLines: 3,
                                                       overflow:
                                                           TextOverflow.ellipsis,
                                                     ),

@@ -27,7 +27,7 @@ Future<List<News>> fetchAllNews() async {
         News(
             id: data[i]["id"],
             title: data[i]["title"]["rendered"],
-            image: data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"],
+            image: data[i].containsKey("_embedded") ? data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"] : "",
             date: formatter.format(DateTime.parse(data[i]["date"])),
             text: data[i]["content"]["rendered"]),
       );
