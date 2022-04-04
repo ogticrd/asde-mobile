@@ -67,7 +67,7 @@ class _RoutesPageState extends State<RoutesPage> {
                 ),
               ),
               Text(
-                "Consulte la ruta de recogida de basura de su sector aquí",
+                "Consulte la ruta de recogida de basura de su sector",
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               SizedBox(

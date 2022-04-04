@@ -111,6 +111,20 @@ class MainDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(
+              FontAwesomeIcons.solidBell,
+              color: Color(0xFFDADADA),
+            ),
+            title: Text("Rutas y frecuencias"),
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(builder: (context) => RoutesPage()),
+                  (Route<dynamic> route) => route.isFirst);
+            },
+          ),
+          ListTile(
             leading: Image.asset(
               "assets/messages.png",
             ),
@@ -152,7 +166,7 @@ class MainDrawer extends StatelessWidget {
                             height: 10,
                           ),
                           Text(
-                            "Si desea communicarse con nuestro servicio de ayuda puedes comentarnos directamente vía WhatsApp. Estamos aquí para ayudarte",
+                            "Selecciona el botón para iniciar una conversación con nuestra mesa de ayuda",
                             style: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 12,
@@ -210,20 +224,6 @@ class MainDrawer extends StatelessWidget {
                   ),
                 ),
               );
-            },
-          ),
-          ListTile(
-            leading: Icon(
-              FontAwesomeIcons.solidBell,
-              color: Color(0xFFDADADA),
-            ),
-            title: Text("Ruta y frecuencia"),
-            onTap: () {
-              Navigator.pop(context);
-              Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(builder: (context) => RoutesPage()),
-                  (Route<dynamic> route) => route.isFirst);
             },
           ),
           ListTile(

@@ -243,13 +243,6 @@ class _HomePageState extends State<HomePage> {
                                               SizedBox(
                                                 height: 5,
                                               ),
-                                              Text(
-                                                snapshot.data![i].date,
-                                                style: TextStyle(
-                                                  color: Color(0xFF979797),
-                                                  fontSize: 11,
-                                                ),
-                                              ),
                                               Expanded(child: Container()),
                                               Row(
                                                 children: [
@@ -339,15 +332,6 @@ class _HomePageState extends State<HomePage> {
                                                     ),
                                                     SizedBox(
                                                       height: 5,
-                                                    ),
-                                                    Text(
-                                                      snapshot
-                                                          .data![i + 1].date,
-                                                      style: TextStyle(
-                                                        color:
-                                                            Color(0xFF979797),
-                                                        fontSize: 11,
-                                                      ),
                                                     ),
                                                     Expanded(
                                                       child: Container(),

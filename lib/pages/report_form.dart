@@ -104,7 +104,7 @@ class _ReportFormState extends State<ReportForm> {
                 ),
               ),
               Text(
-                "Complete los detalles que la denuncia",
+                "Complete los detalles de su reclamación",
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               SizedBox(
@@ -532,7 +532,7 @@ class _ReportFormState extends State<ReportForm> {
                   height: 10,
                 ),
                 Text(
-                  "Su reclamación ha sido enviada, un equipo técnico estará dando seguimiento a sus solicitud",
+                  "Nuestro equipo técnico estará dando seguimiento a su reclamación",
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontSize: 12,

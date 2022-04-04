@@ -42,7 +42,7 @@ class _ContactUsState extends State<ContactUs> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              "Si desea comunicarse con nuestro servicio de ayuda puedes comentarnos directamente via WhatsApp. Estamos aquí para ayudarte.",
+              "Selecciona el botón para iniciar una conversación con nuestra mesa de ayuda.",
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
@@ -104,7 +104,7 @@ class _ContactUsState extends State<ContactUs> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "CONTACTANOS",
+                "CONTÁCTANOS",
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
