@@ -100,13 +100,13 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         AutoSizeText(
                           "CIUDAD JUSTA Y CREATIVA",
                           style: TextStyle(
                             fontSize: 18,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                           ),
                           maxLines: 1,
                         ),
@@ -237,18 +237,11 @@ class _HomePageState extends State<HomePage> {
                                                 style: TextStyle(
                                                   fontWeight: FontWeight.bold,
                                                 ),
-                                                maxLines: 2,
+                                                maxLines: 3,
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                               SizedBox(
                                                 height: 5,
-                                              ),
-                                              Text(
-                                                snapshot.data![i].date,
-                                                style: TextStyle(
-                                                  color: Color(0xFF979797),
-                                                  fontSize: 11,
-                                                ),
                                               ),
                                               Expanded(child: Container()),
                                               Row(
@@ -333,21 +326,12 @@ class _HomePageState extends State<HomePage> {
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
-                                                      maxLines: 2,
+                                                      maxLines: 3,
                                                       overflow:
                                                           TextOverflow.ellipsis,
                                                     ),
                                                     SizedBox(
                                                       height: 5,
-                                                    ),
-                                                    Text(
-                                                      snapshot
-                                                          .data![i + 1].date,
-                                                      style: TextStyle(
-                                                        color:
-                                                            Color(0xFF979797),
-                                                        fontSize: 11,
-                                                      ),
                                                     ),
                                                     Expanded(
                                                       child: Container(),

@@ -141,7 +141,7 @@ class SettingsPage extends StatelessWidget {
                                 height: 10,
                               ),
                               Text(
-                                "Si desea communicarse con nuestro servicio de ayuda puedes comentarnos directamente vía WhatsApp. Estamos aquí para ayudarte",
+                                "Selecciona el botón para iniciar una conversación con nuestra mesa de ayuda",
                                 style: TextStyle(
                                   fontWeight: FontWeight.w500,
                                   fontSize: 12,

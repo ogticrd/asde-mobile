@@ -58,7 +58,7 @@ class _SelectReportState extends State<SelectReport> {
                 ),
               ),
               Text(
-                "Seleccione un servicio a denunciar",
+                "Seleccione un servicio para su reclamación",
                 style: TextStyle(fontWeight: FontWeight.w600),
               ),
               SizedBox(
@@ -411,6 +411,14 @@ class _SelectReportState extends State<SelectReport> {
                                     setState(() {
                                       _value = "Iluminación";
                                     });
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => ReportForm(
+                                          reportType: _value,
+                                        ),
+                                      ),
+                                    );
                                   },
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,

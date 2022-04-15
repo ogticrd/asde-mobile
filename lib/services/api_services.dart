@@ -181,13 +181,13 @@ List<Contact> getContacts() {
         formattedPhone: "809-788-7056",
         unformattedPhone: "8097887056"),
     new Contact(
-        name: "Recepción acaldía",
+        name: "Recepción Alcaldía",
         formattedPhone: "809-788-7676 Ext: 1001",
         unformattedPhone: "8097887676"),
     new Contact(
         name: "Cuerpo de Bomberos",
-        formattedPhone: "809-238-5312",
-        unformattedPhone: "8092385312"),
+        formattedPhone: "809-695-1408",
+        unformattedPhone: "8096951408"),
     new Contact(name: "9-1-1", formattedPhone: "911", unformattedPhone: "911"),
     new Contact(
         name: "DIGESETT",
@@ -213,6 +213,14 @@ List<Contact> getContacts() {
         name: "Funeraria Isabelita",
         formattedPhone: "809-599-2798",
         unformattedPhone: "8095992798"),
+    new Contact(
+        name: "Funeraria Los Frailes",
+        formattedPhone: "809-599-6850",
+        unformattedPhone: "8095996850"),
+    new Contact(
+        name: "Funeraria Los Mina",
+        formattedPhone: "809-388-1048",
+        unformattedPhone: "8093881048"),
   ];
 
   return contacts;
