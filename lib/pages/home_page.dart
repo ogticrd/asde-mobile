@@ -93,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "AYUNTAMIENTO DE SANTO DOMINGO ESTE",
+                          "ASDE",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 22,
