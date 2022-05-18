@@ -27,7 +27,9 @@ Future<List<News>> fetchAllNews() async {
         News(
             id: data[i]["id"],
             title: data[i]["title"]["rendered"],
-            image: data[i].containsKey("_embedded") ? data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"] : "",
+            image: data[i].containsKey("_embedded")
+                ? data[i]["_embedded"]["wp:featuredmedia"][0]["source_url"]
+                : "",
             date: formatter.format(DateTime.parse(data[i]["date"])),
             text: data[i]["content"]["rendered"]),
       );
@@ -222,4 +224,36 @@ List<Contact> getContacts() {
   ];
 
   return contacts;
+}
+
+Future<String> sendEmail(String subject, String description, String barrio, String sector, String location, String image) async {
+  final response =
+      await http.post(Uri.parse('https://api.sendinblue.com/v3/smtp/email'),
+          headers: <String, String>{
+            'content-type': 'application/json',
+            'Api-Key':
+                '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',
+          },
+          body: jsonEncode(
+            {
+              'sender': {"name": "Triny", "email": "pruebastriny@gmail.com"},
+              'to': [
+                {"email": "info@asde.gov.do", "name": "ASDE"}
+              ],
+              'subject': subject,
+              'attachment': [
+                {"content" : image, "name" : "Imagen.jpg"}
+              ],
+              'htmlContent': """
+                  <h1>Información:</h1>
+                  <p>$description</p>
+                  <p>$barrio</p>
+                  <p>$sector</p>
+                  <p>$location</p>
+                  """,
+            },
+          ));
+  print(response.statusCode);
+  print("Codigo ejecutandose");
+  return "ok";
 }

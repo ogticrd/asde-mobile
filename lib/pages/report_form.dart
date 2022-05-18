@@ -10,7 +10,6 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:hive/hive.dart';
 import 'package:intl/intl.dart';
 import 'package:mailer/mailer.dart';
-import 'package:mailer/smtp_server.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../main_drawer.dart';
@@ -50,7 +49,7 @@ class _ReportFormState extends State<ReportForm> {
     sectorController.dispose();
     barrioController.dispose();
     locationController.dispose();
-    Hive.close();
+    //Hive.close();
     super.dispose();
   }
 
@@ -435,37 +434,12 @@ class _ReportFormState extends State<ReportForm> {
                                         : base64Encode(
                                             image!.readAsBytesSync()),
                                     date);
-                                String username = 'pruebastriny@gmail.com';
-                                String password = 'triny1234TRINY';
-                                final smtpServer = gmail(username, password);
-                                final message = Message()
-                                  ..from = Address(username, 'Test ASDE')
-                                  ..recipients.add('info@asde.gov.do')
-                                  // ..ccRecipients.addAll([
-                                  //   'destCc1@example.com',
-                                  //   'destCc2@example.com'
-                                  // ])
-                                  // ..bccRecipients
-                                  //     .add(Address('bccAddress@example.com'))
-                                  ..subject = 'Reclamo: ${widget.reportType}'
-                                  ..html = """
-                                      <h1>Información:</h1>
-                                      <p>${descriptionController.text}</p>
-                                      <p>${barrioController.text}</p>
-                                      <p>${sectorController.text}</p>
-                                      <p>${locationController.text}</p>
-                                      """;
-
-                                if (image != null) {
-                                  message.attachments = [
-                                    FileAttachment(image!)
-                                  ];
-                                }
                                 try {
-                                  final sendReport =
-                                      await send(message, smtpServer);
+                                  sendEmail('Reclamo: ${widget.reportType}', descriptionController.text, barrioController.text, sectorController.text, locationController.text, report.image);
+                                  // final sendReport =
+                                  //     await send(message, smtpServer);
                                   print(
-                                      'Message sent: ' + sendReport.toString());
+                                      'Message sent: ');
 
                                   var box =
                                       await Hive.openBox<Report>("reports");

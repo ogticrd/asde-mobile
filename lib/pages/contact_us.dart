@@ -27,7 +27,7 @@ class _ContactUsState extends State<ContactUs> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance?.addPostFrameCallback((_) =>
+    WidgetsBinding.instance.addPostFrameCallback((_) =>
         ScaffoldMessenger.of(_scaffoldKey.currentContext!)
             .showSnackBar(WhatsAppSnackBar()));
 
