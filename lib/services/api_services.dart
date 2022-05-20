@@ -18,11 +18,13 @@ Future<List<News>> fetchAllNews() async {
   );
 
   if (response.statusCode == 200) {
+    print("ok");
     // If the server did return a 200 OK response,
     // then parse the JSON.
     final data = await jsonDecode(response.body);
 
     for (var i = 0; i < data.length; i++) {
+      print(data[i]["title"]["rendered"]);
       newsList.add(
         News(
             id: data[i]["id"],
