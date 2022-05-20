@@ -37,7 +37,7 @@ if(System.getenv('APPCENTER_BUILD_ID') != null){
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
 
     lintOptions {
         disable 'InvalidPackage'

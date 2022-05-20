@@ -769,45 +769,6 @@
         ]
     },
     {
-        "id": 14,
-        "title" : "Recogida de desechos sólidos",
-        "image" : "recogida_desechos.png",
-        "description" : "Este servicio consiste en la recolección de los residuos sólidos generados en las circunscripciones 1, 2 y 3 del municipio Santo Domingo Este de cualesquiera de las fuentes generadoras.",
-        "public": "Público en General",
-        "offerer": "el departamento de Limpieza y aseo urbano",
-        "tel": "(809) 788-7676 Ext: 7007",
-        "email": [
-            "limpiaasde@gmail.com"
-        ],
-        "requirements": [
-            "Solicitar el servicio mediante llamada o comunicación dirigida a la Dirección de Limpieza y Aseo.",
-            "Se debe especificar el tipo de basura y/o residuo al que se le prestara atención, así como una estimación primaria respecto del volumen o posibles volúmenes a manejar",
-            "Dirección exacta del lugar y teléfono de contacto.",
-            "En caso de ser una denuncia de un tercero, se guardará el anonimato pero se requerirán todos los pasos anteriores."
-        ],
-        "procedures": [
-            "Una vez realizado el registro de las informaciones antes detalladas se procede a asignar el supervisor de la zona el cual evaluara físicamente la situación y recomendara la forma correcta de manejar y solucionar la situación.",
-            "Con la información levantada por el supervisor se procede a enviar el expediente a la dirección de ingresos municipales a los fines de fijar la tasa de cobro por el servicio",
-            "Mediante vía telefónica desde la dirección de ingresos municipales se comunicara con el solicitante o denunciante de la situación y comunicara el monto a pagar por dicho servicio.",
-            "Si el solicitante está de acuerdo se le comunica que debe realizar el pago del mismo.",
-            "Una vez realizado el pago la dirección de ingresos municipales remite el expediente a la dirección correspondiente para la ejecución del servicio.",
-            "La dirección correspondiente emitirá una notificación de servicio realizado a la dirección de ingresos municipales.",
-            "En caso de no ejecutarse el mismo ya sea porque el solicitante no está de acuerdo con el precio a pagar o por algún otro contratiempo se realiza una notificación de NO EJECUCIÓN DEL SERVICIO. Esto inmediatamente dispara una alarma de seguimiento continuo."
-        ],
-        "available_days": "Disponibles de lunes a viernes",
-        "available_time": "8:00 a.m. hasta 4:30 p.m.",
-        "cost": "Depende de la tasa de cobranza fijada por la Dirección de Recaudación de Rentas y Arbitrios",
-        "expected_time" : "De 1.5 a 3 días laborables",
-        "delivery_channel": "Presencial",
-        "additional_information": [
-            {
-                "text": "Para los casos de servicios y denuncias propias al sistema de recolección de residuos sólidos de nuestra Alcaldía, dichas denuncias son atendidas en tiempo récord, ya que el mecanismo de actuación es más directo y se maneja a nivel de los generantes de operaciones y supervisión de zonas. El horario en este caso es de 6:00 am a 10:00 pm.",
-                "is_bold": false,
-                "color": ""
-            }
-        ]
-    },
-    {
         "id": 15,
         "title" : "Resellado de planos con certificado solo de la Dirección de Planeamiento Urbano",
         "image" : "resellado_planos.png",
