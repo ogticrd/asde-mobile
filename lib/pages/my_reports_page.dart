@@ -114,34 +114,36 @@ class MyReportsPage extends StatelessWidget {
                                       SizedBox(
                                         width: 20,
                                       ),
-                                      Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Row(
-                                            children: [
-                                              Image.asset(
-                                                "assets/location_icon.png",
-                                                scale: 0.8,
-                                              ),
-                                              SizedBox(
-                                                width: 10,
-                                              ),
-                                              Text(
-                                                box.getAt(index)!.location,
-                                                style: TextStyle(
-                                                  fontWeight: FontWeight.bold,
+                                      Expanded(
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Image.asset(
+                                                  "assets/location_icon.png",
+                                                  scale: 0.8,
                                                 ),
-                                              ),
-                                            ],
-                                          ),
-                                          SizedBox(
-                                            height: 20,
-                                          ),
-                                          Text(box.getAt(index)!.description),
-                                        ],
+                                                SizedBox(
+                                                  width: 10,
+                                                ),
+                                                Text(
+                                                  box.getAt(index)!.location,
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Text(box.getAt(index)!.description),
+                                          ],
+                                        ),
                                       ),
                                     ],
                                   ),

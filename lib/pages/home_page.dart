@@ -245,6 +245,7 @@ class _HomePageState extends State<HomePage> {
                                               ),
                                               Expanded(child: Container()),
                                               Row(
+                                                mainAxisSize: MainAxisSize.min,
                                                 children: [
                                                   Text(
                                                     "Leer más ",
@@ -405,7 +406,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                           CarouselSlider(
                             options: CarouselOptions(
-                              height: 270.0,
+                              //height: 270.0,
+                              aspectRatio: 4 / 3,
                               enableInfiniteScroll: true,
                               viewportFraction: 1,
                             ),
@@ -420,7 +422,6 @@ class _HomePageState extends State<HomePage> {
                     return Text(
                         'Hubo un problema de conexión. Las Novedades no se podrán mostrar ahora mismo');
                   }
-
                   return Column(
                     children: [
                       SizedBox(

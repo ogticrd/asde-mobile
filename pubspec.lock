@@ -1024,9 +1024,13 @@ packages:
     version: "3.1.0"
 sdks:
 <<<<<<< HEAD
+<<<<<<< HEAD
   dart: ">=2.17.0-0 <3.0.0"
   flutter: ">=2.5.0"
 =======
   dart: ">=2.15.0 <3.0.0"
+=======
+  dart: ">=2.17.0-0 <3.0.0"
+>>>>>>> de88ce9d9e6eed3cf3be15da69e3ee06fde50937
   flutter: ">=2.8.0"
 >>>>>>> 5c1ff719bf3d242ef59eb3aff066b70591ef5437
