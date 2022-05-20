@@ -239,6 +239,7 @@ Future<String> sendEmail(String subject, String description, String barrio, Stri
               'sender': {"name": "Triny", "email": "pruebastriny@gmail.com"},
               'to': [
                 {"email": "info@asde.gov.do", "name": "ASDE"}
+                //{"email": "tomas.familia@outlook.com", "name": "ASDE"}
               ],
               'subject': subject,
               'attachment': [

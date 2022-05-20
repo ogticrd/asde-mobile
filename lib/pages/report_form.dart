@@ -36,7 +36,7 @@ class _ReportFormState extends State<ReportForm> {
   Sector? selectedSector;
   late Future<List<String>> neighborhoodList = Future<List<String>>.value([]);
   String? selectedNeighborhood;
-
+  final _scaffoldKey = GlobalKey<ScaffoldState>();
   String _id = "";
 
   String _name = "";
@@ -62,7 +62,6 @@ class _ReportFormState extends State<ReportForm> {
 
   @override
   Widget build(BuildContext context) {
-    final _scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
       backgroundColor: Color(0xFFEEEEEE),
       key: _scaffoldKey,
@@ -258,6 +257,7 @@ class _ReportFormState extends State<ReportForm> {
                           if (snapshot.hasData) {
                             return DropdownButtonFormField(
                               value: selectedSector,
+                              isExpanded: true,
                               decoration: InputDecoration(
                                 isDense: true,
                                 border: OutlineInputBorder(
