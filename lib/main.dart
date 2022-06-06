@@ -30,25 +30,29 @@ class ASDEApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: HomePage(),
-      theme: ThemeData(
-        fontFamily: "Gotham",
-        backgroundColor: Colors.white,
-        textTheme: TextTheme(
-          bodyText2: TextStyle(
-            fontSize: 15,
-            color: Colors.black,
-            letterSpacing: 0,
-          ),
-          subtitle1: TextStyle(),
-          subtitle2: TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      theme: getTheme(),
       routes: {
         '/home': (context) => HomePage(),
       },
+    );
+  }
+
+  ThemeData getTheme() {
+    return ThemeData(
+      fontFamily: "Gotham",
+      backgroundColor: Colors.white,
+      textTheme: TextTheme(
+        bodyText2: TextStyle(
+          fontSize: 15,
+          color: Colors.black,
+          letterSpacing: 0,
+        ),
+        subtitle1: TextStyle(),
+        subtitle2: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
     );
   }
 }

@@ -17,8 +17,8 @@ class _RoutesPageState extends State<RoutesPage> {
   String? _selectedSector;
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   List<int> circumscriptions = [];
-  Future<List<String>> sectors = Future<List<String>>.value([]);
-  Future<List<Ruta>> routesResult = Future<List<Ruta>>.value([]);
+  Future<List<String>> _sectors = Future<List<String>>.value([]);
+  Future<List<Ruta>> _routesResult = Future<List<Ruta>>.value([]);
 
   @override
   void initState() {
@@ -117,7 +117,7 @@ class _RoutesPageState extends State<RoutesPage> {
                                   setState(() {
                                     _selectedCircumscriptions = newValue!;
                                     _selectedSector = null;
-                                    sectors = DatabaseHelper.instance
+                                    _sectors = DatabaseHelper.instance
                                         .getSectorsByCircumscription(newValue);
                                   });
                                 },
@@ -147,7 +147,7 @@ class _RoutesPageState extends State<RoutesPage> {
                         height: 20,
                       ),
                       FutureBuilder<List<String>>(
-                        future: sectors,
+                        future: _sectors,
                         builder: (context, snapshot) {
                           if (snapshot.hasData) {
                             return DropdownButtonFormField(
@@ -210,13 +210,13 @@ class _RoutesPageState extends State<RoutesPage> {
                                 if (_selectedSector != null &&
                                     _selectedSector != "") {
                                   setState(() {
-                                    routesResult = DatabaseHelper.instance
+                                    _routesResult = DatabaseHelper.instance
                                         .getRoutesBySector(_selectedSector!);
                                   });
                                 } else {
                                   if (_selectedCircumscriptions != null) {
                                     setState(() {
-                                      routesResult = DatabaseHelper.instance
+                                      _routesResult = DatabaseHelper.instance
                                           .getRoutesByCircumscription(
                                               _selectedCircumscriptions!);
                                     });
@@ -241,7 +241,7 @@ class _RoutesPageState extends State<RoutesPage> {
                 height: 20,
               ),
               FutureBuilder<List<Ruta>>(
-                future: routesResult,
+                future: _routesResult,
                 builder: (context, snapshot) {
                   if (snapshot.hasData) {
                     return ListView.builder(

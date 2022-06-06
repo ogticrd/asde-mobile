@@ -12,6 +12,7 @@ import 'package:intl/intl.dart';
 import 'package:mailer/mailer.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:url_launcher/url_launcher.dart';
+import '../database.dart';
 import '../main_drawer.dart';
 import 'my_reports_page.dart';
 
@@ -33,15 +34,10 @@ class _ReportFormState extends State<ReportForm> {
   final phoneController = TextEditingController();
   File? image;
   late Future<List<Sector>> allSectors;
-  Sector? selectedSector;
-  late Future<List<String>> neighborhoodList = Future<List<String>>.value([]);
-  String? selectedNeighborhood;
+  int? _selectedCircumscriptions;
+  late Future<List<String>> _sectors = Future<List<String>>.value([]);
+  String? _selectedSector;
   final _scaffoldKey = GlobalKey<ScaffoldState>();
-  String _id = "";
-
-  String _name = "";
-
-  String _phone = "";
 
   @override
   void dispose() {
@@ -251,12 +247,12 @@ class _ReportFormState extends State<ReportForm> {
                       SizedBox(
                         height: 15,
                       ),
-                      FutureBuilder<List<Sector>>(
-                        future: allSectors,
+                      FutureBuilder<List<int>>(
+                        future: DatabaseHelper.instance.getCircumscriptions(),
                         builder: (context, snapshot) {
                           if (snapshot.hasData) {
                             return DropdownButtonFormField(
-                              value: selectedSector,
+                              value: _selectedCircumscriptions,
                               isExpanded: true,
                               decoration: InputDecoration(
                                 isDense: true,
@@ -264,20 +260,21 @@ class _ReportFormState extends State<ReportForm> {
                                     borderRadius: BorderRadius.circular(8.0)),
                               ),
                               items: snapshot.data!
-                                  .map<DropdownMenuItem<Sector>>(
-                                      (Sector sector) {
-                                return DropdownMenuItem<Sector>(
-                                  value: sector,
-                                  child: Text(sector.name),
+                                  .map<DropdownMenuItem<int>>((int value) {
+                                return DropdownMenuItem<int>(
+                                  value: value,
+                                  child: Text(
+                                      "Circunscripción #" + value.toString()),
                                 );
                               }).toList(),
-                              hint: Text("Sector"),
-                              onChanged: (Sector? value) {
+                              hint: Text("Circunscripción"),
+                              onChanged: (int? newValue) {
                                 setState(() {
-                                  if (value != null) {
-                                    neighborhoodList =
-                                        fetchNeiborhoodsBySector(value);
-                                    selectedSector = value;
+                                  if (newValue != null) {
+                                    _sectors = DatabaseHelper.instance
+                                        .getSectorsByCircumscription(newValue);
+                                    _selectedSector = null;
+                                    _selectedCircumscriptions = newValue;
                                   }
                                 });
                               },
@@ -293,11 +290,11 @@ class _ReportFormState extends State<ReportForm> {
                         height: 15,
                       ),
                       FutureBuilder<List<String>>(
-                        future: neighborhoodList,
+                        future: _sectors,
                         builder: (context, snapshot) {
                           if (snapshot.hasData) {
                             return DropdownButtonFormField(
-                              value: selectedNeighborhood,
+                              value: _selectedSector,
                               decoration: InputDecoration(
                                 isDense: true,
                                 border: OutlineInputBorder(
@@ -305,17 +302,17 @@ class _ReportFormState extends State<ReportForm> {
                               ),
                               items: snapshot.data!
                                   .map<DropdownMenuItem<String>>(
-                                      (String neighborhood) {
+                                      (String value) {
                                 return DropdownMenuItem<String>(
-                                  value: neighborhood,
-                                  child: Text(neighborhood),
+                                  value: value,
+                                  child: Text(value),
                                 );
                               }).toList(),
-                              hint: Text("Barrio"),
+                              hint: Text("Sector"),
                               onChanged: (String? value) {
                                 setState(() {
                                   if (value != null) {
-                                    selectedNeighborhood = value;
+                                    _selectedSector = value;
                                   }
                                 });
                               },
@@ -426,8 +423,9 @@ class _ReportFormState extends State<ReportForm> {
                                 var report = Report(
                                     widget.reportType,
                                     descriptionController.text,
-                                    selectedSector!.name,
-                                    selectedNeighborhood!,
+                                    "Circunscripción #" +
+                                        _selectedCircumscriptions.toString(),
+                                    _selectedSector!,
                                     locationController.text,
                                     (image == null)
                                         ? ""
@@ -435,11 +433,17 @@ class _ReportFormState extends State<ReportForm> {
                                             image!.readAsBytesSync()),
                                     date);
                                 try {
-                                  sendEmail('Reclamo: ${widget.reportType}', descriptionController.text, barrioController.text, sectorController.text, locationController.text, report.image);
+                                  sendEmail(
+                                      'Reclamo: ${widget.reportType}',
+                                      descriptionController.text,
+                                      "Circunscripción #" +
+                                        _selectedCircumscriptions.toString(),
+                                      _selectedSector!,
+                                      locationController.text,
+                                      report.image);
                                   // final sendReport =
                                   //     await send(message, smtpServer);
-                                  print(
-                                      'Message sent: ');
+                                  print('Message sent: ');
 
                                   var box =
                                       await Hive.openBox<Report>("reports");
