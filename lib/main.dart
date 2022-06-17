@@ -30,15 +30,7 @@ class ASDEApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: HomePage(),
-      theme: getTheme(),
-      routes: {
-        '/home': (context) => HomePage(),
-      },
-    );
-  }
-
-  ThemeData getTheme() {
-    return ThemeData(
+      theme: ThemeData(
       fontFamily: "Gotham",
       backgroundColor: Colors.white,
       textTheme: TextTheme(
@@ -53,6 +45,10 @@ class ASDEApp extends StatelessWidget {
           fontWeight: FontWeight.bold,
         ),
       ),
+    ),
+      routes: {
+        '/home': (context) => HomePage(),
+      },
     );
   }
 }
